@@ -6,8 +6,7 @@
     "source": "src/index.html",
     "scripts": {
         "start": "parcel",
-        "build": "format && tailwind && parcel build",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md}\"",
+        "build": "tailwind && parcel build",
         "tailwind": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind.css"
     },
     "browserslist": "> 0.5%, last 2 versions, not dead",
