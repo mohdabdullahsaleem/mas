@@ -293,6 +293,10 @@ img, video {
   height: 100vh;
 }
 
+.min-h-min {
+  min-height: min-content;
+}
+
 .w-32 {
   width: 8rem;
 }
@@ -340,6 +344,11 @@ img, video {
   background-color: rgb(2 56 95 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#c0c0c0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 192 192 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -351,6 +360,14 @@ img, video {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-2xl {
@@ -366,6 +383,14 @@ img, video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
 }
 
 .text-white {

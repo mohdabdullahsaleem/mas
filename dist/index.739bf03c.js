@@ -594,43 +594,54 @@ if (data().email) email = data().email;
 (0, _mithrilDefault.default).mount(root, {
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
+            class: "flex flex-col"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: "page flex-1 ml-0 mt-0 grid place-content-center"
+                class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "mas grid place-content-center"
+                    class: "page flex-1 ml-0 mt-0 grid place-content-center"
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
+                        class: "mas grid place-content-center"
                     }, [
-                        (0, _mithrilDefault.default)("span", {
-                            class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
-                            onclick: ()=>{
-                                click = true;
-                            }
-                        }, click ? [
-                            (0, _mithrilDefault.default)("a", {
-                                href: `mailto:${email}`,
-                                class: "animate-pulse"
-                            }, `${email}`)
-                        ] : "@")
+                        (0, _mithrilDefault.default)("div", {
+                            class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
+                        }, [
+                            (0, _mithrilDefault.default)("span", {
+                                class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
+                                onclick: ()=>{
+                                    click = true;
+                                }
+                            }, click ? [
+                                (0, _mithrilDefault.default)("a", {
+                                    href: `mailto:${email}`,
+                                    class: "animate-pulse"
+                                }, `${email}`)
+                            ] : "@")
+                        ])
                     ])
+                ]),
+                (0, _mithrilDefault.default)("div", {
+                    class: "info flex flex-col p-4 lg:w-1/5 mt-3/4 lg:pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]"
+                }, [
+                    (0, _mithrilDefault.default)("h2", {
+                        class: "text-3xl leading-10"
+                    }, "Website design and development"),
+                    (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
+                    (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
+                    (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Node, html, css, sass, scss, handlebars, ejs, etc."),
+                    (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
+                    (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
+                    (0, _mithrilDefault.default)("p", " \u2022 CSS frameworks Tailwind & Bootstrap")
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "info flex flex-col p-4 lg:w-1/5 mt-3/4 lg:pt-12 lg:px-4 z-20 text-white bg-[#02385f]"
+                class: "footer grid place-content-center w-screen min-h-min bg-[#c0c0c0]"
             }, [
-                (0, _mithrilDefault.default)("h2", {
-                    class: "text-3xl"
-                }, "Website design and development"),
-                (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
-                (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Node, html, css, sass, scss, handlebars, ejs, etc."),
-                (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
-                (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
-                (0, _mithrilDefault.default)("p", " \u2022 CSS frameworks Tailwind & Bootstrap")
+                (0, _mithrilDefault.default)("span", {
+                    class: "p-4"
+                }, "mohdsaleem.uk \xa9 2021")
             ])
         ]);
     }
