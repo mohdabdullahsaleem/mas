@@ -2,7 +2,7 @@ import m from 'mithril'
 import '../assets/styles/base.scss'
 import './index.scss'
 
-root = document.body
+const root = document.body
 
 m.mount(root, {
     view: function () {

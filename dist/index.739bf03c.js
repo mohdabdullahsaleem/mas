@@ -580,7 +580,7 @@ var _mithril = require("mithril");
 var _mithrilDefault = parcelHelpers.interopDefault(_mithril);
 var _baseScss = require("../assets/styles/base.scss");
 var _indexScss = require("./index.scss");
-root = document.body;
+const root = document.body;
 (0, _mithrilDefault.default).mount(root, {
     view: function() {
         return (0, _mithrilDefault.default)("div", {
