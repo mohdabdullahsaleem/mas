@@ -82,39 +82,47 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-white bg-[#02385f] '
+                            class: 'info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-black bg-[#02385f] '
                         },
                         [
                             m(
-                                'h2',
-                                { class: 'text-3xl leading-10 pb-8' },
-                                'Website Design and Development'
-                            ),
-                            m(
-                                'p',
+                                'div',
+                                {
+                                    class: 'rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black bg-[#fff] '
+                                },
+                                [
+                                    m(
+                                        'h2',
+                                        { class: 'text-3xl leading-10 pb-8' },
+                                        'Website Design and Development'
+                                    ),
+                                    m(
+                                        'p',
 
-                                ' • 15+ years of experience'
-                            ),
-                            m('p', ' • full-stack'),
-                            m(
-                                'p',
+                                        ' • 15+ years of experience'
+                                    ),
+                                    m('p', ' • full-stack'),
+                                    m(
+                                        'p',
 
-                                ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
-                            ),
-                            m(
-                                'p',
+                                        ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                    ),
+                                    m(
+                                        'p',
 
-                                ' • proficient in JS frameworks including React, Vue and many others'
-                            ),
-                            m(
-                                'p',
+                                        ' • proficient in JS frameworks including React, Vue and many others'
+                                    ),
+                                    m(
+                                        'p',
 
-                                ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                            ),
-                            m(
-                                'p',
-                                { class: 'pb-4' },
-                                ' • CSS frameworks Tailwind & Bootstrap'
+                                        ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
+                                    ),
+                                    m(
+                                        'p',
+                                        { class: 'pb-4' },
+                                        ' • CSS frameworks Tailwind & Bootstrap'
+                                    )
+                                ]
                             )
                         ]
                     )

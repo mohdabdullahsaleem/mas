@@ -623,19 +623,23 @@ if (data().email) email = data().email;
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-white bg-[#02385f] "
+                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-black bg-[#02385f] "
                 }, [
-                    (0, _mithrilDefault.default)("h2", {
-                        class: "text-3xl leading-10 pb-8"
-                    }, "Website Design and Development"),
-                    (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
-                    (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                    (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
-                    (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
-                    (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
-                    (0, _mithrilDefault.default)("p", {
-                        class: "pb-4"
-                    }, " \u2022 CSS frameworks Tailwind & Bootstrap")
+                    (0, _mithrilDefault.default)("div", {
+                        class: "rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black bg-[#fff] "
+                    }, [
+                        (0, _mithrilDefault.default)("h2", {
+                            class: "text-3xl leading-10 pb-8"
+                        }, "Website Design and Development"),
+                        (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
+                        (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
+                        (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
+                        (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
+                        (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
+                        (0, _mithrilDefault.default)("p", {
+                            class: "pb-4"
+                        }, " \u2022 CSS frameworks Tailwind & Bootstrap")
+                    ])
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
