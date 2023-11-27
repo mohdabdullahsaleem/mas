@@ -88,7 +88,7 @@ m.mount(root, {
                             m(
                                 'h2',
                                 { class: 'text-3xl leading-10' },
-                                'Website design and development'
+                                'Website Design and Development'
                             ),
                             m(
                                 'p',
@@ -99,7 +99,7 @@ m.mount(root, {
                             m(
                                 'p',
 
-                                ' • experience with PHP, JavaScript, Node, html, css, sass, scss, handlebars, ejs, etc.'
+                                ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
                             ),
                             m(
                                 'p',

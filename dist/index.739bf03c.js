@@ -627,10 +627,10 @@ if (data().email) email = data().email;
                 }, [
                     (0, _mithrilDefault.default)("h2", {
                         class: "text-3xl leading-10"
-                    }, "Website design and development"),
+                    }, "Website Design and Development"),
                     (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                     (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                    (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Node, html, css, sass, scss, handlebars, ejs, etc."),
+                    (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
                     (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
                     (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
                     (0, _mithrilDefault.default)("p", " \u2022 CSS frameworks Tailwind & Bootstrap")
