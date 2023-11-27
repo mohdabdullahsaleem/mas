@@ -6,7 +6,7 @@
     "source": "src/index.html",
     "scripts": {
         "start": "parcel",
-        "build": "format && tailwind && parcel build",
+        "build": "parcel build",
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md}\"",
         "tailwind": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind.css"
     },
@@ -29,6 +29,7 @@
         "@parcel/packager-raw-url": "^2.10.3",
         "@parcel/transformer-sass": "^2.10.3",
         "@parcel/transformer-webmanifest": "^2.10.3",
+        "autoprefixer": "^10.4.16",
         "parcel": "^2.10.3",
         "postcss": "^8.4.31",
         "prettier": "^3.1.0",
