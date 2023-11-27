@@ -594,32 +594,49 @@ if (data().email) email = data().email;
 (0, _mithrilDefault.default).mount(root, {
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "page w-screen h-screen absolute ml-0 mt-0 grid place-content-center"
+            class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: "mas grid place-content-center"
+                class: "page flex-1 ml-0 mt-0 grid place-content-center"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
+                    class: "mas grid place-content-center"
                 }, [
-                    (0, _mithrilDefault.default)("span", {
-                        class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
-                        onclick: ()=>{
-                            click = true;
-                        }
-                    }, click ? [
-                        (0, _mithrilDefault.default)("a", {
-                            href: `mailto:${email}`,
-                            class: "animate-pulse"
-                        }, `${email}`)
-                    ] : "@")
+                    (0, _mithrilDefault.default)("div", {
+                        class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
+                    }, [
+                        (0, _mithrilDefault.default)("span", {
+                            class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
+                            onclick: ()=>{
+                                click = true;
+                            }
+                        }, click ? [
+                            (0, _mithrilDefault.default)("a", {
+                                href: `mailto:${email}`,
+                                class: "animate-pulse"
+                            }, `${email}`)
+                        ] : "@")
+                    ])
                 ])
+            ]),
+            (0, _mithrilDefault.default)("div", {
+                class: "info flex flex-col p-4 lg:w-1/5 mt-3/4 lg:pt-12 lg:px-4 z-20 text-white bg-[#02385f]"
+            }, [
+                (0, _mithrilDefault.default)("h2", {
+                    class: "text-3xl"
+                }, "Website design and development"),
+                (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
+                (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
+                (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Node, html, css, sass, scss, handlebars, ejs, etc."),
+                (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
+                (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
+                (0, _mithrilDefault.default)("p", " \u2022 CSS frameworks Tailwind & Bootstrap")
             ])
         ]);
     }
 });
 
-},{"mithril":"1zcoP","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","fs":"jhUEF","path":"loE3o"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -2552,7 +2569,7 @@ module.exports = function(attrs, extras) {
     return result;
 };
 
-},{"ea1ad0c0d427959":"elD1t"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
+},{"ea1ad0c0d427959":"elD1t"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2582,7 +2599,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"jhUEF":[function(require,module,exports) {
+},{}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"jhUEF":[function(require,module,exports) {
 "use strict";
 
 },{}],"loE3o":[function(require,module,exports) {
