@@ -1,32 +1,4 @@
-// rotate animation 360deg
-@keyframes rotate-animation-counter-clockwise {
-    0% {
-        transform: rotate3d(1, 1, 1, -360deg);
-    }
-    20% {
-        transform: rotate3d(1, 1, 1, -360deg);
-    }
-    40% {
-        transform: rotate3d(1, 1, 1, -240deg);
-    }
-    60% {
-        transform: rotate3d(1, 1, 1, -120deg);
-    }
-    80% {
-        transform: rotate3d(0);
-    }
-    100% {
-        transform: rotate3d(0);
-    }
-}
-
 .mas {
-    animation-name: rotate-animation-counter-clockwise;
-    animation-timing-function: ease-in-out;
-    animation-duration: 10s;
-    animation-delay: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     transform-origin: center;
     background: radial-gradient(
         ellipse at center,
