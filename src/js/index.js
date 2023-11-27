@@ -32,12 +32,14 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'page flex-1 ml-0 mt-0 grid place-content-center'
+                            class: 'page flex-1 ml-0 mt-0 flex justify-start'
                         },
                         [
                             m(
                                 'div',
-                                { class: 'mas grid place-content-center' },
+                                {
+                                    class: 'mas grid place-content-center p-4'
+                                },
                                 [
                                     m(
                                         'div',
@@ -80,7 +82,7 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'info flex flex-col p-4 lg:w-1/5 mt-3/4 lg:pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]'
+                            class: 'info pl-8 pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]'
                         },
                         [
                             m(

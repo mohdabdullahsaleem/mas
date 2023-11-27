@@ -335,6 +335,10 @@ img, video {
   place-content: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .rounded-lg {
   border-radius: .5rem;
 }
@@ -360,6 +364,14 @@ img, video {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
 }
 
 .text-center {
@@ -458,6 +470,10 @@ img, video {
     z-index: 10;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:h-screen {
     height: 100vh;
   }
@@ -476,6 +492,14 @@ img, video {
 
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:px-4 {
@@ -541,16 +565,6 @@ img, video {
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.page .mas .logo {
-  width: 40vw;
-  height: 40vw;
-}
-
-.page .mas .logo:hover {
-  width: 50vw;
-  height: 50vw;
 }
 
 @media (hover: hover) or (width >= 1024px) {

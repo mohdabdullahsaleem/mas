@@ -600,10 +600,10 @@ if (data().email) email = data().email;
                 class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "page flex-1 ml-0 mt-0 grid place-content-center"
+                    class: "page flex-1 ml-0 mt-0 flex justify-start"
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "mas grid place-content-center"
+                        class: "mas grid place-content-center p-4"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
@@ -623,7 +623,7 @@ if (data().email) email = data().email;
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "info flex flex-col p-4 lg:w-1/5 mt-3/4 lg:pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]"
+                    class: "info pl-8 pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]"
                 }, [
                     (0, _mithrilDefault.default)("h2", {
                         class: "text-3xl leading-10"
