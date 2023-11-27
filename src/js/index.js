@@ -66,7 +66,7 @@ m.mount(root, {
                                                               'a',
                                                               {
                                                                   href: `mailto:${email}`,
-                                                                  class: 'animate-pulse text-2xl lg:text-4xl'
+                                                                  class: 'animate-pulse grid place-content-center text-sm  sm:p-2 sm:text-md lg:text-4xl p-4'
                                                               },
                                                               `${email}`
                                                           )

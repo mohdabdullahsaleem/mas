@@ -363,6 +363,11 @@ img, video {
   line-height: 2.25rem;
 }
 
+.text-sm {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
 .leading-10 {
   line-height: 2.5rem;
 }
@@ -419,9 +424,18 @@ html, body {
 }
 
 @media (width >= 640px) {
+  .sm\:p-2 {
+    padding: .5rem;
+  }
+
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
   }
 }
 
