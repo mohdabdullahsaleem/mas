@@ -1,0 +1,62 @@
+// rotate animation 360deg
+@keyframes rotate-animation-counter-clockwise {
+    0% {
+        transform: rotate3d(1, 1, 1, -360deg);
+    }
+    20% {
+        transform: rotate3d(1, 1, 1, -360deg);
+    }
+    40% {
+        transform: rotate3d(1, 1, 1, -240deg);
+    }
+    60% {
+        transform: rotate3d(1, 1, 1, -120deg);
+    }
+    80% {
+        transform: rotate3d(0);
+    }
+    100% {
+        transform: rotate3d(0);
+    }
+}
+
+.mas {
+    animation-name: rotate-animation-counter-clockwise;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+    background: radial-gradient(
+        ellipse at center,
+        #a83333 18%,
+        #e3df69 52%,
+        #beeda2 77%
+    );
+    background-image: url('../assets/images/black-hex-web-dev.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.logo {
+    background-image: url('../assets/images/mas-logo.svg');
+}
+
+.logo:hover {
+    background-image: url('../assets/images/mas-logo-plain.svg');
+}
+
+@media (hover: hover) or (min-width: 1024px) {
+    .mas {
+        width: 50vh;
+        height: 50vh;
+    }
+}
+@media (hover: hover) or (min-width: 1024px) {
+    .mas {
+        width: 50vh;
+        height: 50vh;
+    }
+}
