@@ -626,7 +626,7 @@ if (data().email) email = data().email;
                     class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-20 leading-8 text-white bg-[#02385f]"
                 }, [
                     (0, _mithrilDefault.default)("h2", {
-                        class: "text-3xl leading-10"
+                        class: "text-3xl leading-10 pb-8"
                     }, "Website Design and Development"),
                     (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                     (0, _mithrilDefault.default)("p", " \u2022 full-stack"),

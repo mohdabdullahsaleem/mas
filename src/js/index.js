@@ -87,7 +87,7 @@ m.mount(root, {
                         [
                             m(
                                 'h2',
-                                { class: 'text-3xl leading-10' },
+                                { class: 'text-3xl leading-10 pb-8' },
                                 'Website Design and Development'
                             ),
                             m(
