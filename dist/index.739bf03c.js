@@ -600,7 +600,7 @@ if (data().email) email = data().email;
                 class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "page flex-1 ml-0 mt-0 hover:grid hover:place-content-center flex justify-start"
+                    class: "page flex-1 ml-0 mt-0  grid place-content-center lg:flex lg:justify-start"
                 }, [
                     (0, _mithrilDefault.default)("div", {
                         class: "mas grid place-content-center p-4 relative z-20"
@@ -616,7 +616,7 @@ if (data().email) email = data().email;
                             }, click ? [
                                 (0, _mithrilDefault.default)("a", {
                                     href: `mailto:${email}`,
-                                    class: "animate-pulse "
+                                    class: "animate-pulse text-2xl lg:text-4xl"
                                 }, `${email}`)
                             ] : "@")
                         ])

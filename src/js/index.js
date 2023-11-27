@@ -32,7 +32,7 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'page flex-1 ml-0 mt-0 hover:grid hover:place-content-center flex justify-start'
+                            class: 'page flex-1 ml-0 mt-0  grid place-content-center lg:flex lg:justify-start'
                         },
                         [
                             m(
@@ -66,7 +66,7 @@ m.mount(root, {
                                                               'a',
                                                               {
                                                                   href: `mailto:${email}`,
-                                                                  class: 'animate-pulse '
+                                                                  class: 'animate-pulse text-2xl lg:text-4xl'
                                                               },
                                                               `${email}`
                                                           )
