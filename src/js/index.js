@@ -113,7 +113,7 @@ m.mount(root, {
                             ),
                             m(
                                 'p',
-
+                                { class: 'pb-4' },
                                 ' • CSS frameworks Tailwind & Bootstrap'
                             )
                         ]

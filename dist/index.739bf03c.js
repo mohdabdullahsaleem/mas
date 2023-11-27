@@ -633,7 +633,9 @@ if (data().email) email = data().email;
                     (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
                     (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
                     (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
-                    (0, _mithrilDefault.default)("p", " \u2022 CSS frameworks Tailwind & Bootstrap")
+                    (0, _mithrilDefault.default)("p", {
+                        class: "pb-4"
+                    }, " \u2022 CSS frameworks Tailwind & Bootstrap")
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {

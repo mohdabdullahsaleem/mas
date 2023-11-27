@@ -353,6 +353,10 @@ img, video {
   padding-top: 3rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
