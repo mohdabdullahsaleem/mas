@@ -623,7 +623,7 @@ if (data().email) email = data().email;
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "info pl-8 pt-12 lg:px-4 z-20 leading-8 text-white bg-[#02385f]"
+                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-20 leading-8 text-white bg-[#02385f]"
                 }, [
                     (0, _mithrilDefault.default)("h2", {
                         class: "text-3xl leading-10"
