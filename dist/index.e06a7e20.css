@@ -435,7 +435,7 @@ img, video {
 
 .mas {
   transform-origin: center;
-  background: url("black-hex-web-dev.58043532.png") center / contain no-repeat;
+  background: url("black-hex.b2ae32fa.webp") center / contain no-repeat;
   animation-name: rotate-animation-counter-clockwise;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -451,8 +451,45 @@ img, video {
   background-image: url("mas-logo-plain.1d3e31b1.svg");
 }
 
+.page {
+  background-image: url("at-pc-bg.000e9ac6.webp");
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.page .mas {
+  width: 50vw;
+  height: 50vw;
+}
+
+.page .mas .logo {
+  width: 40vw;
+  height: 40vw;
+}
+
+.page .mas .logo:hover {
+  width: 50vw;
+  height: 50vw;
+}
+
 @media (hover: hover) or (width >= 1024px) {
-  .mas {
+  .page {
+    background-position: 100% 0;
+    background-size: contain;
+  }
+
+  .page .mas {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .page .mas .logo {
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .page .mas .logo:hover {
     width: 50vh;
     height: 50vh;
   }

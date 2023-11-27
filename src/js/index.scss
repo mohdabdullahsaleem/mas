@@ -34,7 +34,7 @@
         #e3df69 52%,
         #beeda2 77%
     );
-    background-image: url('../assets/images/black-hex-web-dev.png');
+    background-image: url('../assets/images/black-hex.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -48,15 +48,46 @@
     background-image: url('../assets/images/mas-logo-plain.svg');
 }
 
-@media (hover: hover) or (min-width: 1024px) {
+.page {
+    background-position: top right;
+    background-image: url('../assets/images/at-pc-bg.webp');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
     .mas {
-        width: 50vh;
-        height: 50vh;
+        width: 50vw;
+        height: 50vw;
+
+        .logo {
+            width: 40vw;
+            height: 40vw;
+        }
+
+        .logo:hover {
+            width: 50vw;
+            height: 50vw;
+        }
     }
 }
+
 @media (hover: hover) or (min-width: 1024px) {
-    .mas {
-        width: 50vh;
-        height: 50vh;
+    .page {
+        background-position: top right;
+        background-size: contain;
+
+        .mas {
+            width: 50vh;
+            height: 50vh;
+
+            .logo {
+                width: 40vh;
+                height: 40vh;
+            }
+
+            .logo:hover {
+                width: 50vh;
+                height: 50vh;
+            }
+        }
     }
 }
