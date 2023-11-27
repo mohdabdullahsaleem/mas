@@ -603,7 +603,7 @@ if (data().email) email = data().email;
                     class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
                 }, [
                     (0, _mithrilDefault.default)("span", {
-                        class: `${click ? "opacity-0 hover:opacity-100 text-white block text-2xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block text-2xl md:text-6xl"}`,
+                        class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
                         onclick: ()=>{
                             click = true;
                         }

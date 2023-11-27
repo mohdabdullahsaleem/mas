@@ -40,8 +40,8 @@ m.mount(root, {
                                 {
                                     class: `${
                                         click
-                                            ? 'opacity-0 hover:opacity-100 text-white block text-2xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg'
-                                            : 'opacity-0 hover:opacity-100 text-white block text-2xl md:text-6xl'
+                                            ? 'opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg'
+                                            : 'opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl'
                                     }`,
                                     onclick: () => {
                                         click = true
