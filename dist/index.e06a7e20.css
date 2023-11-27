@@ -528,7 +528,7 @@ html, body {
 
 .page {
   background-image: url("at-pc-bg.000e9ac6.webp");
-  background-position: 100% 100%;
+  background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 100%;
 }
