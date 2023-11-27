@@ -249,6 +249,10 @@ img, video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -259,6 +263,10 @@ img, video {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .ml-0 {
@@ -441,6 +449,10 @@ img, video {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
+.hover\:grid:hover {
+  display: grid;
+}
+
 .hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -449,6 +461,10 @@ img, video {
 
 .hover\:animate-none:hover {
   animation: none;
+}
+
+.hover\:place-content-center:hover {
+  place-content: center;
 }
 
 .hover\:opacity-100:hover {

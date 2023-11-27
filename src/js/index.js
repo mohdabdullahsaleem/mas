@@ -32,13 +32,13 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'page flex-1 ml-0 mt-0 flex justify-start'
+                            class: 'page flex-1 ml-0 mt-0 hover:grid hover:place-content-center flex justify-start'
                         },
                         [
                             m(
                                 'div',
                                 {
-                                    class: 'mas grid place-content-center p-4'
+                                    class: 'mas grid place-content-center p-4 relative z-20'
                                 },
                                 [
                                     m(
@@ -66,7 +66,7 @@ m.mount(root, {
                                                               'a',
                                                               {
                                                                   href: `mailto:${email}`,
-                                                                  class: 'animate-pulse'
+                                                                  class: 'animate-pulse '
                                                               },
                                                               `${email}`
                                                           )
@@ -82,7 +82,7 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'info pl-8 pt-12 lg:px-4 lg:w-1/4 z-20 leading-8 text-white bg-[#02385f]'
+                            class: 'info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-white bg-[#02385f] '
                         },
                         [
                             m(

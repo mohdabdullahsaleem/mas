@@ -600,10 +600,10 @@ if (data().email) email = data().email;
                 class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "page flex-1 ml-0 mt-0 flex justify-start"
+                    class: "page flex-1 ml-0 mt-0 hover:grid hover:place-content-center flex justify-start"
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "mas grid place-content-center p-4"
+                        class: "mas grid place-content-center p-4 relative z-20"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
@@ -616,14 +616,14 @@ if (data().email) email = data().email;
                             }, click ? [
                                 (0, _mithrilDefault.default)("a", {
                                     href: `mailto:${email}`,
-                                    class: "animate-pulse"
+                                    class: "animate-pulse "
                                 }, `${email}`)
                             ] : "@")
                         ])
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-20 leading-8 text-white bg-[#02385f]"
+                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-white bg-[#02385f] "
                 }, [
                     (0, _mithrilDefault.default)("h2", {
                         class: "text-3xl leading-10 pb-8"
