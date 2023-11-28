@@ -625,7 +625,7 @@ if (data().email) email = data().email;
                 }, "Lights Off")
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "flex flex-col p-10 w-screen h-auto"
+                class: "flex flex-col p-10 pb-0 w-screen h-auto"
             }, [
                 (0, _mithrilDefault.default)("div", {
                     class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"

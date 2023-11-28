@@ -74,7 +74,7 @@ m.mount(root, {
                     ]
                 ),
 
-                m('div', { class: 'flex flex-col p-10 w-screen h-auto' }, [
+                m('div', { class: 'flex flex-col p-10 pb-0 w-screen h-auto' }, [
                     m(
                         'div',
                         {
