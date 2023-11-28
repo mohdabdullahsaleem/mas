@@ -649,7 +649,7 @@ if (data().email) email = data().email;
                             }, [
                                 (0, _mithrilDefault.default)("h2", {
                                     class: "text-3xl leading-10 pb-4"
-                                }, "Website Design and Development"),
+                                }, `Mohd Saleem's Web Development`),
                                 (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                                 (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
                                 (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),

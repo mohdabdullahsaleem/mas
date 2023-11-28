@@ -116,7 +116,7 @@ m.mount(root, {
                                                         {
                                                             class: 'text-3xl leading-10 pb-4'
                                                         },
-                                                        'Website Design and Development'
+                                                        `Mohd Saleem's Web Development`
                                                     ),
                                                     m(
                                                         'p',
