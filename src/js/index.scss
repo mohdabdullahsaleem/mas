@@ -1,8 +1,4 @@
-body.lights-off {
-    filter: invert(1);
-}
-
-body.lights-off .logo {
+body.lights-off:not(.logo) {
     filter: invert(1);
 }
 

@@ -849,7 +849,7 @@ html, body {
   }
 }
 
-body.lights-off, body.lights-off .logo {
+body.lights-off:not(.logo) {
   filter: invert();
 }
 
