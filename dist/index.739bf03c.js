@@ -660,11 +660,11 @@ if (data().email) email = data().email;
                                     class: "pb-4"
                                 }, " \u2022 CSS frameworks Tailwind & Bootstrap"),
                                 (0, _mithrilDefault.default)("span", {
-                                    class: "border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center"
+                                    class: `relative w-100 ${click ? "m-0" : ""} border-white bg-black text-white block p-4 rounded-full h-16 m-4 grid place-content-center text-sm md:text-xl text-center`
                                 }, [
                                     (0, _mithrilDefault.default)("a", {
                                         href: `mailto:${email}`,
-                                        class: "animate-pulse",
+                                        class: "animate-pulse px-4",
                                         onclick: ()=>{
                                             return click = !click, setTimeout(()=>click = !click, 5000);
                                         }
