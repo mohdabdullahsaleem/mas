@@ -101,69 +101,78 @@ m.mount(root, {
                                     m(
                                         'div',
                                         {
-                                            class: 'rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black'
+                                            class: 'rounded-lg'
                                         },
                                         [
                                             m(
-                                                'h2',
+                                                'div',
                                                 {
-                                                    class: 'text-3xl leading-10 pb-4'
-                                                },
-                                                'Website Design and Development'
-                                            ),
-                                            m(
-                                                'p',
-
-                                                ' • 15+ years of experience'
-                                            ),
-                                            m('p', ' • full-stack'),
-                                            m(
-                                                'p',
-
-                                                ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
-                                            ),
-                                            m(
-                                                'p',
-
-                                                ' • proficient in JS frameworks including React, Vue and many others'
-                                            ),
-                                            m(
-                                                'p',
-
-                                                ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                                            ),
-                                            m(
-                                                'p',
-                                                { class: 'pb-4' },
-                                                ' • CSS frameworks Tailwind & Bootstrap'
-                                            ),
-                                            m(
-                                                'span',
-                                                {
-                                                    class: 'border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center'
+                                                    class: 'rounded-md p-4 leading-8 text-black'
                                                 },
                                                 [
                                                     m(
-                                                        'a',
+                                                        'h2',
                                                         {
-                                                            href: `mailto:${email}`,
-                                                            class: 'animate-pulse',
-                                                            onclick: () => {
-                                                                return (
-                                                                    (click =
-                                                                        !click),
-                                                                    setTimeout(
-                                                                        () =>
-                                                                            (click =
-                                                                                !click),
-                                                                        5000
-                                                                    )
-                                                                )
-                                                            }
+                                                            class: 'text-3xl leading-10 pb-4'
                                                         },
-                                                        click
-                                                            ? email
-                                                            : 'Click to Reveal Email'
+                                                        'Website Design and Development'
+                                                    ),
+                                                    m(
+                                                        'p',
+
+                                                        ' • 15+ years of experience'
+                                                    ),
+                                                    m('p', ' • full-stack'),
+                                                    m(
+                                                        'p',
+
+                                                        ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                                    ),
+                                                    m(
+                                                        'p',
+
+                                                        ' • proficient in JS frameworks including React, Vue and many others'
+                                                    ),
+                                                    m(
+                                                        'p',
+
+                                                        ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
+                                                    ),
+                                                    m(
+                                                        'p',
+                                                        { class: 'pb-4' },
+                                                        ' • CSS frameworks Tailwind & Bootstrap'
+                                                    ),
+                                                    m(
+                                                        'span',
+                                                        {
+                                                            class: 'border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center'
+                                                        },
+                                                        [
+                                                            m(
+                                                                'a',
+                                                                {
+                                                                    href: `mailto:${email}`,
+                                                                    class: 'animate-pulse',
+                                                                    onclick:
+                                                                        () => {
+                                                                            return (
+                                                                                (click =
+                                                                                    !click),
+                                                                                setTimeout(
+                                                                                    () =>
+                                                                                        (click =
+                                                                                            !click),
+                                                                                    5000
+                                                                                )
+                                                                            )
+                                                                        }
+                                                                },
+                                                                click
+                                                                    ? email
+                                                                    : 'Click to Reveal Email'
+                                                            )
+                                                        ]
                                                     )
                                                 ]
                                             )

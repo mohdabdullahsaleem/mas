@@ -20,6 +20,16 @@ body.invert .logo {
     background-position: center;
 }
 
+.info > div {
+    padding: 2px;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.3));
+    box-shadow: 4px 4px 5px;
+}
+
+.info > div > div {
+    background-color: #fff;
+}
+
 @media (hover: hover) or (min-width: 1024px) {
     .page {
         background-position: top right;

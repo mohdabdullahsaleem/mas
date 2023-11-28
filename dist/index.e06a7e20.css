@@ -477,6 +477,10 @@ img, video {
   border-radius: .5rem;
 }
 
+.rounded-md {
+  border-radius: .375rem;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -865,6 +869,16 @@ body.invert .logo {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.info > div {
+  background: linear-gradient(#000, #0000004d);
+  padding: 2px;
+  box-shadow: 4px 4px 5px;
+}
+
+.info > div > div {
+  background-color: #fff;
 }
 
 @media (hover: hover) or (width >= 1024px) {
