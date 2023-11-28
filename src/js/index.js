@@ -38,9 +38,10 @@ m.mount(root, {
                     },
                     [
                         m(
-                            'div',
+                            'a',
                             {
-                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black'
+                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black',
+                                href: '/'
                             },
 
                             'Code & Creativity Unleashed'

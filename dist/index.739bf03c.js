@@ -602,8 +602,9 @@ if (data().email) email = data().email;
             (0, _mithrilDefault.default)("div", {
                 class: "w-screen h-24 bg-[#f5f5f5] sm:block flex flex-row"
             }, [
-                (0, _mithrilDefault.default)("div", {
-                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black"
+                (0, _mithrilDefault.default)("a", {
+                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black",
+                    href: "/"
                 }, "Code & Creativity Unleashed"),
                 (0, _mithrilDefault.default)("span", {
                     class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:pl-5  lg:text-6xl font-bold text-black"
