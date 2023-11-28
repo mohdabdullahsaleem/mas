@@ -163,7 +163,7 @@ m.mount(root, {
                                                         },
                                                         click
                                                             ? email
-                                                            : 'Click to reveal email'
+                                                            : 'Click to Reveal Email'
                                                     )
                                                 ]
                                             )

@@ -663,7 +663,7 @@ if (data().email) email = data().email;
                                     onclick: ()=>{
                                         return click = !click, setTimeout(()=>click = !click, 5000);
                                     }
-                                }, click ? email : "Click to reveal email")
+                                }, click ? email : "Click to Reveal Email")
                             ])
                         ])
                     ])
