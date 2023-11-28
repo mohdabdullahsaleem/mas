@@ -653,7 +653,18 @@ if (data().email) email = data().email;
                             (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
                             (0, _mithrilDefault.default)("p", {
                                 class: "pb-4"
-                            }, " \u2022 CSS frameworks Tailwind & Bootstrap")
+                            }, " \u2022 CSS frameworks Tailwind & Bootstrap"),
+                            (0, _mithrilDefault.default)("span", {
+                                class: "border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center"
+                            }, [
+                                (0, _mithrilDefault.default)("a", {
+                                    href: `mailto:${email}`,
+                                    class: "animate-pulse",
+                                    onclick: ()=>{
+                                        return click = !click, setTimeout(()=>click = !click, 5000);
+                                    }
+                                }, click ? email : "Click to reveal email")
+                            ])
                         ])
                     ])
                 ]),
@@ -662,19 +673,7 @@ if (data().email) email = data().email;
                 }, [
                     (0, _mithrilDefault.default)("div", {
                         class: "w-5/6 mx-auto cursor-pointer grid place-content-center  "
-                    }, [
-                        (0, _mithrilDefault.default)("span", {
-                            class: "border-white bg-black text-white block float-right p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center"
-                        }, [
-                            (0, _mithrilDefault.default)("a", {
-                                href: `mailto:${email}`,
-                                class: "animate-pulse",
-                                onclick: ()=>{
-                                    return click = !click, setTimeout(()=>click = !click, 5000);
-                                }
-                            }, click ? email : "Click to reveal email")
-                        ])
-                    ])
+                    }, [])
                 ]),
                 (0, _mithrilDefault.default)("div", {
                     class: "footer grid place-content-center min-h-min"
