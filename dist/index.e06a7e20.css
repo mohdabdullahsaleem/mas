@@ -812,6 +812,10 @@ html, body {
 }
 
 @media (width >= 1280px) {
+  .xl\:grid {
+    display: grid;
+  }
+
   .xl\:w-1\/2 {
     width: 50%;
   }
@@ -826,6 +830,14 @@ html, body {
 
   .xl\:w-3\/5 {
     width: 60%;
+  }
+
+  .xl\:flex-1 {
+    flex: 1;
+  }
+
+  .xl\:place-content-center {
+    place-content: center;
   }
 }
 

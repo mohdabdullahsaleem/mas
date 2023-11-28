@@ -628,7 +628,7 @@ if (data().email) email = data().email;
                 class: "flex flex-col p-10 w-screen h-auto"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "lg:flex lg:flex-row  lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"
+                    class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"
                 }, [
                     (0, _mithrilDefault.default)("div", {
                         class: ""
@@ -638,7 +638,7 @@ if (data().email) email = data().email;
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
-                        class: "info lg:px-4 lg:w-2/5 xl:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
+                        class: "info xl:grid xl:place-content-center lg:px-4 lg:w-2/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black"
