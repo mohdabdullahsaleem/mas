@@ -58,12 +58,16 @@ m.mount(root, {
                                 onclick: function () {
                                     lightsOff = !lightsOff
                                     if (lightsOff) {
-                                        document.body.classList.add('invert')
+                                        document.body.classList.add(
+                                            'lights-off'
+                                        )
                                         document.getElementById(
                                             'lightsOff'
                                         ).innerHTML = 'Lights On'
                                     } else {
-                                        document.body.classList.remove('invert')
+                                        document.body.classList.remove(
+                                            'lights-off'
+                                        )
                                         document.getElementById(
                                             'lightsOff'
                                         ).innerHTML = 'Lights Off'
@@ -75,137 +79,150 @@ m.mount(root, {
                     ]
                 ),
 
-                m('div', { class: 'flex flex-col p-10 pb-0 w-screen h-auto' }, [
-                    m(
-                        'div',
-                        {
-                            class: 'lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly'
-                        },
-                        [
-                            m(
-                                'div',
-                                {
-                                    class: ''
-                                },
-                                [
-                                    m('img', {
-                                        src: atPC
-                                    })
-                                ]
-                            ),
-                            m(
-                                'div',
-                                {
-                                    class: 'info xl:grid xl:place-content-center lg:px-4 lg:w-2/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
-                                },
-                                [
-                                    m(
-                                        'div',
-                                        {
-                                            class: 'rounded-lg'
-                                        },
-                                        [
-                                            m(
-                                                'div',
-                                                {
-                                                    class: 'rounded-md p-4 leading-8 text-black'
-                                                },
-                                                [
-                                                    m(
-                                                        'h2',
-                                                        {
-                                                            class: 'text-3xl leading-10 pb-4'
-                                                        },
-                                                        `Mohd Saleem's Web Development`
-                                                    ),
-                                                    m(
-                                                        'p',
+                m(
+                    'div',
+                    {
+                        class: 'flex flex-col p-10 pb-0 w-screen h-auto',
+                        id: 'main'
+                    },
+                    [
+                        m(
+                            'div',
+                            {
+                                class: 'lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly'
+                            },
+                            [
+                                m(
+                                    'div',
+                                    {
+                                        class: ''
+                                    },
+                                    [
+                                        m('img', {
+                                            src: atPC
+                                        })
+                                    ]
+                                ),
+                                m(
+                                    'div',
+                                    {
+                                        class: 'info xl:grid xl:place-content-center lg:px-4 lg:w-2/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
+                                    },
+                                    [
+                                        m(
+                                            'div',
+                                            {
+                                                class: 'rounded-lg'
+                                            },
+                                            [
+                                                m(
+                                                    'div',
+                                                    {
+                                                        class: 'rounded-md p-4 leading-8 text-black'
+                                                    },
+                                                    [
+                                                        m(
+                                                            'h2',
+                                                            {
+                                                                class: 'text-3xl leading-10 pb-4'
+                                                            },
+                                                            `Mohd Saleem's Web Development`
+                                                        ),
+                                                        m(
+                                                            'p',
 
-                                                        ' • 15+ years of experience'
-                                                    ),
-                                                    m('p', ' • full-stack'),
-                                                    m(
-                                                        'p',
+                                                            ' • 15+ years of experience'
+                                                        ),
+                                                        m('p', ' • full-stack'),
+                                                        m(
+                                                            'p',
 
-                                                        ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
-                                                    ),
-                                                    m(
-                                                        'p',
+                                                            ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                                        ),
+                                                        m(
+                                                            'p',
 
-                                                        ' • proficient in JS frameworks including React, Vue and many others'
-                                                    ),
-                                                    m(
-                                                        'p',
+                                                            ' • proficient in JS frameworks including React, Vue and many others'
+                                                        ),
+                                                        m(
+                                                            'p',
 
-                                                        ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                                                    ),
-                                                    m(
-                                                        'p',
-                                                        { class: 'pb-4' },
-                                                        ' • CSS frameworks Tailwind & Bootstrap'
-                                                    ),
-                                                    m(
-                                                        'span',
-                                                        {
-                                                            class: 'border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center'
-                                                        },
-                                                        [
-                                                            m(
-                                                                'a',
-                                                                {
-                                                                    href: `mailto:${email}`,
-                                                                    class: 'animate-pulse',
-                                                                    onclick:
-                                                                        () => {
-                                                                            return (
-                                                                                (click =
-                                                                                    !click),
-                                                                                setTimeout(
-                                                                                    () =>
-                                                                                        (click =
-                                                                                            !click),
-                                                                                    5000
+                                                            ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
+                                                        ),
+                                                        m(
+                                                            'p',
+                                                            { class: 'pb-4' },
+                                                            ' • CSS frameworks Tailwind & Bootstrap'
+                                                        ),
+                                                        m(
+                                                            'span',
+                                                            {
+                                                                class: 'border-white bg-black text-white block p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center'
+                                                            },
+                                                            [
+                                                                m(
+                                                                    'a',
+                                                                    {
+                                                                        href: `mailto:${email}`,
+                                                                        class: 'animate-pulse',
+                                                                        onclick:
+                                                                            () => {
+                                                                                return (
+                                                                                    (click =
+                                                                                        !click),
+                                                                                    setTimeout(
+                                                                                        () =>
+                                                                                            (click =
+                                                                                                !click),
+                                                                                        5000
+                                                                                    )
                                                                                 )
-                                                                            )
-                                                                        }
-                                                                },
-                                                                click
-                                                                    ? email
-                                                                    : 'Click to Reveal Email'
-                                                            )
-                                                        ]
-                                                    )
-                                                ]
-                                            )
-                                        ]
-                                    )
-                                ]
-                            )
-                        ]
-                    ),
-                    m(
-                        'div',
-                        {
-                            class: ''
-                        },
-                        [
-                            m(
-                                'div',
-                                {
-                                    class: 'w-5/6 mx-auto cursor-pointer grid place-content-center  '
-                                },
-                                []
-                            )
-                        ]
-                    ),
-                    m(
-                        'div',
-                        {
-                            class: 'footer grid place-content-center min-h-min'
-                        },
-                        [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
-                    )
-                ])
+                                                                            }
+                                                                    },
+                                                                    click
+                                                                        ? email
+                                                                        : 'Click to Reveal Email'
+                                                                )
+                                                            ]
+                                                        )
+                                                    ]
+                                                )
+                                            ]
+                                        )
+                                    ]
+                                )
+                            ]
+                        ),
+                        m(
+                            'div',
+                            {
+                                class: ''
+                            },
+                            [
+                                m(
+                                    'div',
+                                    {
+                                        class: 'w-5/6 mx-auto cursor-pointer grid place-content-center  '
+                                    },
+                                    []
+                                )
+                            ]
+                        ),
+                        m(
+                            'div',
+                            {
+                                class: 'footer grid place-content-center min-h-min'
+                            },
+                            [
+                                m(
+                                    'span',
+                                    { class: 'p-4' },
+                                    'mohdsaleem.uk © 2021'
+                                )
+                            ]
+                        )
+                    ]
+                )
             ]
         )
     }

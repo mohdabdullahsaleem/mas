@@ -1,23 +1,13 @@
-.mas {
-    transform-origin: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+body.lights-off {
+    filter: invert(1);
 }
 
-body.invert .logo {
-    filter: grayscale(100%) brightness(1);
+body.lights-off .logo {
+    filter: invert(1);
 }
 
 .logo {
     background-image: url('../assets/images/mas-logo.svg');
-}
-
-.cursor {
-    background-image: url('../assets/images/cursor.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
 
 .info > div {

@@ -616,17 +616,18 @@ if (data().email) email = data().email;
                     onclick: function() {
                         lightsOff = !lightsOff;
                         if (lightsOff) {
-                            document.body.classList.add("invert");
+                            document.body.classList.add("lights-off");
                             document.getElementById("lightsOff").innerHTML = "Lights On";
                         } else {
-                            document.body.classList.remove("invert");
+                            document.body.classList.remove("lights-off");
                             document.getElementById("lightsOff").innerHTML = "Lights Off";
                         }
                     }
                 }, "Lights Off")
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "flex flex-col p-10 pb-0 w-screen h-auto"
+                class: "flex flex-col p-10 pb-0 w-screen h-auto",
+                id: "main"
             }, [
                 (0, _mithrilDefault.default)("div", {
                     class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"

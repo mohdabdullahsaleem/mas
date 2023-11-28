@@ -849,26 +849,12 @@ html, body {
   }
 }
 
-.mas {
-  transform-origin: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-body.invert .logo {
-  filter: grayscale() brightness();
+body.lights-off, body.lights-off .logo {
+  filter: invert();
 }
 
 .logo {
   background-image: url("mas-logo.bfa20ad0.svg");
-}
-
-.cursor {
-  background-image: url("cursor.9bf59f91.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .info > div {
