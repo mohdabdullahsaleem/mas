@@ -620,10 +620,10 @@ if (data().email) email = data().email;
                             document.getElementById("lightsOff").innerHTML = "Lights On";
                         } else {
                             document.body.classList.remove("lights-off");
-                            document.getElementById("lightsOff").innerHTML = "Lights Off";
+                            document.getElementById("lightsOff").innerHTML = "Lights off!";
                         }
                     }
-                }, "Lights Off")
+                }, "Lights off!")
             ]),
             (0, _mithrilDefault.default)("div", {
                 class: "flex flex-col p-10 pb-0 w-screen h-auto",
@@ -653,8 +653,8 @@ if (data().email) email = data().email;
                                 }, `Mohd Saleem's Web Development`),
                                 (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                                 (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                                (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
-                                (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
+                                (0, _mithrilDefault.default)("p", " \u2022 Experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
+                                (0, _mithrilDefault.default)("p", " \u2022 Proficient in JS frameworks including React, Vue and many others"),
                                 (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
                                 (0, _mithrilDefault.default)("p", {
                                     class: "pb-4"

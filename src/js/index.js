@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 import atPC from '../assets/images/at-pc.webp'
+
 import '../assets/styles/base.scss'
 import './index.scss'
 
@@ -70,11 +71,11 @@ m.mount(root, {
                                         )
                                         document.getElementById(
                                             'lightsOff'
-                                        ).innerHTML = 'Lights Off'
+                                        ).innerHTML = 'Lights off!'
                                     }
                                 }
                             },
-                            'Lights Off'
+                            'Lights off!'
                         )
                     ]
                 ),
@@ -137,12 +138,12 @@ m.mount(root, {
                                                         m(
                                                             'p',
 
-                                                            ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                                            ' • Experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
                                                         ),
                                                         m(
                                                             'p',
 
-                                                            ' • proficient in JS frameworks including React, Vue and many others'
+                                                            ' • Proficient in JS frameworks including React, Vue and many others'
                                                         ),
                                                         m(
                                                             'p',
