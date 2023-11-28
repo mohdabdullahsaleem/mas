@@ -2,6 +2,7 @@ import m from 'mithril'
 import fs from 'fs'
 import path from 'path'
 
+import atPC from '../assets/images/at-pc.webp'
 import '../assets/styles/base.scss'
 import './index.scss'
 
@@ -9,6 +10,8 @@ const root = document.body
 
 let click = false
 let email = '@'
+
+let lightsOff = false
 
 const data = () => {
     return JSON.parse(
@@ -22,56 +25,117 @@ if (data().email) {
 
 m.mount(root, {
     view: function () {
-        return m('div', { class: 'flex flex-col' }, [
-            m(
-                'div',
-                {
-                    class: 'flex flex-col lg:flex-row-reverse w-screen h-screen'
-                },
-                [
+        return m(
+            'div',
+            {
+                class: 'bg-white'
+            },
+            [
+                m(
+                    'div',
+                    {
+                        class: 'w-screen h-24 bg-[#f5f5f5] sm:block flex flex-row'
+                    },
+                    [
+                        m(
+                            'div',
+                            {
+                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black'
+                            },
+
+                            'Code & Creativity Unleashed'
+                        ),
+                        m('span', {
+                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:pl-5  lg:text-6xl font-bold text-black'
+                        }),
+                        m(
+                            'button',
+                            {
+                                class: 'pointer border-white bg-black block text-white block my-4 mr-8 md:mx-4 p-4 rounded-full h-16 w-auto text-xl absolute top-0 right-0',
+                                id: 'lightsOff',
+                                type: 'button',
+                                onclick: function () {
+                                    lightsOff = !lightsOff
+                                    if (lightsOff) {
+                                        document.body.classList.add('invert')
+                                        document.getElementById(
+                                            'lightsOff'
+                                        ).innerHTML = 'Lights On'
+                                    } else {
+                                        document.body.classList.remove('invert')
+                                        document.getElementById(
+                                            'lightsOff'
+                                        ).innerHTML = 'Lights Off'
+                                    }
+                                }
+                            },
+                            'Lights Off'
+                        )
+                    ]
+                ),
+
+                m('div', { class: 'flex flex-col p-10 w-screen h-auto' }, [
                     m(
                         'div',
                         {
-                            class: 'page flex-1 ml-0 mt-0  grid place-content-center lg:flex lg:justify-start'
+                            class: 'lg:flex lg:flex-row  lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly'
                         },
                         [
                             m(
                                 'div',
                                 {
-                                    class: 'mas grid place-content-center p-4 relative z-20'
+                                    class: ''
+                                },
+                                [
+                                    m('img', {
+                                        src: atPC
+                                    })
+                                ]
+                            ),
+                            m(
+                                'div',
+                                {
+                                    class: 'info lg:px-4 lg:w-2/5 xl:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
                                 },
                                 [
                                     m(
                                         'div',
                                         {
-                                            class: 'logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center'
+                                            class: 'rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black'
                                         },
                                         [
                                             m(
-                                                'span',
+                                                'h2',
                                                 {
-                                                    class: `${
-                                                        click
-                                                            ? 'opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg'
-                                                            : 'opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl'
-                                                    }`,
-                                                    onclick: () => {
-                                                        click = true
-                                                    }
+                                                    class: 'text-3xl leading-10 pb-4'
                                                 },
+                                                'Website Design and Development'
+                                            ),
+                                            m(
+                                                'p',
 
-                                                click
-                                                    ? [
-                                                          m(
-                                                              'a',
-                                                              {
-                                                                  href: `mailto:${email}`,
-                                                                  class: 'animate-pulse grid place-content-center text-sm  sm:p-2 sm:text-md lg:text-4xl p-4'
-                                                              },
-                                                              `${email}`
-                                                          )
-                                                      ]
-                                                    : '@'
+                                                ' • 15+ years of experience'
+                                            ),
+                                            m('p', ' • full-stack'),
+                                            m(
+                                                'p',
+
+                                                ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                            ),
+                                            m(
+                                                'p',
+
+                                                ' • proficient in JS frameworks including React, Vue and many others'
+                                            ),
+                                            m(
+                                                'p',
+
+                                                ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
+                                            ),
+                                            m(
+                                                'p',
+                                                { class: 'pb-4' },
+                                                ' • CSS frameworks Tailwind & Bootstrap'
                                             )
                                         ]
                                     )
@@ -82,59 +146,57 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: 'info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-black bg-[#02385f] '
+                            class: ''
                         },
                         [
                             m(
                                 'div',
                                 {
-                                    class: 'rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black bg-[#fff] '
+                                    class: 'w-5/6 mx-auto cursor-pointer grid place-content-center  '
                                 },
                                 [
                                     m(
-                                        'h2',
-                                        { class: 'text-3xl leading-10 pb-8' },
-                                        'Website Design and Development'
-                                    ),
-                                    m(
-                                        'p',
-
-                                        ' • 15+ years of experience'
-                                    ),
-                                    m('p', ' • full-stack'),
-                                    m(
-                                        'p',
-
-                                        ' • experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
-                                    ),
-                                    m(
-                                        'p',
-
-                                        ' • proficient in JS frameworks including React, Vue and many others'
-                                    ),
-                                    m(
-                                        'p',
-
-                                        ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                                    ),
-                                    m(
-                                        'p',
-                                        { class: 'pb-4' },
-                                        ' • CSS frameworks Tailwind & Bootstrap'
+                                        'span',
+                                        {
+                                            class: 'border-white bg-black text-white block float-right p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center'
+                                        },
+                                        [
+                                            m(
+                                                'a',
+                                                {
+                                                    href: `mailto:${email}`,
+                                                    class: 'animate-pulse',
+                                                    onclick: () => {
+                                                        return (
+                                                            (click = !click),
+                                                            setTimeout(
+                                                                () =>
+                                                                    (click =
+                                                                        !click),
+                                                                5000
+                                                            )
+                                                        )
+                                                    }
+                                                },
+                                                click
+                                                    ? email
+                                                    : 'Click to reveal email'
+                                            )
+                                        ]
                                     )
                                 ]
                             )
                         ]
+                    ),
+                    m(
+                        'div',
+                        {
+                            class: 'footer grid place-content-center min-h-min'
+                        },
+                        [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
                     )
-                ]
-            ),
-            m(
-                'div',
-                {
-                    class: 'footer grid place-content-center w-screen min-h-min bg-[#c0c0c0]'
-                },
-                [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
-            )
-        ])
+                ])
+            ]
+        )
     }
 })

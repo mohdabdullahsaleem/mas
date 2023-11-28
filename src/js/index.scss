@@ -1,54 +1,27 @@
 .mas {
     transform-origin: center;
-    background: radial-gradient(
-        ellipse at center,
-        #a83333 18%,
-        #e3df69 52%,
-        #beeda2 77%
-    );
-    background-image: url('../assets/images/black-hex.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+body.invert .logo {
+    filter: grayscale(100%) brightness(1);
 }
 
 .logo {
     background-image: url('../assets/images/mas-logo.svg');
 }
 
-.logo:hover {
-    background-image: url('../assets/images/mas-logo-plain.svg');
-}
-
-.info {
-    background-color: #9e5a5a;
-}
-
-.page {
-    background-position: top right;
-    background-image: url('../assets/images/at-pc-bg.webp');
+.cursor {
+    background-image: url('../assets/images/cursor.svg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: contain;
+    background-position: center;
 }
 
 @media (hover: hover) or (min-width: 1024px) {
-    .info {
-        background-color: #9e5a5a;
-    }
     .page {
         background-position: top right;
-        background-size: contain;
-
-        .mas {
-            .logo {
-                width: 40vh;
-                height: 40vh;
-            }
-
-            .logo:hover {
-                width: 50vh;
-                height: 50vh;
-            }
-        }
     }
 }

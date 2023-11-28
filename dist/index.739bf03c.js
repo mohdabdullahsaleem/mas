@@ -582,11 +582,14 @@ var _fs = require("fs");
 var _fsDefault = parcelHelpers.interopDefault(_fs);
 var _path = require("path");
 var _pathDefault = parcelHelpers.interopDefault(_path);
+var _atPcWebp = require("../assets/images/at-pc.webp");
+var _atPcWebpDefault = parcelHelpers.interopDefault(_atPcWebp);
 var _baseScss = require("../assets/styles/base.scss");
 var _indexScss = require("./index.scss");
 const root = document.body;
 let click = false;
 let email = "@";
+let lightsOff = false;
 const data = ()=>{
     return JSON.parse('{\n    "email": "contact@mohdsaleem.uk"\n}\n');
 };
@@ -594,66 +597,98 @@ if (data().email) email = data().email;
 (0, _mithrilDefault.default).mount(root, {
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "flex flex-col"
+            class: "bg-white"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: "flex flex-col lg:flex-row-reverse w-screen h-screen"
+                class: "w-screen h-24 bg-[#f5f5f5] sm:block flex flex-row"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "page flex-1 ml-0 mt-0  grid place-content-center lg:flex lg:justify-start"
+                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black"
+                }, "Code & Creativity Unleashed"),
+                (0, _mithrilDefault.default)("span", {
+                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:pl-5  lg:text-6xl font-bold text-black"
+                }),
+                (0, _mithrilDefault.default)("button", {
+                    class: "pointer border-white bg-black block text-white block my-4 mr-8 md:mx-4 p-4 rounded-full h-16 w-auto text-xl absolute top-0 right-0",
+                    id: "lightsOff",
+                    type: "button",
+                    onclick: function() {
+                        lightsOff = !lightsOff;
+                        if (lightsOff) {
+                            document.body.classList.add("invert");
+                            document.getElementById("lightsOff").innerHTML = "Lights On";
+                        } else {
+                            document.body.classList.remove("invert");
+                            document.getElementById("lightsOff").innerHTML = "Lights Off";
+                        }
+                    }
+                }, "Lights Off")
+            ]),
+            (0, _mithrilDefault.default)("div", {
+                class: "flex flex-col p-10 w-screen h-auto"
+            }, [
+                (0, _mithrilDefault.default)("div", {
+                    class: "lg:flex lg:flex-row  lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "mas grid place-content-center p-4 relative z-20"
+                        class: ""
+                    }, [
+                        (0, _mithrilDefault.default)("img", {
+                            src: (0, _atPcWebpDefault.default)
+                        })
+                    ]),
+                    (0, _mithrilDefault.default)("div", {
+                        class: "info lg:px-4 lg:w-2/5 xl:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
                     }, [
                         (0, _mithrilDefault.default)("div", {
-                            class: "logo w-32 h-32 cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all duration-300 ease-in-out grid place-content-center"
+                            class: "rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black"
                         }, [
-                            (0, _mithrilDefault.default)("span", {
-                                class: `${click ? "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl transform transition-all duration-300 ease-in-out bg-[#02385f] underline p-4 rounded-lg" : "opacity-0 hover:opacity-100 text-white block sm:text-xl md:text-6xl"}`,
-                                onclick: ()=>{
-                                    click = true;
-                                }
-                            }, click ? [
-                                (0, _mithrilDefault.default)("a", {
-                                    href: `mailto:${email}`,
-                                    class: "animate-pulse grid place-content-center text-sm  sm:p-2 sm:text-md lg:text-4xl p-4"
-                                }, `${email}`)
-                            ] : "@")
+                            (0, _mithrilDefault.default)("h2", {
+                                class: "text-3xl leading-10 pb-4"
+                            }, "Website Design and Development"),
+                            (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
+                            (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
+                            (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
+                            (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
+                            (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
+                            (0, _mithrilDefault.default)("p", {
+                                class: "pb-4"
+                            }, " \u2022 CSS frameworks Tailwind & Bootstrap")
                         ])
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "info pl-8 pt-12 lg:px-4 lg:w-1/4 z-10 leading-8 text-black bg-[#02385f] "
+                    class: ""
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "rounded-lg p-4 shadow-md shadow-slate-600 leading-8 text-black bg-[#fff] "
+                        class: "w-5/6 mx-auto cursor-pointer grid place-content-center  "
                     }, [
-                        (0, _mithrilDefault.default)("h2", {
-                            class: "text-3xl leading-10 pb-8"
-                        }, "Website Design and Development"),
-                        (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
-                        (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                        (0, _mithrilDefault.default)("p", " \u2022 experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
-                        (0, _mithrilDefault.default)("p", " \u2022 proficient in JS frameworks including React, Vue and many others"),
-                        (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
-                        (0, _mithrilDefault.default)("p", {
-                            class: "pb-4"
-                        }, " \u2022 CSS frameworks Tailwind & Bootstrap")
+                        (0, _mithrilDefault.default)("span", {
+                            class: "border-white bg-black text-white block float-right p-4 rounded-full h-16 w-auto m-4 grid place-content-center text-xl text-center"
+                        }, [
+                            (0, _mithrilDefault.default)("a", {
+                                href: `mailto:${email}`,
+                                class: "animate-pulse",
+                                onclick: ()=>{
+                                    return click = !click, setTimeout(()=>click = !click, 5000);
+                                }
+                            }, click ? email : "Click to reveal email")
+                        ])
                     ])
+                ]),
+                (0, _mithrilDefault.default)("div", {
+                    class: "footer grid place-content-center min-h-min"
+                }, [
+                    (0, _mithrilDefault.default)("span", {
+                        class: "p-4"
+                    }, "mohdsaleem.uk \xa9 2021")
                 ])
-            ]),
-            (0, _mithrilDefault.default)("div", {
-                class: "footer grid place-content-center w-screen min-h-min bg-[#c0c0c0]"
-            }, [
-                (0, _mithrilDefault.default)("span", {
-                    class: "p-4"
-                }, "mohdsaleem.uk \xa9 2021")
             ])
         ]);
     }
 });
 
-},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o","../assets/images/at-pc.webp":"1uqB0"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -3188,6 +3223,44 @@ process.chdir = function(dir) {
 process.umask = function() {
     return 0;
 };
+
+},{}],"1uqB0":[function(require,module,exports) {
+module.exports = require("6c482b7863237223").getBundleURL("g05j8") + "at-pc.d52f82ef.webp" + "?" + Date.now();
+
+},{"6c482b7863237223":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
 
 },{}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
 
