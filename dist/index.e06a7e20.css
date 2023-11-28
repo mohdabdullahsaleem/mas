@@ -874,7 +874,7 @@ body.invert .logo {
 .info > div {
   background: linear-gradient(#000000e6, #0000004d);
   padding: 2px;
-  box-shadow: 4px 4px 5px;
+  box-shadow: 2px 2px 5px;
 }
 
 .info > div > div {
