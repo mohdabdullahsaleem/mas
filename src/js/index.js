@@ -64,7 +64,7 @@ m.mount(root, {
                                         )
                                         document.getElementById(
                                             'lightsOff'
-                                        ).innerHTML = 'Lights On'
+                                        ).innerHTML = 'Lights on!'
                                     } else {
                                         document.body.classList.remove(
                                             'lights-off'

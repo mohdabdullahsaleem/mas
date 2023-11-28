@@ -617,7 +617,7 @@ if (data().email) email = data().email;
                         lightsOff = !lightsOff;
                         if (lightsOff) {
                             document.body.classList.add("lights-off");
-                            document.getElementById("lightsOff").innerHTML = "Lights On";
+                            document.getElementById("lightsOff").innerHTML = "Lights on!";
                         } else {
                             document.body.classList.remove("lights-off");
                             document.getElementById("lightsOff").innerHTML = "Lights off!";
