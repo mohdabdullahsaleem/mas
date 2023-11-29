@@ -142,7 +142,7 @@ m.mount(root, {
                                                         m(
                                                             'p',
 
-                                                            ' • Experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc.'
+                                                            ' • Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc.'
                                                         ),
                                                         m(
                                                             'p',

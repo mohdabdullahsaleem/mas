@@ -660,7 +660,7 @@ if (data().email) email = data().email;
                                 }, `Mohammad Saleem's Web Development`),
                                 (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                                 (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                                (0, _mithrilDefault.default)("p", " \u2022 Experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
+                                (0, _mithrilDefault.default)("p", " \u2022 Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc."),
                                 (0, _mithrilDefault.default)("p", " \u2022 Proficient in JS frameworks including React, Vue and many others"),
                                 (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
                                 (0, _mithrilDefault.default)("p", {
