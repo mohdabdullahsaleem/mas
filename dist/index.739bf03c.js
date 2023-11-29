@@ -640,7 +640,7 @@ if (data().email) email = data().email;
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
-                        class: "info xl:grid xl:place-content-center lg:px-4 lg:w-2/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
+                        class: "info xl:grid xl:place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "rounded-lg"
@@ -650,7 +650,7 @@ if (data().email) email = data().email;
                             }, [
                                 (0, _mithrilDefault.default)("h2", {
                                     class: "text-3xl leading-10 pb-4"
-                                }, `Mohd Saleem's Web Development`),
+                                }, `Mohammad Saleem's Web Development`),
                                 (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
                                 (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
                                 (0, _mithrilDefault.default)("p", " \u2022 Experience with PHP, JavaScript, Python, Node, html, CSS, SASS etc."),
@@ -660,7 +660,7 @@ if (data().email) email = data().email;
                                     class: "pb-4"
                                 }, " \u2022 CSS frameworks Tailwind & Bootstrap"),
                                 (0, _mithrilDefault.default)("span", {
-                                    class: `relative w-100 ${click ? "m-0" : ""} border-white bg-black text-white block p-4 rounded-full h-16 m-4 grid place-content-center text-sm md:text-xl text-center`
+                                    class: `relative w-100 ${click ? "m-0" : ""} border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
                                 }, [
                                     (0, _mithrilDefault.default)("a", {
                                         href: `mailto:${email}`,

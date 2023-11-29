@@ -107,7 +107,7 @@ m.mount(root, {
                                 m(
                                     'div',
                                     {
-                                        class: 'info xl:grid xl:place-content-center lg:px-4 lg:w-2/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
+                                        class: 'info xl:grid xl:place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
                                     },
                                     [
                                         m(
@@ -127,7 +127,7 @@ m.mount(root, {
                                                             {
                                                                 class: 'text-3xl leading-10 pb-4'
                                                             },
-                                                            `Mohd Saleem's Web Development`
+                                                            `Mohammad Saleem's Web Development`
                                                         ),
                                                         m(
                                                             'p',
@@ -162,7 +162,7 @@ m.mount(root, {
                                                                     click
                                                                         ? 'm-0'
                                                                         : ''
-                                                                } border-white bg-black text-white block p-4 rounded-full h-16 m-4 grid place-content-center text-sm md:text-xl text-center`
+                                                                } border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
                                                             },
                                                             [
                                                                 m(
