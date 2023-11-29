@@ -1,9 +1,5 @@
 body.lights-off {
-    filter: invert(1);
-}
-
-.logo {
-    background-image: url('../assets/images/mas-logo.svg');
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .info > div {

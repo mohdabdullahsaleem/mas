@@ -2,7 +2,9 @@ import m from 'mithril'
 import fs from 'fs'
 import path from 'path'
 
+import logo from '../assets/images/mas-logo.svg'
 import atPC from '../assets/images/at-pc.webp'
+import darkMode from '../assets/images/dark-mode.webp'
 
 import '../assets/styles/base.scss'
 import './index.scss'
@@ -47,13 +49,15 @@ m.mount(root, {
 
                             'Code & Creativity Unleashed'
                         ),
-                        m('span', {
-                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:pl-5  lg:text-6xl font-bold text-black'
+                        m('img', {
+                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black',
+                            src: logo,
+                            alt: 'Mohammad Saleem Logo'
                         }),
                         m(
                             'button',
                             {
-                                class: 'pointer border-white bg-black block text-white block my-4 mr-8 md:mx-4 p-4 rounded-full h-16 w-auto text-xl absolute top-0 right-0',
+                                class: 'pointer border-white block text-white block absolute top-0 right-0',
                                 id: 'lightsOff',
                                 type: 'button',
                                 onclick: function () {
@@ -62,20 +66,20 @@ m.mount(root, {
                                         document.body.classList.add(
                                             'lights-off'
                                         )
-                                        document.getElementById(
-                                            'lightsOff'
-                                        ).innerHTML = 'Lights on!'
                                     } else {
                                         document.body.classList.remove(
                                             'lights-off'
                                         )
-                                        document.getElementById(
-                                            'lightsOff'
-                                        ).innerHTML = 'Lights off!'
                                     }
                                 }
                             },
-                            'Lights off!'
+                            [
+                                m('img', {
+                                    src: darkMode,
+                                    alt: 'Dark Mode',
+                                    class: 'w-16 h-16 m-3'
+                                })
+                            ]
                         )
                     ]
                 ),

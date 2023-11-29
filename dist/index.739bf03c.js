@@ -582,8 +582,12 @@ var _fs = require("fs");
 var _fsDefault = parcelHelpers.interopDefault(_fs);
 var _path = require("path");
 var _pathDefault = parcelHelpers.interopDefault(_path);
+var _masLogoSvg = require("../assets/images/mas-logo.svg");
+var _masLogoSvgDefault = parcelHelpers.interopDefault(_masLogoSvg);
 var _atPcWebp = require("../assets/images/at-pc.webp");
 var _atPcWebpDefault = parcelHelpers.interopDefault(_atPcWebp);
+var _darkModeWebp = require("../assets/images/dark-mode.webp");
+var _darkModeWebpDefault = parcelHelpers.interopDefault(_darkModeWebp);
 var _baseScss = require("../assets/styles/base.scss");
 var _indexScss = require("./index.scss");
 const root = document.body;
@@ -606,24 +610,27 @@ if (data().email) email = data().email;
                     class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black",
                     href: "/"
                 }, "Code & Creativity Unleashed"),
-                (0, _mithrilDefault.default)("span", {
-                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:pl-5  lg:text-6xl font-bold text-black"
+                (0, _mithrilDefault.default)("img", {
+                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black",
+                    src: (0, _masLogoSvgDefault.default),
+                    alt: "Mohammad Saleem Logo"
                 }),
                 (0, _mithrilDefault.default)("button", {
-                    class: "pointer border-white bg-black block text-white block my-4 mr-8 md:mx-4 p-4 rounded-full h-16 w-auto text-xl absolute top-0 right-0",
+                    class: "pointer border-white block text-white block absolute top-0 right-0",
                     id: "lightsOff",
                     type: "button",
                     onclick: function() {
                         lightsOff = !lightsOff;
-                        if (lightsOff) {
-                            document.body.classList.add("lights-off");
-                            document.getElementById("lightsOff").innerHTML = "Lights on!";
-                        } else {
-                            document.body.classList.remove("lights-off");
-                            document.getElementById("lightsOff").innerHTML = "Lights off!";
-                        }
+                        if (lightsOff) document.body.classList.add("lights-off");
+                        else document.body.classList.remove("lights-off");
                     }
-                }, "Lights off!")
+                }, [
+                    (0, _mithrilDefault.default)("img", {
+                        src: (0, _darkModeWebpDefault.default),
+                        alt: "Dark Mode",
+                        class: "w-16 h-16 m-3"
+                    })
+                ])
             ]),
             (0, _mithrilDefault.default)("div", {
                 class: "flex flex-col p-10 pb-0 w-screen h-auto",
@@ -693,7 +700,7 @@ if (data().email) email = data().email;
     }
 });
 
-},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o","../assets/images/at-pc.webp":"1uqB0"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o","../assets/images/at-pc.webp":"1uqB0","../assets/images/dark-mode.webp":"ikZRW","../assets/images/mas-logo.svg":"42czT"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -3267,6 +3274,12 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
+},{}],"ikZRW":[function(require,module,exports) {
+module.exports = require("f42b20a27734232b").getBundleURL("g05j8") + "dark-mode.475bf8dd.webp" + "?" + Date.now();
+
+},{"f42b20a27734232b":"lgJ39"}],"42czT":[function(require,module,exports) {
+module.exports = require("31b5b5e742a0494b").getBundleURL("g05j8") + "mas-logo.bfa20ad0.svg" + "?" + Date.now();
+
+},{"31b5b5e742a0494b":"lgJ39"}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
 
 //# sourceMappingURL=index.739bf03c.js.map
