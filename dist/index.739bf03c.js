@@ -763,7 +763,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} footer grid place-content-center min-h-min dark:text w-screen mt-8`
+                class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-screen mt-8`
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"

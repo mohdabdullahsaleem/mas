@@ -363,7 +363,7 @@ m.mount(root, {
                         class: `${
                             colourModeOn
                                 ? 'bg-[#95d266] dark:bg-[#024b7b]'
-                                : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
+                                : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
                         } footer grid place-content-center min-h-min dark:text w-screen mt-8`
                     },
                     [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
