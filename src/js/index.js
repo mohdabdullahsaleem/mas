@@ -61,7 +61,7 @@ m.mount(root, {
         return m(
             'div',
             {
-                class: 'flex flex-col dark:bg-black'
+                class: 'flex flex-col dark:bg-black min-h-screen'
             },
             [
                 m(
@@ -69,12 +69,12 @@ m.mount(root, {
                     {
                         class: `${
                             colourModeOn
-                                ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]'
+                                ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]'
                                 : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
-                        } header w-screen h-24 sm:block flex flex-row justify-between items-center`
+                        } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8`
                     },
                     [
-                        m('div', {}, [
+                        m('div', [
                             m(
                                 'a',
                                 {
@@ -215,157 +215,158 @@ m.mount(root, {
                     ]
                 ),
 
+                m('div', { class: 'flex justify-between flex-1' }, [
+                    m(
+                        'div',
+                        {
+                            class: `${
+                                colourModeOn ? '' : 'grayscale'
+                            }  main lg:grid place-content-center w-screen flex-1 bg-[#ffffff0a]`
+                        },
+                        [
+                            m(
+                                'div',
+                                {
+                                    class: 'flex flex-col md-flex-col-reverse lg:flex-row-reverse align-top justify-evenly mx-auto light:bg-[#2d2d2d0a]'
+                                },
+                                [
+                                    m(
+                                        'div',
+                                        {
+                                            class: 'lg:grid lg:pt-0 lg:place-content-center md:w-100 lg:w-[420px]'
+                                        },
+                                        [
+                                            m('img', {
+                                                src: colourModeOn
+                                                    ? atPCColor
+                                                    : atPC,
+
+                                                alt: 'At my PC',
+                                                title: 'At my PC',
+                                                class: `${
+                                                    colourModeOn
+                                                        ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05] dark:filter-none'
+                                                        : 'grayscale'
+                                                } lg:rounded-xl bg-gradient-to-b from-[#000] to-[#fff] dark:invert md:w-100 lg:w-[418px]`
+                                            })
+                                        ]
+                                    ),
+                                    m(
+                                        'div',
+                                        {
+                                            class: 'info grid place-content-center pt-4 lg:w-[420px] md:mt-0 w-auto mx-8 leading-8 text-black lg:mr-12 dark:invert'
+                                        },
+                                        [
+                                            m(
+                                                'div',
+                                                {
+                                                    class: 'rounded-lg'
+                                                },
+                                                [
+                                                    m(
+                                                        'div',
+                                                        {
+                                                            class: `${
+                                                                colourModeOn
+                                                                    ? 'text-[#024b7b]'
+                                                                    : 'text-[#000]'
+                                                            } rounded-md p-4 leading-8 text-black`
+                                                        },
+                                                        [
+                                                            m(
+                                                                'h2',
+                                                                {
+                                                                    class: 'text-3xl leading-10 pb-4'
+                                                                },
+                                                                `Mohammad Saleem's Web Development`
+                                                            ),
+                                                            m(
+                                                                'p',
+
+                                                                ' • 15+ years of experience'
+                                                            ),
+                                                            m(
+                                                                'p',
+                                                                ' • full-stack'
+                                                            ),
+                                                            m(
+                                                                'p',
+
+                                                                ' • Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc.'
+                                                            ),
+                                                            m(
+                                                                'p',
+
+                                                                ' • Proficient in JS frameworks including React, Vue and many others'
+                                                            ),
+                                                            m(
+                                                                'p',
+
+                                                                ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
+                                                            ),
+                                                            m(
+                                                                'p',
+                                                                {
+                                                                    class: 'pb-4'
+                                                                },
+                                                                ' • CSS frameworks Tailwind & Bootstrap'
+                                                            ),
+                                                            m(
+                                                                'span',
+                                                                {
+                                                                    class: `relative w-100 ${
+                                                                        click
+                                                                            ? 'm-0'
+                                                                            : ''
+                                                                    } border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
+                                                                },
+                                                                [
+                                                                    m(
+                                                                        'a',
+                                                                        {
+                                                                            href: `mailto:${email}`,
+                                                                            class: 'animate-pulse px-4',
+                                                                            onclick:
+                                                                                () => {
+                                                                                    return (
+                                                                                        (click =
+                                                                                            !click),
+                                                                                        setTimeout(
+                                                                                            () =>
+                                                                                                (click =
+                                                                                                    !click),
+                                                                                            5000
+                                                                                        )
+                                                                                    )
+                                                                                }
+                                                                        },
+                                                                        click
+                                                                            ? email
+                                                                            : 'Click to Reveal Email'
+                                                                    )
+                                                                ]
+                                                            )
+                                                        ]
+                                                    )
+                                                ]
+                                            )
+                                        ]
+                                    )
+                                ]
+                            )
+                        ]
+                    )
+                ]),
                 m(
                     'div',
                     {
                         class: `${
-                            colourModeOn ? '' : 'grayscale'
-                        }  main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100`
+                            colourModeOn
+                                ? 'bg-[#95d266] dark:bg-[#024b7b]'
+                                : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
+                        } footer grid place-content-center min-h-min dark:text w-screen mt-8`
                     },
-                    [
-                        m(
-                            'div',
-                            {
-                                class: 'lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly light:bg-[#2d2d2d0a]'
-                            },
-                            [
-                                m(
-                                    'div',
-                                    {
-                                        class: ''
-                                    },
-                                    [
-                                        m('img', {
-                                            src: colourModeOn
-                                                ? atPCColor
-                                                : atPC,
-                                            alt: 'At my PC',
-                                            title: 'At my PC',
-                                            class: `${
-                                                colourModeOn
-                                                    ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]'
-                                                    : 'grayscale'
-                                            } rounded-xl m-8 bg-gradient-to-b from-[#000] to-[#fff] dark:invert`
-                                        })
-                                    ]
-                                ),
-                                m(
-                                    'div',
-                                    {
-                                        class: 'info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12 dark:invert'
-                                    },
-                                    [
-                                        m(
-                                            'div',
-                                            {
-                                                class: 'rounded-lg'
-                                            },
-                                            [
-                                                m(
-                                                    'div',
-                                                    {
-                                                        class: `${
-                                                            colourModeOn
-                                                                ? 'text-[#024b7b]'
-                                                                : 'text-[#000]'
-                                                        } rounded-md p-4 leading-8 text-black`
-                                                    },
-                                                    [
-                                                        m(
-                                                            'h2',
-                                                            {
-                                                                class: 'text-3xl leading-10 pb-4'
-                                                            },
-                                                            `Mohammad Saleem's Web Development`
-                                                        ),
-                                                        m(
-                                                            'p',
-
-                                                            ' • 15+ years of experience'
-                                                        ),
-                                                        m('p', ' • full-stack'),
-                                                        m(
-                                                            'p',
-
-                                                            ' • Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc.'
-                                                        ),
-                                                        m(
-                                                            'p',
-
-                                                            ' • Proficient in JS frameworks including React, Vue and many others'
-                                                        ),
-                                                        m(
-                                                            'p',
-
-                                                            ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                                                        ),
-                                                        m(
-                                                            'p',
-                                                            { class: 'pb-4' },
-                                                            ' • CSS frameworks Tailwind & Bootstrap'
-                                                        ),
-                                                        m(
-                                                            'span',
-                                                            {
-                                                                class: `relative w-100 ${
-                                                                    click
-                                                                        ? 'm-0'
-                                                                        : ''
-                                                                } border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
-                                                            },
-                                                            [
-                                                                m(
-                                                                    'a',
-                                                                    {
-                                                                        href: `mailto:${email}`,
-                                                                        class: 'animate-pulse px-4',
-                                                                        onclick:
-                                                                            () => {
-                                                                                return (
-                                                                                    (click =
-                                                                                        !click),
-                                                                                    setTimeout(
-                                                                                        () =>
-                                                                                            (click =
-                                                                                                !click),
-                                                                                        5000
-                                                                                    )
-                                                                                )
-                                                                            }
-                                                                    },
-                                                                    click
-                                                                        ? email
-                                                                        : 'Click to Reveal Email'
-                                                                )
-                                                            ]
-                                                        )
-                                                    ]
-                                                )
-                                            ]
-                                        )
-                                    ]
-                                )
-                            ]
-                        ),
-
-                        m(
-                            'div',
-                            {
-                                class: `${
-                                    colourModeOn
-                                        ? 'bg-[#95d266] dark:bg-[#024b7b]'
-                                        : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
-                                } footer grid place-content-center min-h-min dark:text-white`
-                            },
-                            [
-                                m(
-                                    'span',
-                                    { class: 'p-4' },
-                                    'mohdsaleem.uk © 2021'
-                                )
-                            ]
-                        )
-                    ]
+                    [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
                 )
             ]
         )
