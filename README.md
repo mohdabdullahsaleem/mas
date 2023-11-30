@@ -9,7 +9,7 @@ Example:
 
 ## Screenshot links
 
-![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/blob/main/screenshots/light-mode-colour.jpeg?raw=true)
+![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/blob/main/screenshots/light-mode.jpeg?raw=true)
 
 ![Screenshot in dark mode](https://github.com/mohdabdullahsaleem/mas/blob/main/screenshots/dark-mode.jpeg?raw=true)
 
