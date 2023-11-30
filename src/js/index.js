@@ -71,70 +71,72 @@ m.mount(root, {
                             colourModeOn
                                 ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]'
                                 : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
-                        } header w-screen h-24 sm:block flex flex-row`
+                        } header w-screen h-24 sm:block flex flex-row justify-between items-center`
                     },
                     [
-                        m(
-                            'a',
-                            {
-                                class: `${
-                                    colourModeOn
-                                        ? 'text-[#d47c7c] '
-                                        : 'text-black dark:text-white'
-                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                                href: '/'
-                            },
-                            'Code'
-                        ),
-                        m(
-                            'a',
-                            {
-                                class: `${
-                                    colourModeOn
-                                        ? 'text-[#f2f0ac]'
-                                        : 'text-black dark:text-white'
-                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                                href: '/'
-                            },
+                        m('div', {}, [
+                            m(
+                                'a',
+                                {
+                                    class: `${
+                                        colourModeOn
+                                            ? 'text-[#d47c7c] '
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                                    href: '/'
+                                },
+                                'Code'
+                            ),
+                            m(
+                                'a',
+                                {
+                                    class: `${
+                                        colourModeOn
+                                            ? 'text-[#f2f0ac]'
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                                    href: '/'
+                                },
 
-                            ' & '
-                        ),
-                        m(
-                            'a',
-                            {
-                                class: `${
-                                    colourModeOn
-                                        ? 'text-[#95d266]'
-                                        : 'text-black dark:text-white'
-                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                                href: '/'
-                            },
+                                ' & '
+                            ),
+                            m(
+                                'a',
+                                {
+                                    class: `${
+                                        colourModeOn
+                                            ? 'text-[#95d266]'
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                                    href: '/'
+                                },
 
-                            'Creativity'
-                        ),
-                        m(
-                            'a',
-                            {
-                                class: `${
-                                    colourModeOn
-                                        ? 'text-[#d47c7c]'
-                                        : 'text-black dark:text-white'
-                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                                href: '/'
-                            },
+                                'Creativity'
+                            ),
+                            m(
+                                'a',
+                                {
+                                    class: `${
+                                        colourModeOn
+                                            ? 'text-[#d47c7c]'
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                                    href: '/'
+                                },
 
-                            'Unleashed'
-                        ),
-                        m('img', {
-                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ',
-                            src: logo,
-                            alt: 'Mohammad Saleem Logo',
-                            title: 'Mohammad Saleem Logo'
-                        }),
+                                'Unleashed'
+                            ),
+                            m('img', {
+                                class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ',
+                                src: logo,
+                                alt: 'Mohammad Saleem Logo',
+                                title: 'Mohammad Saleem Logo'
+                            })
+                        ]),
                         m(
                             'div',
                             {
-                                class: 'flex flex-row float-right'
+                                class: 'flex flex-row justify-end'
                             },
                             [
                                 m(

@@ -627,32 +627,34 @@ if (data().email) email = data().email;
             class: "flex flex-col dark:bg-black"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row`
+                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center`
             }, [
-                (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#d47c7c] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                    href: "/"
-                }, "Code"),
-                (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                    href: "/"
-                }, " & "),
-                (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#95d266]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                    href: "/"
-                }, "Creativity"),
-                (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#d47c7c]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
-                    href: "/"
-                }, "Unleashed"),
-                (0, _mithrilDefault.default)("img", {
-                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
-                    src: (0, _masLogoSvgDefault.default),
-                    alt: "Mohammad Saleem Logo",
-                    title: "Mohammad Saleem Logo"
-                }),
+                (0, _mithrilDefault.default)("div", {}, [
+                    (0, _mithrilDefault.default)("a", {
+                        class: `${colourModeOn ? "text-[#d47c7c] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        href: "/"
+                    }, "Code"),
+                    (0, _mithrilDefault.default)("a", {
+                        class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        href: "/"
+                    }, " & "),
+                    (0, _mithrilDefault.default)("a", {
+                        class: `${colourModeOn ? "text-[#95d266]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        href: "/"
+                    }, "Creativity"),
+                    (0, _mithrilDefault.default)("a", {
+                        class: `${colourModeOn ? "text-[#d47c7c]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        href: "/"
+                    }, "Unleashed"),
+                    (0, _mithrilDefault.default)("img", {
+                        class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
+                        src: (0, _masLogoSvgDefault.default),
+                        alt: "Mohammad Saleem Logo",
+                        title: "Mohammad Saleem Logo"
+                    })
+                ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "flex flex-row float-right"
+                    class: "flex flex-row justify-end"
                 }, [
                     (0, _mithrilDefault.default)("button", {
                         class: "pointer border-white block text-white block",
