@@ -9,10 +9,12 @@ Example:
 
 ## Screenshots
 
-![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/screenshots/light-mode.jpeg)
+![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/tree/main/screenshots/light-mode.jpeg)
 
-![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/screenshots/dark-mode.jpeg)
+![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/tree/main/screenshots/dark-mode.jpeg)
 
-![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/screenshots/light-mode-colour.jpeg)
+![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/tree/main/screenshots/light-mode-colour.jpeg)
 
-![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/screenshots/dark-mode-colour.jpeg)
+![Screenshot in light mode](https://github.com/mohdabdullahsaleem/mas/tree/main/screenshots/dark-mode-colour.jpeg)
+
+Copyright 2023
