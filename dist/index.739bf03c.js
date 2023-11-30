@@ -584,16 +584,21 @@ var _path = require("path");
 var _pathDefault = parcelHelpers.interopDefault(_path);
 var _masLogoSvg = require("../assets/images/mas-logo.svg");
 var _masLogoSvgDefault = parcelHelpers.interopDefault(_masLogoSvg);
-var _atPcWebp = require("../assets/images/at-pc.webp");
-var _atPcWebpDefault = parcelHelpers.interopDefault(_atPcWebp);
+var _atPcBwWebp = require("../assets/images/at-pc-bw.webp");
+var _atPcBwWebpDefault = parcelHelpers.interopDefault(_atPcBwWebp);
+var _atPcColourWebp = require("../assets/images/at-pc-colour.webp");
+var _atPcColourWebpDefault = parcelHelpers.interopDefault(_atPcColourWebp);
 var _darkModeWebp = require("../assets/images/dark-mode.webp");
 var _darkModeWebpDefault = parcelHelpers.interopDefault(_darkModeWebp);
+var _colorModeWebp = require("../assets/images/color-mode.webp");
+var _colorModeWebpDefault = parcelHelpers.interopDefault(_colorModeWebp);
 var _baseScss = require("../assets/styles/base.scss");
 var _indexScss = require("./index.scss");
 const root = document.body;
 let click = false;
 let email = "@";
 let lightsOff;
+let colourModeOn = false;
 const data = ()=>{
     return JSON.parse('{\n    "email": "contact@mohdsaleem.uk"\n}\n');
 };
@@ -609,72 +614,120 @@ if (data().email) email = data().email;
             document.documentElement.classList.add("light");
             lightsOff = false;
         }
+        if (localStorage.colorMode === "color-mode") {
+            document.documentElement.classList.add("color-mode");
+            colourModeOn = true;
+        } else {
+            document.documentElement.classList.remove("color-mode");
+            colourModeOn = false;
+        }
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "page min-h-screen flex flex-col"
+            class: `${colourModeOn ? "" : "grayscale "} page min-h-screen flex flex-col dark:bg-black`
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: "header w-screen h-24 sm:block flex flex-row dark:bg-[#2d2d2d] "
+                class: `${colourModeOn ? "bg-[#64a07e]" : "dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row mb-8`
             }, [
                 (0, _mithrilDefault.default)("a", {
-                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold dark:text-white",
+                    class: "text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
                     href: "/"
-                }, "Code & Creativity Unleashed"),
+                }, "Code"),
+                (0, _mithrilDefault.default)("a", {
+                    class: "text-[#f2f0ac] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
+                    href: "/"
+                }, " & "),
+                (0, _mithrilDefault.default)("a", {
+                    class: "text-[#95d266] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold",
+                    href: "/"
+                }, "Creativity"),
+                (0, _mithrilDefault.default)("a", {
+                    class: "text-[#024b7b] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
+                    href: "/"
+                }, "Unleashed"),
                 (0, _mithrilDefault.default)("img", {
-                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black",
+                    class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
                     src: (0, _masLogoSvgDefault.default),
                     alt: "Mohammad Saleem Logo",
                     title: "Mohammad Saleem Logo"
                 }),
-                (0, _mithrilDefault.default)("button", {
-                    class: "pointer border-white block text-white block absolute top-0 right-0",
-                    id: "lightsOff",
-                    type: "button",
-                    onclick: function() {
-                        lightsOff = !lightsOff;
-                        if (lightsOff) {
-                            document.documentElement.classList.add("dark");
-                            document.documentElement.classList.remove("light");
-                            localStorage.theme = "dark";
-                        } else if (!lightsOff) {
-                            document.documentElement.classList.add("light");
-                            document.documentElement.classList.remove("dark");
-                            localStorage.theme = "light";
-                        }
-                    }
+                (0, _mithrilDefault.default)("div", {
+                    class: "flex flex-row float-right"
                 }, [
-                    (0, _mithrilDefault.default)("img", {
-                        src: (0, _darkModeWebpDefault.default),
-                        alt: "Dark Mode",
-                        class: "w-16 h-16 m-3",
-                        title: "Dark Mode"
-                    })
+                    (0, _mithrilDefault.default)("button", {
+                        class: "pointer border-white block text-white block",
+                        id: "lightsOff",
+                        type: "button",
+                        onclick: function() {
+                            lightsOff = !lightsOff;
+                            if (lightsOff) {
+                                document.documentElement.classList.add("dark");
+                                document.documentElement.classList.remove("light");
+                                localStorage.theme = "dark";
+                            } else if (!lightsOff) {
+                                document.documentElement.classList.add("light");
+                                document.documentElement.classList.remove("dark");
+                                localStorage.theme = "light";
+                            }
+                        }
+                    }, [
+                        (0, _mithrilDefault.default)("img", {
+                            src: (0, _darkModeWebpDefault.default),
+                            alt: "Dark Mode",
+                            class: "w-16 h-16 m-3",
+                            title: "Dark Mode"
+                        })
+                    ]),
+                    (0, _mithrilDefault.default)("button", {
+                        class: "pointer border-white block text-white block",
+                        id: "colorMode",
+                        type: "button",
+                        onclick: function() {
+                            colourModeOn = !colourModeOn;
+                            if (colourModeOn) {
+                                colourModeOn = true;
+                                document.documentElement.classList.add("color-mode");
+                                localStorage.colorMode = "color-mode";
+                            } else {
+                                colourModeOn = false;
+                                document.documentElement.classList.remove("color-mode");
+                                localStorage.removeItem("colorMode");
+                            }
+                        }
+                    }, [
+                        (0, _mithrilDefault.default)("img", {
+                            src: (0, _colorModeWebpDefault.default),
+                            alt: "Colour Mode",
+                            class: "w-12 h-12 m-3",
+                            title: "Colour Mode"
+                        })
+                    ])
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "main flex flex-col flex-1 pb-0 w-screen bg-[#f5f4f4] dark:invert h-100"
+                class: "main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] dark:bg-black h-100"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"
+                    class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly light:bg-[#2d2d2d0a]"
                 }, [
                     (0, _mithrilDefault.default)("div", {
                         class: ""
                     }, [
                         (0, _mithrilDefault.default)("img", {
-                            src: (0, _atPcWebpDefault.default),
+                            src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
                             alt: "At my PC",
-                            title: "At my PC"
+                            title: "At my PC",
+                            class: `${colourModeOn ? "bg-[#f2f0ac] dark:bg-[#2d2d2d]" : "dark:bg-[#2d2d2d] dark:grayscale"}`
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
-                        class: "info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
+                        class: "info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12 "
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "rounded-lg"
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: "rounded-md p-4 leading-8 text-black"
+                                class: `${colourModeOn ? "text-[#024b7b]" : "text-[#000]"} rounded-md p-4 leading-8 text-black`
                             }, [
                                 (0, _mithrilDefault.default)("h2", {
                                     class: "text-3xl leading-10 pb-4"
@@ -714,7 +767,7 @@ if (data().email) email = data().email;
     }
 });
 
-},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/at-pc.webp":"1uqB0","../assets/images/dark-mode.webp":"ikZRW","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/at-pc-bw.webp":"lpdv7","../assets/images/at-pc-colour.webp":"8Mt3d","../assets/images/dark-mode.webp":"ikZRW","../assets/images/color-mode.webp":"7CCHn","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -3258,13 +3311,19 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"1uqB0":[function(require,module,exports) {
-module.exports = require("6c482b7863237223").getBundleURL("g05j8") + "at-pc.d52f82ef.webp" + "?" + Date.now();
+},{}],"lpdv7":[function(require,module,exports) {
+module.exports = require("328f9c4759d3e02e").getBundleURL("g05j8") + "at-pc-bw.c51a27a4.webp" + "?" + Date.now();
 
-},{"6c482b7863237223":"lgJ39"}],"ikZRW":[function(require,module,exports) {
+},{"328f9c4759d3e02e":"lgJ39"}],"8Mt3d":[function(require,module,exports) {
+module.exports = require("59be17af479532b1").getBundleURL("g05j8") + "at-pc-colour.463338c5.webp" + "?" + Date.now();
+
+},{"59be17af479532b1":"lgJ39"}],"ikZRW":[function(require,module,exports) {
 module.exports = require("f42b20a27734232b").getBundleURL("g05j8") + "dark-mode.475bf8dd.webp" + "?" + Date.now();
 
-},{"f42b20a27734232b":"lgJ39"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
+},{"f42b20a27734232b":"lgJ39"}],"7CCHn":[function(require,module,exports) {
+module.exports = require("a4d56bfcb67a03f9").getBundleURL("g05j8") + "color-mode.b65029f8.webp" + "?" + Date.now();
+
+},{"a4d56bfcb67a03f9":"lgJ39"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a

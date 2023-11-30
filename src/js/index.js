@@ -3,8 +3,10 @@ import fs from 'fs'
 import path from 'path'
 
 import logo from '../assets/images/mas-logo.svg'
-import atPC from '../assets/images/at-pc.webp'
+import atPC from '../assets/images/at-pc-bw.webp'
+import atPCColor from '../assets/images/at-pc-colour.webp'
 import darkMode from '../assets/images/dark-mode.webp'
+import colorMode from '../assets/images/color-mode.webp'
 
 import '../assets/styles/base.scss'
 import './index.scss'
@@ -15,6 +17,7 @@ let click = false
 let email = '@'
 
 let lightsOff
+let colourModeOn = false
 
 const data = () => {
     return JSON.parse(
@@ -45,69 +48,150 @@ m.mount(root, {
             document.documentElement.classList.add('light')
             lightsOff = false
         }
+
+        if (localStorage.colorMode === 'color-mode') {
+            document.documentElement.classList.add('color-mode')
+            colourModeOn = true
+        } else {
+            document.documentElement.classList.remove('color-mode')
+            colourModeOn = false
+        }
     },
     view: function () {
         return m(
             'div',
             {
-                class: 'page min-h-screen flex flex-col'
+                class: `${
+                    colourModeOn ? '' : 'grayscale '
+                } page min-h-screen flex flex-col dark:bg-black`
             },
             [
                 m(
                     'div',
                     {
-                        class: 'header w-screen h-24 sm:block flex flex-row dark:bg-[#2d2d2d] '
+                        class: `${
+                            colourModeOn ? 'bg-[#64a07e]' : 'dark:bg-[#2d2d2d]'
+                        } header w-screen h-24 sm:block flex flex-row mb-8`
                     },
                     [
                         m(
                             'a',
                             {
-                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold dark:text-white',
+                                class: 'text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
+                                href: '/'
+                            },
+                            'Code'
+                        ),
+                        m(
+                            'a',
+                            {
+                                class: 'text-[#f2f0ac] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
                                 href: '/'
                             },
 
-                            'Code & Creativity Unleashed'
+                            ' & '
+                        ),
+                        m(
+                            'a',
+                            {
+                                class: 'text-[#95d266] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold',
+                                href: '/'
+                            },
+
+                            'Creativity'
+                        ),
+                        m(
+                            'a',
+                            {
+                                class: 'text-[#024b7b] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
+                                href: '/'
+                            },
+
+                            'Unleashed'
                         ),
                         m('img', {
-                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black',
+                            class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ',
                             src: logo,
                             alt: 'Mohammad Saleem Logo',
                             title: 'Mohammad Saleem Logo'
                         }),
                         m(
-                            'button',
+                            'div',
                             {
-                                class: 'pointer border-white block text-white block absolute top-0 right-0',
-                                id: 'lightsOff',
-                                type: 'button',
-                                onclick: function () {
-                                    lightsOff = !lightsOff
-                                    if (lightsOff) {
-                                        document.documentElement.classList.add(
-                                            'dark'
-                                        )
-                                        document.documentElement.classList.remove(
-                                            'light'
-                                        )
-                                        localStorage.theme = 'dark'
-                                    } else if (!lightsOff) {
-                                        document.documentElement.classList.add(
-                                            'light'
-                                        )
-                                        document.documentElement.classList.remove(
-                                            'dark'
-                                        )
-                                        localStorage.theme = 'light'
-                                    }
-                                }
+                                class: 'flex flex-row float-right'
                             },
                             [
-                                m('img', {
-                                    src: darkMode,
-                                    alt: 'Dark Mode',
-                                    class: 'w-16 h-16 m-3',
-                                    title: 'Dark Mode'
-                                })
+                                m(
+                                    'button',
+                                    {
+                                        class: 'pointer border-white block text-white block',
+                                        id: 'lightsOff',
+                                        type: 'button',
+                                        onclick: function () {
+                                            lightsOff = !lightsOff
+                                            if (lightsOff) {
+                                                document.documentElement.classList.add(
+                                                    'dark'
+                                                )
+                                                document.documentElement.classList.remove(
+                                                    'light'
+                                                )
+                                                localStorage.theme = 'dark'
+                                            } else if (!lightsOff) {
+                                                document.documentElement.classList.add(
+                                                    'light'
+                                                )
+                                                document.documentElement.classList.remove(
+                                                    'dark'
+                                                )
+                                                localStorage.theme = 'light'
+                                            }
+                                        }
+                                    },
+                                    [
+                                        m('img', {
+                                            src: darkMode,
+                                            alt: 'Dark Mode',
+                                            class: 'w-16 h-16 m-3',
+                                            title: 'Dark Mode'
+                                        })
+                                    ]
+                                ),
+                                m(
+                                    'button',
+                                    {
+                                        class: 'pointer border-white block text-white block',
+                                        id: 'colorMode',
+                                        type: 'button',
+                                        onclick: function () {
+                                            colourModeOn = !colourModeOn
+                                            if (colourModeOn) {
+                                                colourModeOn = true
+                                                document.documentElement.classList.add(
+                                                    'color-mode'
+                                                )
+                                                localStorage.colorMode =
+                                                    'color-mode'
+                                            } else {
+                                                colourModeOn = false
+                                                document.documentElement.classList.remove(
+                                                    'color-mode'
+                                                )
+                                                localStorage.removeItem(
+                                                    'colorMode'
+                                                )
+                                            }
+                                        }
+                                    },
+                                    [
+                                        m('img', {
+                                            src: colorMode,
+                                            alt: 'Colour Mode',
+                                            class: 'w-12 h-12 m-3',
+                                            title: 'Colour Mode'
+                                        })
+                                    ]
+                                )
                             ]
                         )
                     ]
@@ -116,13 +200,13 @@ m.mount(root, {
                 m(
                     'div',
                     {
-                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#f5f4f4] dark:invert h-100'
+                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] dark:bg-black h-100'
                     },
                     [
                         m(
                             'div',
                             {
-                                class: 'lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly'
+                                class: 'lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly light:bg-[#2d2d2d0a]'
                             },
                             [
                                 m(
@@ -132,16 +216,23 @@ m.mount(root, {
                                     },
                                     [
                                         m('img', {
-                                            src: atPC,
+                                            src: colourModeOn
+                                                ? atPCColor
+                                                : atPC,
                                             alt: 'At my PC',
-                                            title: 'At my PC'
+                                            title: 'At my PC',
+                                            class: `${
+                                                colourModeOn
+                                                    ? 'bg-[#f2f0ac] dark:bg-[#2d2d2d]'
+                                                    : 'dark:bg-[#2d2d2d] dark:grayscale'
+                                            }`
                                         })
                                     ]
                                 ),
                                 m(
                                     'div',
                                     {
-                                        class: 'info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12'
+                                        class: 'info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12 '
                                     },
                                     [
                                         m(
@@ -153,7 +244,11 @@ m.mount(root, {
                                                 m(
                                                     'div',
                                                     {
-                                                        class: 'rounded-md p-4 leading-8 text-black'
+                                                        class: `${
+                                                            colourModeOn
+                                                                ? 'text-[#024b7b]'
+                                                                : 'text-[#000]'
+                                                        } rounded-md p-4 leading-8 text-black`
                                                     },
                                                     [
                                                         m(
