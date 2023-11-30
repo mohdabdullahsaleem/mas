@@ -643,7 +643,7 @@ if (data().email) email = data().email;
                         href: "/"
                     }, "Creativity"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#d47c7c]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        class: `${colourModeOn ? "text-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                         href: "/"
                     }, "Unleashed"),
                     (0, _mithrilDefault.default)("img", {

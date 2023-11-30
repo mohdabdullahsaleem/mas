@@ -590,6 +590,11 @@ img, video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#512da8\] {
+  --tw-text-opacity: 1;
+  color: rgb(81 45 168 / var(--tw-text-opacity));
+}
+
 .opacity-50 {
   opacity: .5;
 }
