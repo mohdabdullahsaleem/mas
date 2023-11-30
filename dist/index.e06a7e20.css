@@ -539,6 +539,10 @@ html, body {
     margin-top: 0;
   }
 
+  .md\:place-content-center {
+    place-content: center;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -573,6 +577,10 @@ html, body {
 
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .lg\:place-content-center {
+    place-content: center;
   }
 
   .lg\:px-4 {

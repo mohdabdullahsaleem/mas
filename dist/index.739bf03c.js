@@ -668,7 +668,7 @@ if (data().email) email = data().email;
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
-                        class: "info xl:grid xl:place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
+                        class: "info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "rounded-lg"
