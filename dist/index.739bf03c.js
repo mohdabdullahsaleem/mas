@@ -631,19 +631,19 @@ if (data().email) email = data().email;
             }, [
                 (0, _mithrilDefault.default)("div", [
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#d47c7c] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        class: `${colourModeOn ? "text-[#d47c7c] " : "text-black dark:text-white border-[#024b7b]"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
                         href: "/"
                     }, "Code"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black dark:text-white border-[#024b7b]"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
                         href: "/"
                     }, " & "),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#95d266]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        class: `${colourModeOn ? "text-[#95d266]" : "text-black dark:text-white border-[#024b7b]"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
                         href: "/"
                     }, "Creativity"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                        class: `${colourModeOn ? "text-[#512da8] border-b-4 border-dotted border-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-dotted`,
                         href: "/"
                     }, "Unleashed"),
                     (0, _mithrilDefault.default)("img", {
@@ -713,7 +713,7 @@ if (data().email) email = data().email;
                     class: `${colourModeOn ? "" : "grayscale"}  main lg:grid place-content-center w-screen flex-1 bg-[#ffffff0a]`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "flex flex-col md-flex-col-reverse lg:flex-row-reverse align-top justify-evenly mx-auto light:bg-[#2d2d2d0a]"
+                        class: "flex flex-col md-flex-col-reverse lg:flex-row-reverse align-top justify-evenly lg:w-screen mx-auto light:bg-[#2d2d2d0a]"
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "lg:grid lg:pt-0 lg:place-content-center md:w-100 lg:w-[420px]"
