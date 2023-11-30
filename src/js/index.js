@@ -61,9 +61,7 @@ m.mount(root, {
         return m(
             'div',
             {
-                class: `${
-                    colourModeOn ? '' : 'grayscale'
-                } flex flex-col dark:bg-black`
+                class: 'flex flex-col dark:bg-black'
             },
             [
                 m(
@@ -71,8 +69,8 @@ m.mount(root, {
                     {
                         class: `${
                             colourModeOn
-                                ? 'bg-[#370b4c]'
-                                : 'bg-[#fafafa] dark:invert'
+                                ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]'
+                                : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
                         } header w-screen h-24 sm:block flex flex-row`
                     },
                     [
@@ -81,8 +79,8 @@ m.mount(root, {
                             {
                                 class: `${
                                     colourModeOn
-                                        ? 'text-[#d47c7c]'
-                                        : 'text-black'
+                                        ? 'text-[#d47c7c] '
+                                        : 'text-black dark:text-white'
                                 }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
@@ -94,7 +92,7 @@ m.mount(root, {
                                 class: `${
                                     colourModeOn
                                         ? 'text-[#f2f0ac]'
-                                        : 'text-black'
+                                        : 'text-black dark:text-white'
                                 }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
@@ -107,7 +105,7 @@ m.mount(root, {
                                 class: `${
                                     colourModeOn
                                         ? 'text-[#95d266]'
-                                        : 'text-black'
+                                        : 'text-black dark:text-white'
                                 }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
@@ -120,7 +118,7 @@ m.mount(root, {
                                 class: `${
                                     colourModeOn
                                         ? 'text-[#d47c7c]'
-                                        : 'text-black'
+                                        : 'text-black dark:text-white'
                                 }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
@@ -218,7 +216,9 @@ m.mount(root, {
                 m(
                     'div',
                     {
-                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100'
+                        class: `${
+                            colourModeOn ? '' : 'grayscale'
+                        }  main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100`
                     },
                     [
                         m(
@@ -234,15 +234,13 @@ m.mount(root, {
                                     },
                                     [
                                         m('img', {
-                                            src: colourModeOn
-                                                ? atPCColor
-                                                : atPC,
+                                            src: atPCColor,
                                             alt: 'At my PC',
                                             title: 'At my PC',
                                             class: `${
                                                 colourModeOn
                                                     ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]'
-                                                    : 'bg-gradient-to-b from-white to-black'
+                                                    : 'grayscale brightness-25 invert dark:grayscale'
                                             } rounded-xl m-8`
                                         })
                                     ]

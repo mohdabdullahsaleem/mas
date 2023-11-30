@@ -624,25 +624,25 @@ if (data().email) email = data().email;
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: `${colourModeOn ? "" : "grayscale"} flex flex-col dark:bg-black`
+            class: "flex flex-col dark:bg-black"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#370b4c]" : "bg-[#fafafa] dark:invert"} header w-screen h-24 sm:block flex flex-row`
+                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#dadada]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row`
             }, [
                 (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#d47c7c]" : "text-black"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                    class: `${colourModeOn ? "text-[#d47c7c] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                     href: "/"
                 }, "Code"),
                 (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                    class: `${colourModeOn ? "text-[#f2f0ac]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                     href: "/"
                 }, " & "),
                 (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#95d266]" : "text-black"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                    class: `${colourModeOn ? "text-[#95d266]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                     href: "/"
                 }, "Creativity"),
                 (0, _mithrilDefault.default)("a", {
-                    class: `${colourModeOn ? "text-[#d47c7c]" : "text-black"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
+                    class: `${colourModeOn ? "text-[#d47c7c]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                     href: "/"
                 }, "Unleashed"),
                 (0, _mithrilDefault.default)("img", {
@@ -705,7 +705,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100"
+                class: `${colourModeOn ? "" : "grayscale"}  main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100`
             }, [
                 (0, _mithrilDefault.default)("div", {
                     class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly light:bg-[#2d2d2d0a]"
@@ -714,10 +714,10 @@ if (data().email) email = data().email;
                         class: ""
                     }, [
                         (0, _mithrilDefault.default)("img", {
-                            src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
+                            src: (0, _atPcColourWebpDefault.default),
                             alt: "At my PC",
                             title: "At my PC",
-                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "bg-gradient-to-b from-white to-black"} rounded-xl m-8`
+                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "grayscale brightness-25 invert dark:grayscale"} rounded-xl m-8`
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
