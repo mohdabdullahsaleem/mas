@@ -72,14 +72,18 @@ m.mount(root, {
                         class: `${
                             colourModeOn
                                 ? 'bg-[#370b4c]'
-                                : 'bg-[#370b4c] dark:invert'
-                        } header w-screen h-24 sm:block flex flex-row mb-8`
+                                : 'bg-[#fafafa] dark:invert'
+                        } header w-screen h-24 sm:block flex flex-row`
                     },
                     [
                         m(
                             'a',
                             {
-                                class: 'text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
+                                class: `${
+                                    colourModeOn
+                                        ? 'text-[#d47c7c]'
+                                        : 'text-black'
+                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
                             'Code'
@@ -87,7 +91,11 @@ m.mount(root, {
                         m(
                             'a',
                             {
-                                class: 'text-[#f2f0ac] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
+                                class: `${
+                                    colourModeOn
+                                        ? 'text-[#f2f0ac]'
+                                        : 'text-black'
+                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
 
@@ -96,7 +104,11 @@ m.mount(root, {
                         m(
                             'a',
                             {
-                                class: 'text-[#95d266] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold',
+                                class: `${
+                                    colourModeOn
+                                        ? 'text-[#95d266]'
+                                        : 'text-black'
+                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
 
@@ -105,7 +117,11 @@ m.mount(root, {
                         m(
                             'a',
                             {
-                                class: 'text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ',
+                                class: `${
+                                    colourModeOn
+                                        ? 'text-[#d47c7c]'
+                                        : 'text-black'
+                                }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold`,
                                 href: '/'
                             },
 
@@ -202,7 +218,7 @@ m.mount(root, {
                 m(
                     'div',
                     {
-                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] dark:bg-black h-100'
+                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#ffffff0a] h-100'
                     },
                     [
                         m(
@@ -227,14 +243,14 @@ m.mount(root, {
                                                 colourModeOn
                                                     ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]'
                                                     : 'bg-gradient-to-b from-white to-black'
-                                            } rounded-xl`
+                                            } rounded-xl mt-8`
                                         })
                                     ]
                                 ),
                                 m(
                                     'div',
                                     {
-                                        class: 'info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12 '
+                                        class: 'info grid place-content-center lg:px-4 lg:w-3/5 pt-4 md:mt-0 leading-8 text-black lg:mr-12 dark:invert'
                                     },
                                     [
                                         m(
