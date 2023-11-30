@@ -80,9 +80,9 @@ m.mount(root, {
                                 {
                                     class: `${
                                         colourModeOn
-                                            ? 'text-[#d47c7c] '
-                                            : 'text-black dark:text-white border-[#024b7b]'
-                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
+                                            ? 'text-[#d47c7c]  border-[#024b7b]'
+                                            : 'text-black dark:text-white '
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid `,
                                     href: '/'
                                 },
                                 'Code'
@@ -92,9 +92,9 @@ m.mount(root, {
                                 {
                                     class: `${
                                         colourModeOn
-                                            ? 'text-[#f2f0ac]'
-                                            : 'text-black dark:text-white border-[#024b7b]'
-                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
+                                            ? 'text-[#f2f0ac] border-[#024b7b] '
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
                                     href: '/'
                                 },
 
@@ -105,9 +105,9 @@ m.mount(root, {
                                 {
                                     class: `${
                                         colourModeOn
-                                            ? 'text-[#95d266]'
-                                            : 'text-black dark:text-white border-[#024b7b]'
-                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid border-white`,
+                                            ? 'text-[#95d266] border-[#024b7b] '
+                                            : 'text-black dark:text-white'
+                                    }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
                                     href: '/'
                                 },
 
