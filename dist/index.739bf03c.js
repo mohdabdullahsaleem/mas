@@ -714,10 +714,10 @@ if (data().email) email = data().email;
                         class: ""
                     }, [
                         (0, _mithrilDefault.default)("img", {
-                            src: (0, _atPcColourWebpDefault.default),
+                            src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
                             alt: "At my PC",
                             title: "At my PC",
-                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "grayscale brightness-25 invert dark:grayscale"} rounded-xl m-8`
+                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "grayscale"} rounded-xl m-8 bg-gradient-to-b from-[#000] to-[#fff] dark:invert`
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {

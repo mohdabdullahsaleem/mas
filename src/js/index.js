@@ -234,14 +234,16 @@ m.mount(root, {
                                     },
                                     [
                                         m('img', {
-                                            src: atPCColor,
+                                            src: colourModeOn
+                                                ? atPCColor
+                                                : atPC,
                                             alt: 'At my PC',
                                             title: 'At my PC',
                                             class: `${
                                                 colourModeOn
                                                     ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]'
-                                                    : 'grayscale brightness-25 invert dark:grayscale'
-                                            } rounded-xl m-8`
+                                                    : 'grayscale'
+                                            } rounded-xl m-8 bg-gradient-to-b from-[#000] to-[#fff] dark:invert`
                                         })
                                     ]
                                 ),
