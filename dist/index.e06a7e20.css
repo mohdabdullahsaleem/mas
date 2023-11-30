@@ -266,6 +266,10 @@ img, video {
   margin: 2rem;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;

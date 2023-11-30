@@ -647,7 +647,7 @@ if (data().email) email = data().email;
                         href: "/"
                     }, "Unleashed"),
                     (0, _mithrilDefault.default)("img", {
-                        class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
+                        class: "logo sm:float-left w-12 h-12 m-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
                         src: (0, _masLogoSvgDefault.default),
                         alt: "Mohammad Saleem Logo",
                         title: "Mohammad Saleem Logo"
