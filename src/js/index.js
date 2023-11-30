@@ -14,7 +14,7 @@ const root = document.body
 let click = false
 let email = '@'
 
-let lightsOff = false
+let lightsOff
 
 const data = () => {
     return JSON.parse(
@@ -27,23 +27,42 @@ if (data().email) {
 }
 
 m.mount(root, {
+    oncreate: function () {
+        if (
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark')
+            document.documentElement.classList.remove('light')
+            lightsOff = true
+        } else if (
+            localStorage.theme === 'light' ||
+            (!('theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: light)').matches)
+        ) {
+            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.add('light')
+            lightsOff = false
+        }
+    },
     view: function () {
         return m(
             'div',
             {
-                class: 'bg-white'
+                class: 'page min-h-screen flex flex-col'
             },
             [
                 m(
                     'div',
                     {
-                        class: 'w-screen h-24 bg-[#f5f5f5] sm:block flex flex-row'
+                        class: 'header w-screen h-24 sm:block flex flex-row dark:bg-[#2d2d2d] '
                     },
                     [
                         m(
                             'a',
                             {
-                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black',
+                                class: 'hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold dark:text-white',
                                 href: '/'
                             },
 
@@ -52,7 +71,8 @@ m.mount(root, {
                         m('img', {
                             class: 'logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black',
                             src: logo,
-                            alt: 'Mohammad Saleem Logo'
+                            alt: 'Mohammad Saleem Logo',
+                            title: 'Mohammad Saleem Logo'
                         }),
                         m(
                             'button',
@@ -63,13 +83,21 @@ m.mount(root, {
                                 onclick: function () {
                                     lightsOff = !lightsOff
                                     if (lightsOff) {
-                                        document.body.classList.add(
-                                            'lights-off'
+                                        document.documentElement.classList.add(
+                                            'dark'
                                         )
-                                    } else {
-                                        document.body.classList.remove(
-                                            'lights-off'
+                                        document.documentElement.classList.remove(
+                                            'light'
                                         )
+                                        localStorage.theme = 'dark'
+                                    } else if (!lightsOff) {
+                                        document.documentElement.classList.add(
+                                            'light'
+                                        )
+                                        document.documentElement.classList.remove(
+                                            'dark'
+                                        )
+                                        localStorage.theme = 'light'
                                     }
                                 }
                             },
@@ -77,7 +105,8 @@ m.mount(root, {
                                 m('img', {
                                     src: darkMode,
                                     alt: 'Dark Mode',
-                                    class: 'w-16 h-16 m-3'
+                                    class: 'w-16 h-16 m-3',
+                                    title: 'Dark Mode'
                                 })
                             ]
                         )
@@ -87,8 +116,7 @@ m.mount(root, {
                 m(
                     'div',
                     {
-                        class: 'flex flex-col p-10 pb-0 w-screen h-auto',
-                        id: 'main'
+                        class: 'main flex flex-col flex-1 pb-0 w-screen bg-[#f5f4f4] dark:invert h-100'
                     },
                     [
                         m(
@@ -104,7 +132,9 @@ m.mount(root, {
                                     },
                                     [
                                         m('img', {
-                                            src: atPC
+                                            src: atPC,
+                                            alt: 'At my PC',
+                                            title: 'At my PC'
                                         })
                                     ]
                                 ),
@@ -202,25 +232,11 @@ m.mount(root, {
                                 )
                             ]
                         ),
+
                         m(
                             'div',
                             {
-                                class: ''
-                            },
-                            [
-                                m(
-                                    'div',
-                                    {
-                                        class: 'w-5/6 mx-auto cursor-pointer grid place-content-center  '
-                                    },
-                                    []
-                                )
-                            ]
-                        ),
-                        m(
-                            'div',
-                            {
-                                class: 'footer grid place-content-center min-h-min'
+                                class: 'footer grid place-content-center min-h-min dark:bg-[#2d2d2d] dark:text-white'
                             },
                             [
                                 m(

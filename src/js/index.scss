@@ -1,6 +1,12 @@
-body.lights-off {
-    filter: invert(1) hue-rotate(180deg);
-}
+// .main.lights-off {
+//     background-color: #fff;
+//     filter: invert(1) hue-rotate(180deg);
+// }
+
+// .main.lights-off + .header {
+//     background-color: black;
+//     color: white;
+// }
 
 .info > div {
     padding: 4px;
@@ -12,8 +18,6 @@ body.lights-off {
     background-color: #fff;
 }
 
-@media (hover: hover) or (min-width: 1024px) {
-    .page {
-        background-position: top right;
-    }
+.page {
+    background-position: top right;
 }

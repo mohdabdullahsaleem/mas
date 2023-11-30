@@ -593,27 +593,39 @@ var _indexScss = require("./index.scss");
 const root = document.body;
 let click = false;
 let email = "@";
-let lightsOff = false;
+let lightsOff;
 const data = ()=>{
     return JSON.parse('{\n    "email": "contact@mohdsaleem.uk"\n}\n');
 };
 if (data().email) email = data().email;
 (0, _mithrilDefault.default).mount(root, {
+    oncreate: function() {
+        if (localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+            lightsOff = true;
+        } else if (localStorage.theme === "light" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches) {
+            document.documentElement.classList.remove("dark");
+            document.documentElement.classList.add("light");
+            lightsOff = false;
+        }
+    },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "bg-white"
+            class: "page min-h-screen flex flex-col"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: "w-screen h-24 bg-[#f5f5f5] sm:block flex flex-row"
+                class: "header w-screen h-24 sm:block flex flex-row dark:bg-[#2d2d2d] "
             }, [
                 (0, _mithrilDefault.default)("a", {
-                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold text-black",
+                    class: "hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold dark:text-white",
                     href: "/"
                 }, "Code & Creativity Unleashed"),
                 (0, _mithrilDefault.default)("img", {
                     class: "logo sm:float-left w-12 h-12 mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black",
                     src: (0, _masLogoSvgDefault.default),
-                    alt: "Mohammad Saleem Logo"
+                    alt: "Mohammad Saleem Logo",
+                    title: "Mohammad Saleem Logo"
                 }),
                 (0, _mithrilDefault.default)("button", {
                     class: "pointer border-white block text-white block absolute top-0 right-0",
@@ -621,20 +633,27 @@ if (data().email) email = data().email;
                     type: "button",
                     onclick: function() {
                         lightsOff = !lightsOff;
-                        if (lightsOff) document.body.classList.add("lights-off");
-                        else document.body.classList.remove("lights-off");
+                        if (lightsOff) {
+                            document.documentElement.classList.add("dark");
+                            document.documentElement.classList.remove("light");
+                            localStorage.theme = "dark";
+                        } else if (!lightsOff) {
+                            document.documentElement.classList.add("light");
+                            document.documentElement.classList.remove("dark");
+                            localStorage.theme = "light";
+                        }
                     }
                 }, [
                     (0, _mithrilDefault.default)("img", {
                         src: (0, _darkModeWebpDefault.default),
                         alt: "Dark Mode",
-                        class: "w-16 h-16 m-3"
+                        class: "w-16 h-16 m-3",
+                        title: "Dark Mode"
                     })
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: "flex flex-col p-10 pb-0 w-screen h-auto",
-                id: "main"
+                class: "main flex flex-col flex-1 pb-0 w-screen bg-[#f5f4f4] dark:invert h-100"
             }, [
                 (0, _mithrilDefault.default)("div", {
                     class: "lg:flex lg:flex-row lg:flex-1 lg:flex-row-reverse xl:w-5/6 mx-auto w-full justify-evenly"
@@ -643,7 +662,9 @@ if (data().email) email = data().email;
                         class: ""
                     }, [
                         (0, _mithrilDefault.default)("img", {
-                            src: (0, _atPcWebpDefault.default)
+                            src: (0, _atPcWebpDefault.default),
+                            alt: "At my PC",
+                            title: "At my PC"
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
@@ -682,14 +703,7 @@ if (data().email) email = data().email;
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: ""
-                }, [
-                    (0, _mithrilDefault.default)("div", {
-                        class: "w-5/6 mx-auto cursor-pointer grid place-content-center  "
-                    }, [])
-                ]),
-                (0, _mithrilDefault.default)("div", {
-                    class: "footer grid place-content-center min-h-min"
+                    class: "footer grid place-content-center min-h-min dark:bg-[#2d2d2d] dark:text-white"
                 }, [
                     (0, _mithrilDefault.default)("span", {
                         class: "p-4"
@@ -700,7 +714,7 @@ if (data().email) email = data().email;
     }
 });
 
-},{"mithril":"1zcoP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","fs":"jhUEF","path":"loE3o","../assets/images/at-pc.webp":"1uqB0","../assets/images/dark-mode.webp":"ikZRW","../assets/images/mas-logo.svg":"42czT"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/at-pc.webp":"1uqB0","../assets/images/dark-mode.webp":"ikZRW","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -2633,37 +2647,7 @@ module.exports = function(attrs, extras) {
     return result;
 };
 
-},{"ea1ad0c0d427959":"elD1t"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"jhUEF":[function(require,module,exports) {
+},{"ea1ad0c0d427959":"elD1t"}],"jhUEF":[function(require,module,exports) {
 "use strict";
 
 },{}],"loE3o":[function(require,module,exports) {
@@ -3236,10 +3220,10 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"1uqB0":[function(require,module,exports) {
-module.exports = require("6c482b7863237223").getBundleURL("g05j8") + "at-pc.d52f82ef.webp" + "?" + Date.now();
+},{}],"42czT":[function(require,module,exports) {
+module.exports = require("31b5b5e742a0494b").getBundleURL("g05j8") + "mas-logo.bfa20ad0.svg" + "?" + Date.now();
 
-},{"6c482b7863237223":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"31b5b5e742a0494b":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -3274,12 +3258,42 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"ikZRW":[function(require,module,exports) {
+},{}],"1uqB0":[function(require,module,exports) {
+module.exports = require("6c482b7863237223").getBundleURL("g05j8") + "at-pc.d52f82ef.webp" + "?" + Date.now();
+
+},{"6c482b7863237223":"lgJ39"}],"ikZRW":[function(require,module,exports) {
 module.exports = require("f42b20a27734232b").getBundleURL("g05j8") + "dark-mode.475bf8dd.webp" + "?" + Date.now();
 
-},{"f42b20a27734232b":"lgJ39"}],"42czT":[function(require,module,exports) {
-module.exports = require("31b5b5e742a0494b").getBundleURL("g05j8") + "mas-logo.bfa20ad0.svg" + "?" + Date.now();
+},{"f42b20a27734232b":"lgJ39"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
-},{"31b5b5e742a0494b":"lgJ39"}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
+},{}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
 
 //# sourceMappingURL=index.739bf03c.js.map

@@ -262,17 +262,8 @@ img, video {
   margin: 0;
 }
 
-.m-2 {
-  margin: .5rem;
-}
-
 .m-3 {
   margin: .75rem;
-}
-
-.mx-2 {
-  margin-left: .5rem;
-  margin-right: .5rem;
 }
 
 .mx-8 {
@@ -288,10 +279,6 @@ img, video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
 }
 
 .mt-6 {
@@ -326,20 +313,28 @@ img, video {
   height: 6rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .min-h-min {
   min-height: min-content;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-h-max {
+  min-height: max-content;
 }
 
 .w-12 {
   width: 3rem;
 }
 
-.w-auto {
-  width: auto;
+.w-16 {
+  width: 4rem;
+}
+
+.w-5\/6 {
+  width: 83.3333%;
 }
 
 .w-full {
@@ -350,12 +345,8 @@ img, video {
   width: 100vw;
 }
 
-.w-5\/6 {
-  width: 83.3333%;
-}
-
-.w-16 {
-  width: 4rem;
+.flex-1 {
+  flex: 1;
 }
 
 @keyframes pulse {
@@ -400,18 +391,9 @@ img, video {
   border-radius: .375rem;
 }
 
-.rounded-xl {
-  border-radius: .75rem;
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.bg-\[\#f2f0ac\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 240 172 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -424,40 +406,17 @@ img, video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#f5f5f5\] {
+.bg-\[\#f5f4f4\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-black {
-  --tw-gradient-from: #000 var(--tw-gradient-from-position);
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-blue-500 {
-  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.p-8 {
-  padding: 2rem;
+  background-color: rgb(245 244 244 / var(--tw-bg-opacity));
 }
 
 .p-10 {
   padding: 2.5rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.p-4 {
+  padding: 1rem;
 }
 
 .px-4 {
@@ -465,9 +424,8 @@ img, video {
   padding-right: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.pb-0 {
+  padding-bottom: 0;
 }
 
 .pb-4 {
@@ -480,10 +438,6 @@ img, video {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-0 {
-  padding-bottom: 0;
 }
 
 .text-center {
@@ -517,16 +471,6 @@ img, video {
   line-height: 2rem;
 }
 
-.text-\[\#ff1100\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 17 0 / var(--tw-text-opacity));
-}
-
-.text-\[\#ff9900\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 153 0 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -550,6 +494,26 @@ html, body {
   padding: 0;
 }
 
+:is(.dark .dark\:bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-\[\#2d2d2d\]) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 45 45 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:text-white) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:invert) {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 @media (width >= 640px) {
   .sm\:float-left {
     float: left;
@@ -566,11 +530,6 @@ html, body {
 }
 
 @media (width >= 768px) {
-  .md\:mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   .md\:my-3 {
     margin-top: .75rem;
     margin-bottom: .75rem;
@@ -602,10 +561,6 @@ html, body {
 
   .lg\:w-3\/5 {
     width: 60%;
-  }
-
-  .lg\:w-2\/5 {
-    width: 40%;
   }
 
   .lg\:flex-1 {
@@ -641,10 +596,6 @@ html, body {
 }
 
 @media (width >= 1280px) {
-  .xl\:block {
-    display: block;
-  }
-
   .xl\:grid {
     display: grid;
   }
@@ -658,10 +609,6 @@ html, body {
   }
 }
 
-body.lights-off {
-  filter: invert() hue-rotate(180deg);
-}
-
 .info > div {
   background: linear-gradient(#000000e6, #0000004d);
   padding: 4px;
@@ -672,10 +619,8 @@ body.lights-off {
   background-color: #fff;
 }
 
-@media (hover: hover) or (width >= 1024px) {
-  .page {
-    background-position: 100% 0;
-  }
+.page {
+  background-position: 100% 0;
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */
