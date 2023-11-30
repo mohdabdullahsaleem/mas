@@ -624,10 +624,10 @@ if (data().email) email = data().email;
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: `${colourModeOn ? "" : "grayscale "} page min-h-screen flex flex-col dark:bg-black`
+            class: `${colourModeOn ? "" : "grayscale"} page min-h-screen flex flex-col dark:bg-black`
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#64a07e]" : "dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row mb-8`
+                class: `${colourModeOn ? "bg-[#370b4c]" : "bg-[#370b4c] dark:invert"} header w-screen h-24 sm:block flex flex-row mb-8`
             }, [
                 (0, _mithrilDefault.default)("a", {
                     class: "text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
@@ -642,7 +642,7 @@ if (data().email) email = data().email;
                     href: "/"
                 }, "Creativity"),
                 (0, _mithrilDefault.default)("a", {
-                    class: "text-[#024b7b] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
+                    class: "text-[#d47c7c] hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold ",
                     href: "/"
                 }, "Unleashed"),
                 (0, _mithrilDefault.default)("img", {
@@ -717,7 +717,7 @@ if (data().email) email = data().email;
                             src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
                             alt: "At my PC",
                             title: "At my PC",
-                            class: `${colourModeOn ? "bg-[#f2f0ac] dark:bg-[#2d2d2d]" : "dark:bg-[#2d2d2d] dark:grayscale"}`
+                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "bg-gradient-to-b from-white to-black"} rounded-xl`
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
@@ -756,7 +756,7 @@ if (data().email) email = data().email;
                     ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "footer grid place-content-center min-h-min dark:bg-[#2d2d2d] dark:text-white"
+                    class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} footer grid place-content-center min-h-min dark:text-white`
                 }, [
                     (0, _mithrilDefault.default)("span", {
                         class: "p-4"
