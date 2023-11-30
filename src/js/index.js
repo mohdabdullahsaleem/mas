@@ -63,7 +63,7 @@ m.mount(root, {
             {
                 class: `${
                     colourModeOn ? '' : 'grayscale'
-                } page min-h-screen flex flex-col dark:bg-black`
+                } flex flex-col dark:bg-black`
             },
             [
                 m(
@@ -243,7 +243,7 @@ m.mount(root, {
                                                 colourModeOn
                                                     ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]'
                                                     : 'bg-gradient-to-b from-white to-black'
-                                            } rounded-xl mt-8`
+                                            } rounded-xl m-8`
                                         })
                                     ]
                                 ),

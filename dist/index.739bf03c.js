@@ -624,7 +624,7 @@ if (data().email) email = data().email;
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: `${colourModeOn ? "" : "grayscale"} page min-h-screen flex flex-col dark:bg-black`
+            class: `${colourModeOn ? "" : "grayscale"} flex flex-col dark:bg-black`
         }, [
             (0, _mithrilDefault.default)("div", {
                 class: `${colourModeOn ? "bg-[#370b4c]" : "bg-[#fafafa] dark:invert"} header w-screen h-24 sm:block flex flex-row`
@@ -717,7 +717,7 @@ if (data().email) email = data().email;
                             src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
                             alt: "At my PC",
                             title: "At my PC",
-                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "bg-gradient-to-b from-white to-black"} rounded-xl mt-8`
+                            class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05]" : "bg-gradient-to-b from-white to-black"} rounded-xl m-8`
                         })
                     ]),
                     (0, _mithrilDefault.default)("div", {
