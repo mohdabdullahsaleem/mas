@@ -632,10 +632,10 @@ if (data().email) email = data().email;
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "flex flex-col dark:bg-black min-h-screen min-w-min"
+            class: "flex flex-col dark:bg-black min-h-screen w-auto"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-max`
+                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
             }, [
                 (0, _mithrilDefault.default)("div", [
                     (0, _mithrilDefault.default)("a", {
@@ -838,7 +838,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-screen mt-8`
+                class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"

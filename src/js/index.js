@@ -64,7 +64,7 @@ m.mount(root, {
         return m(
             'div',
             {
-                class: 'flex flex-col dark:bg-black min-h-screen min-w-min'
+                class: 'flex flex-col dark:bg-black min-h-screen w-auto'
             },
             [
                 m(
@@ -74,7 +74,7 @@ m.mount(root, {
                             colourModeOn
                                 ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]'
                                 : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
-                        } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-max`
+                        } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
                     },
                     [
                         m('div', [
@@ -448,7 +448,7 @@ m.mount(root, {
                             colourModeOn
                                 ? 'bg-[#95d266] dark:bg-[#024b7b]'
                                 : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
-                        } footer grid place-content-center min-h-min dark:text w-screen mt-8`
+                        } footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
                     },
                     [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
                 )
