@@ -606,7 +606,7 @@ const root = document.body;
 let click = false;
 let email = "@";
 let lightsOff;
-let colourModeOn = false;
+let colorModeOn = false;
 const data = ()=>{
     return JSON.parse('{\n    "email": "contact@mohdsaleem.uk"\n}\n');
 };
@@ -624,10 +624,10 @@ if (data().email) email = data().email;
         }
         if (localStorage.colorMode === "color-mode") {
             document.documentElement.classList.add("color-mode");
-            colourModeOn = true;
+            colorModeOn = true;
         } else {
             document.documentElement.classList.remove("color-mode");
-            colourModeOn = false;
+            colorModeOn = false;
         }
     },
     view: function() {
@@ -635,23 +635,23 @@ if (data().email) email = data().email;
             class: "flex flex-col dark:bg-black min-h-screen w-auto"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
+                class: `${colorModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
             }, [
                 (0, _mithrilDefault.default)("div", [
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#d47c7c]  border-[#024b7b]" : "text-black dark:text-white "}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid `,
+                        class: `${colorModeOn ? "text-[#d47c7c]  border-[#024b7b]" : "text-black dark:text-white "}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid `,
                         href: "/"
                     }, "Code"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#f2f0ac] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
+                        class: `${colorModeOn ? "text-[#f2f0ac] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
                         href: "/"
                     }, " & "),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#95d266] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
+                        class: `${colorModeOn ? "text-[#95d266] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
                         href: "/"
                     }, "Creativity"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colourModeOn ? "text-[#512da8] border-b-4 border-dotted border-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-dotted`,
+                        class: `${colorModeOn ? "text-[#512da8] border-b-4 border-dotted border-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-dotted`,
                         href: "/"
                     }, "Unleashed"),
                     (0, _mithrilDefault.default)("img", {
@@ -693,13 +693,13 @@ if (data().email) email = data().email;
                         id: "colorMode",
                         type: "button",
                         onclick: function() {
-                            colourModeOn = !colourModeOn;
-                            if (colourModeOn) {
-                                colourModeOn = true;
+                            colorModeOn = !colorModeOn;
+                            if (colorModeOn) {
+                                colorModeOn = true;
                                 document.documentElement.classList.add("color-mode");
                                 localStorage.colorMode = "color-mode";
                             } else {
-                                colourModeOn = false;
+                                colorModeOn = false;
                                 document.documentElement.classList.remove("color-mode");
                                 localStorage.removeItem("colorMode");
                             }
@@ -707,9 +707,9 @@ if (data().email) email = data().email;
                     }, [
                         (0, _mithrilDefault.default)("img", {
                             src: (0, _colorModeWebpDefault.default),
-                            alt: "Colour Mode",
+                            alt: "color Mode",
                             class: "w-12 h-12 m-3 filter-none dark:filter-none",
-                            title: "Colour Mode"
+                            title: "color Mode"
                         })
                     ])
                 ])
@@ -721,7 +721,7 @@ if (data().email) email = data().email;
                     class: `main flex flex-col w-screen flex-1 py-8`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: `${colourModeOn ? "text-black dark:text-white bg-[#d47c7c]" : "text-black bg-white dark:text-white dark:bg-[#595959]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
+                        class: `${colorModeOn ? "text-black dark:text-white bg-[#d47c7c]" : "text-black bg-white dark:text-white dark:bg-[#595959]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "text-lg md:text-2xl text-center"
@@ -771,7 +771,7 @@ if (data().email) email = data().email;
                             class: "mx-auto"
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: `${colourModeOn ? "text-black dark:text-black bg-[#f2f0ac]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
+                                class: `${colorModeOn ? "text-black dark:text-black bg-[#f2f0ac]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
                             }, [
                                 (0, _mithrilDefault.default)("div", {
                                     class: "xs:text-lg md:text-2xl"
@@ -809,7 +809,7 @@ if (data().email) email = data().email;
                             class: "md:grid md:place-content-center min-w-max mx-8 my-8"
                         }, [
                             (0, _mithrilDefault.default)("img", {
-                                class: `${colourModeOn ? "grayscale-0" : "grayscale"} w-72 mx-16 rounded-full`,
+                                class: `${colorModeOn ? "grayscale-0" : "grayscale"} w-72 mx-16 rounded-full`,
                                 src: (0, _mohammadSaleemLightWebpDefault.default),
                                 alt: "Mohammad Saleem",
                                 title: "Mohammad Saleem"
@@ -820,7 +820,7 @@ if (data().email) email = data().email;
                         class: "w-full h-auto"
                     }, [
                         (0, _mithrilDefault.default)("span", {
-                            class: `relative w-100 ${click ? "m-0" : ""} ${colourModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
                         }, [
                             (0, _mithrilDefault.default)("a", {
                                 href: `mailto:${email}`,
@@ -834,7 +834,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#95d266] text-white dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
+                class: `${colorModeOn ? "bg-[#95d266] text-white dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"
@@ -844,7 +844,7 @@ if (data().email) email = data().email;
     }
 });
 
-},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/mohammad-saleem-light.webp":"hyrnY","../assets/images/dark-mode.webp":"ikZRW","../assets/images/color-mode.webp":"7CCHn","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/images/branding-icons/css3-logo.png":"Ms14M","../assets/images/branding-icons/html5-logo.png":"5qNCn","../assets/images/branding-icons/javascript-logo.svg":"dF9fD","../assets/images/branding-icons/php-logo.svg":"cum0x","../assets/images/branding-icons/typescript-logo.svg":"gLmZs"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/mohammad-saleem-light.webp":"hyrnY","../assets/images/dark-mode.webp":"ikZRW","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/images/branding-icons/css3-logo.png":"Ms14M","../assets/images/branding-icons/html5-logo.png":"5qNCn","../assets/images/branding-icons/javascript-logo.svg":"dF9fD","../assets/images/branding-icons/php-logo.svg":"cum0x","../assets/images/branding-icons/typescript-logo.svg":"gLmZs","../assets/images/color-mode.webp":"7CCHn"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -3394,10 +3394,7 @@ module.exports = require("260b5a2ddfe161c2").getBundleURL("g05j8") + "mohammad-s
 },{"260b5a2ddfe161c2":"lgJ39"}],"ikZRW":[function(require,module,exports) {
 module.exports = require("f42b20a27734232b").getBundleURL("g05j8") + "dark-mode.475bf8dd.webp" + "?" + Date.now();
 
-},{"f42b20a27734232b":"lgJ39"}],"7CCHn":[function(require,module,exports) {
-module.exports = require("a4d56bfcb67a03f9").getBundleURL("g05j8") + "color-mode.b65029f8.webp" + "?" + Date.now();
-
-},{"a4d56bfcb67a03f9":"lgJ39"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
+},{"f42b20a27734232b":"lgJ39"}],"bjuoM":[function() {},{}],"77SYx":[function() {},{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -3442,6 +3439,9 @@ module.exports = require("46f9105fbf2bf142").getBundleURL("g05j8") + "php-logo.3
 },{"46f9105fbf2bf142":"lgJ39"}],"gLmZs":[function(require,module,exports) {
 module.exports = require("490e5a75538ab9e").getBundleURL("g05j8") + "typescript-logo.cfe34911.svg" + "?" + Date.now();
 
-},{"490e5a75538ab9e":"lgJ39"}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
+},{"490e5a75538ab9e":"lgJ39"}],"7CCHn":[function(require,module,exports) {
+module.exports = require("a4d56bfcb67a03f9").getBundleURL("g05j8") + "color-mode.b65029f8.webp" + "?" + Date.now();
+
+},{"a4d56bfcb67a03f9":"lgJ39"}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
 
 //# sourceMappingURL=index.739bf03c.js.map

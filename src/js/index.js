@@ -20,7 +20,7 @@ const root = document.body
 let click = false
 let email = '@'
 let lightsOff
-let colourModeOn = false
+let colorModeOn = false
 
 const data = () => {
     return JSON.parse(
@@ -54,10 +54,10 @@ m.mount(root, {
 
         if (localStorage.colorMode === 'color-mode') {
             document.documentElement.classList.add('color-mode')
-            colourModeOn = true
+            colorModeOn = true
         } else {
             document.documentElement.classList.remove('color-mode')
-            colourModeOn = false
+            colorModeOn = false
         }
     },
     view: function () {
@@ -71,7 +71,7 @@ m.mount(root, {
                     'div',
                     {
                         class: `${
-                            colourModeOn
+                            colorModeOn
                                 ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]'
                                 : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
                         } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
@@ -82,7 +82,7 @@ m.mount(root, {
                                 'a',
                                 {
                                     class: `${
-                                        colourModeOn
+                                        colorModeOn
                                             ? 'text-[#d47c7c]  border-[#024b7b]'
                                             : 'text-black dark:text-white '
                                     }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid `,
@@ -94,7 +94,7 @@ m.mount(root, {
                                 'a',
                                 {
                                     class: `${
-                                        colourModeOn
+                                        colorModeOn
                                             ? 'text-[#f2f0ac] border-[#024b7b] '
                                             : 'text-black dark:text-white'
                                     }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
@@ -107,7 +107,7 @@ m.mount(root, {
                                 'a',
                                 {
                                     class: `${
-                                        colourModeOn
+                                        colorModeOn
                                             ? 'text-[#95d266] border-[#024b7b] '
                                             : 'text-black dark:text-white'
                                     }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
@@ -120,7 +120,7 @@ m.mount(root, {
                                 'a',
                                 {
                                     class: `${
-                                        colourModeOn
+                                        colorModeOn
                                             ? 'text-[#512da8] border-b-4 border-dotted border-[#512da8]'
                                             : 'text-black dark:text-white'
                                     }  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-dotted`,
@@ -185,16 +185,16 @@ m.mount(root, {
                                         id: 'colorMode',
                                         type: 'button',
                                         onclick: function () {
-                                            colourModeOn = !colourModeOn
-                                            if (colourModeOn) {
-                                                colourModeOn = true
+                                            colorModeOn = !colorModeOn
+                                            if (colorModeOn) {
+                                                colorModeOn = true
                                                 document.documentElement.classList.add(
                                                     'color-mode'
                                                 )
                                                 localStorage.colorMode =
                                                     'color-mode'
                                             } else {
-                                                colourModeOn = false
+                                                colorModeOn = false
                                                 document.documentElement.classList.remove(
                                                     'color-mode'
                                                 )
@@ -207,9 +207,9 @@ m.mount(root, {
                                     [
                                         m('img', {
                                             src: colorMode,
-                                            alt: 'Colour Mode',
+                                            alt: 'color Mode',
                                             class: 'w-12 h-12 m-3 filter-none dark:filter-none',
-                                            title: 'Colour Mode'
+                                            title: 'color Mode'
                                         })
                                     ]
                                 )
@@ -229,7 +229,7 @@ m.mount(root, {
                                 'div',
                                 {
                                     class: `${
-                                        colourModeOn
+                                        colorModeOn
                                             ? 'text-black dark:text-white bg-[#d47c7c]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                     }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
@@ -305,7 +305,7 @@ m.mount(root, {
                                                 'div',
                                                 {
                                                     class: `${
-                                                        colourModeOn
+                                                        colorModeOn
                                                             ? 'text-black dark:text-black bg-[#f2f0ac]'
                                                             : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                                     } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
@@ -381,7 +381,7 @@ m.mount(root, {
                                         [
                                             m('img', {
                                                 class: `${
-                                                    colourModeOn
+                                                    colorModeOn
                                                         ? 'grayscale-0'
                                                         : 'grayscale'
                                                 } w-72 mx-16 rounded-full`,
@@ -400,7 +400,7 @@ m.mount(root, {
                                         class: `relative w-100 ${
                                             click ? 'm-0' : ''
                                         } ${
-                                            colourModeOn
+                                            colorModeOn
                                                 ? 'text-black dark:text-white bg-[#95d266]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                         } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
@@ -437,7 +437,7 @@ m.mount(root, {
                     'div',
                     {
                         class: `${
-                            colourModeOn
+                            colorModeOn
                                 ? 'bg-[#95d266] text-white dark:bg-[#024b7b]'
                                 : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
                         } footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`

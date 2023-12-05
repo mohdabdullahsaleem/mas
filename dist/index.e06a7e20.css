@@ -501,6 +501,10 @@ img, video {
   background-color: rgb(242 240 172 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#d47c7cfa\] {
+  background-color: #d47c7cfa;
+}
+
 .p-4 {
   padding: 1rem;
 }
