@@ -825,7 +825,7 @@ if (data().email) email = data().email;
                         class: "w-full h-auto"
                     }, [
                         (0, _mithrilDefault.default)("span", {
-                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-16`
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-white dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-16`
                         }, [
                             (0, _mithrilDefault.default)("a", {
                                 href: `mailto:${email}`,
