@@ -728,7 +728,7 @@ if (data().email) email = data().email;
                         }, "Full Stack Website Developer"),
                         (0, _mithrilDefault.default)("div", {
                             class: "text-sm md:text-lg text-center"
-                        }, "with over 15 years of experience"),
+                        }, "with over 15 years of experience in design and development"),
                         (0, _mithrilDefault.default)("div", {
                             class: "flex flex-row justify-space-evenly mx-auto my-4 min-w-max"
                         }, [

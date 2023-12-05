@@ -247,7 +247,7 @@ m.mount(root, {
                                         {
                                             class: 'text-sm md:text-lg text-center'
                                         },
-                                        'with over 15 years of experience'
+                                        'with over 15 years of experience in design and development'
                                     ),
                                     m(
                                         'div',
