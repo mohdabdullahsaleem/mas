@@ -132,6 +132,7 @@ m.mount(root, {
                             m(
                                 'a',
                                 {
+                                    class: '',
                                     href: '/'
                                 },
                                 [
@@ -411,7 +412,7 @@ m.mount(root, {
                                             colorModeOn
                                                 ? 'text-black dark:text-white bg-[#95d266]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto my-8`
+                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-16`
                                     },
                                     [
                                         m(
