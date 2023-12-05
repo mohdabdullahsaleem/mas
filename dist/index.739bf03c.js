@@ -721,7 +721,7 @@ if (data().email) email = data().email;
                     class: `main flex flex-col w-screen flex-1 py-8`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: `${colorModeOn ? "text-black dark:text-white bg-[#d47c7c]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm dark:shadow-white`
+                        class: `${colorModeOn ? "text-black dark:text-white bg-[#d47c7c]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "text-lg md:text-2xl text-center"
@@ -771,7 +771,7 @@ if (data().email) email = data().email;
                             class: "mx-auto"
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: `${colorModeOn ? "text-black dark:text-black bg-[#f2f0ac]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm dark:shadow-white`
+                                class: `${colorModeOn ? "text-black dark:text-black bg-[#f2f0ac]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                             }, [
                                 (0, _mithrilDefault.default)("div", {
                                     class: "xs:text-lg md:text-2xl"
@@ -820,7 +820,7 @@ if (data().email) email = data().email;
                         class: "w-full h-auto"
                     }, [
                         (0, _mithrilDefault.default)("span", {
-                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm  dark:shadow-white mx-auto my-8`
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto my-8`
                         }, [
                             (0, _mithrilDefault.default)("a", {
                                 href: `mailto:${email}`,

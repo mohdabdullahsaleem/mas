@@ -232,7 +232,7 @@ m.mount(root, {
                                         colorModeOn
                                             ? 'text-black dark:text-white bg-[#d47c7c]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm dark:shadow-white`
+                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                 },
                                 [
                                     m(
@@ -308,7 +308,7 @@ m.mount(root, {
                                                         colorModeOn
                                                             ? 'text-black dark:text-black bg-[#f2f0ac]'
                                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                                    } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm dark:shadow-white`
+                                                    } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                                 },
                                                 [
                                                     m(
@@ -403,7 +403,7 @@ m.mount(root, {
                                             colorModeOn
                                                 ? 'text-black dark:text-white bg-[#95d266]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm  dark:shadow-white mx-auto my-8`
+                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto my-8`
                                     },
                                     [
                                         m(

@@ -597,6 +597,26 @@ img, video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-black {
+  --tw-shadow-color: #000;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-\[\#0a0a0a\] {
+  --tw-shadow-color: #0a0a0a;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-\[\#\#4f4f4f\] {
+  --tw-shadow-color: # #4f4f4f;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-\[\#4f4f4f\] {
+  --tw-shadow-color: #4f4f4f;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
