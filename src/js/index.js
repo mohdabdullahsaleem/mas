@@ -256,31 +256,31 @@ m.mount(root, {
                                         },
                                         [
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                                 src: css3,
                                                 alt: 'CSS3 Logo',
                                                 title: 'CSS3 Logo'
                                             }),
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                                 src: html5,
                                                 alt: 'HTML5 Logo',
                                                 title: 'HTML5 Logo'
                                             }),
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                                 src: javascript,
                                                 alt: 'JavaScript Logo',
                                                 title: 'JavaScript Logo'
                                             }),
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                                class: `h-6 m-2 xs:h-10`,
                                                 src: typescript,
                                                 alt: 'TypeScript Logo',
                                                 title: 'TypeScript Logo'
                                             }),
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                                class: `h-6 m-2 xs:h-10`,
                                                 src: php,
                                                 alt: 'PHP Logo',
                                                 title: 'PHP Logo'
@@ -330,14 +330,6 @@ m.mount(root, {
                                                         m(
                                                             'a',
                                                             {
-                                                                href: 'https://laravel.com/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'Laravel '
-                                                        ),
-                                                        m(
-                                                            'a',
-                                                            {
                                                                 href: 'https://react.dev/',
                                                                 class: 'text-sm'
                                                             },
@@ -373,7 +365,7 @@ m.mount(root, {
                                                                 {
                                                                     class: 'text-sm'
                                                                 },
-                                                                'and more...'
+                                                                'and many more...'
                                                             )
                                                         ]
                                                     ])

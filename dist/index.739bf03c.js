@@ -733,31 +733,31 @@ if (data().email) email = data().email;
                             class: "flex flex-row justify-space-evenly mx-auto my-4 min-w-max"
                         }, [
                             (0, _mithrilDefault.default)("img", {
-                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                 src: (0, _css3LogoPngDefault.default),
                                 alt: "CSS3 Logo",
                                 title: "CSS3 Logo"
                             }),
                             (0, _mithrilDefault.default)("img", {
-                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                 src: (0, _html5LogoPngDefault.default),
                                 alt: "HTML5 Logo",
                                 title: "HTML5 Logo"
                             }),
                             (0, _mithrilDefault.default)("img", {
-                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                class: `h-6 m-2 xs:h-10 dark:filter-none filter-none`,
                                 src: (0, _javascriptLogoSvgDefault.default),
                                 alt: "JavaScript Logo",
                                 title: "JavaScript Logo"
                             }),
                             (0, _mithrilDefault.default)("img", {
-                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                class: `h-6 m-2 xs:h-10`,
                                 src: (0, _typescriptLogoSvgDefault.default),
                                 alt: "TypeScript Logo",
                                 title: "TypeScript Logo"
                             }),
                             (0, _mithrilDefault.default)("img", {
-                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                class: `h-6 m-2 xs:h-10`,
                                 src: (0, _phpLogoSvgDefault.default),
                                 alt: "PHP Logo",
                                 title: "PHP Logo"
@@ -782,10 +782,6 @@ if (data().email) email = data().email;
                                         class: "text-sm"
                                     }, "WordPress "),
                                     (0, _mithrilDefault.default)("a", {
-                                        href: "https://laravel.com/",
-                                        class: "text-sm"
-                                    }, "Laravel "),
-                                    (0, _mithrilDefault.default)("a", {
                                         href: "https://react.dev/",
                                         class: "text-sm"
                                     }, "React "),
@@ -804,7 +800,7 @@ if (data().email) email = data().email;
                                     [
                                         (0, _mithrilDefault.default)("span", {
                                             class: "text-sm"
-                                        }, "and more...")
+                                        }, "and many more...")
                                     ]
                                 ])
                             ])
