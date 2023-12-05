@@ -3,10 +3,14 @@ import fs from 'fs'
 import path from 'path'
 
 import logo from '../assets/images/mas-logo.svg'
-import atPC from '../assets/images/at-pc-bw.webp'
-import atPCColor from '../assets/images/at-pc-colour.webp'
+import photoLight from '../assets/images/mohammad-saleem-light.webp'
 import darkMode from '../assets/images/dark-mode.webp'
 import colorMode from '../assets/images/color-mode.webp'
+import css3 from '../assets/images/branding-icons/css3-logo.png'
+import html5 from '../assets/images/branding-icons/html5-logo.png'
+import javascript from '../assets/images/branding-icons/javascript-logo.svg'
+import php from '../assets/images/branding-icons/php-logo.svg'
+import typescript from '../assets/images/branding-icons/typescript-logo.svg'
 
 import '../assets/styles/base.scss'
 import './index.scss'
@@ -15,7 +19,6 @@ const root = document.body
 
 let click = false
 let email = '@'
-
 let lightsOff
 let colourModeOn = false
 
@@ -71,7 +74,7 @@ m.mount(root, {
                             colourModeOn
                                 ? 'bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]'
                                 : 'bg-[#fafafa] dark:bg-[#2d2d2d]'
-                        } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8`
+                        } header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-max`
                     },
                     [
                         m('div', [
@@ -205,7 +208,7 @@ m.mount(root, {
                                         m('img', {
                                             src: colorMode,
                                             alt: 'Colour Mode',
-                                            class: 'w-12 h-12 m-3',
+                                            class: 'w-12 h-12 m-3 filter-none dark:filter-none',
                                             title: 'Colour Mode'
                                         })
                                     ]
@@ -219,141 +222,222 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: `${
-                                colourModeOn ? '' : 'grayscale'
-                            }  main lg:grid place-content-center w-screen flex-1 bg-[#ffffff0a]`
+                            class: `main flex flex-col w-screen flex-1 py-8`
                         },
                         [
                             m(
                                 'div',
                                 {
-                                    class: 'flex flex-col md-flex-col-reverse lg:flex-row-reverse align-top justify-evenly lg:w-screen mx-auto light:bg-[#2d2d2d0a]'
+                                    class: `${
+                                        colourModeOn
+                                            ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                            : 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
                                 },
                                 [
                                     m(
                                         'div',
                                         {
-                                            class: 'lg:grid lg:pt-0 lg:place-content-center md:w-100 lg:w-[420px]'
+                                            class: 'text-lg md:text-2xl text-center'
                                         },
-                                        [
-                                            m('img', {
-                                                src: colourModeOn
-                                                    ? atPCColor
-                                                    : atPC,
-
-                                                alt: 'At my PC',
-                                                title: 'At my PC',
-                                                class: `${
-                                                    colourModeOn
-                                                        ? 'bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05] dark:filter-none'
-                                                        : 'grayscale'
-                                                } lg:rounded-xl bg-gradient-to-b from-[#000] to-[#fff] dark:invert md:w-100 lg:w-[418px]`
-                                            })
-                                        ]
+                                        'Full Stack Website Developer'
                                     ),
                                     m(
                                         'div',
                                         {
-                                            class: 'info grid place-content-center pt-4 lg:w-[420px] md:mt-0 w-auto mx-8 leading-8 text-black lg:mr-12 dark:invert'
+                                            class: 'text-sm md:text-lg text-center'
+                                        },
+                                        'with over 15 years of experience'
+                                    ),
+                                    m(
+                                        'div',
+                                        {
+                                            class: 'flex flex-row justify-space-evenly mx-auto my-4 min-w-max'
+                                        },
+                                        [
+                                            m('img', {
+                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                src: css3,
+                                                alt: 'CSS3 Logo',
+                                                title: 'CSS3 Logo'
+                                            }),
+                                            m('img', {
+                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                src: html5,
+                                                alt: 'HTML5 Logo',
+                                                title: 'HTML5 Logo'
+                                            }),
+                                            m('img', {
+                                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                                src: javascript,
+                                                alt: 'JavaScript Logo',
+                                                title: 'JavaScript Logo'
+                                            }),
+                                            m('img', {
+                                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                                src: typescript,
+                                                alt: 'TypeScript Logo',
+                                                title: 'TypeScript Logo'
+                                            }),
+                                            m('img', {
+                                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                                src: php,
+                                                alt: 'PHP Logo',
+                                                title: 'PHP Logo'
+                                            })
+                                        ]
+                                    )
+                                ]
+                            ),
+                            m(
+                                'div',
+                                {
+                                    class: 'flex flex-col flex-wrap md:flex-row justify-evenly mx-auto'
+                                },
+                                [
+                                    m(
+                                        'div',
+                                        {
+                                            class: 'mx-auto'
                                         },
                                         [
                                             m(
                                                 'div',
                                                 {
-                                                    class: 'rounded-lg'
+                                                    class: `${
+                                                        colourModeOn
+                                                            ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                                            : 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                                    } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
                                                 },
                                                 [
                                                     m(
                                                         'div',
                                                         {
-                                                            class: `${
-                                                                colourModeOn
-                                                                    ? 'text-[#024b7b]'
-                                                                    : 'text-[#000]'
-                                                            } rounded-md p-4 leading-8 text-black`
+                                                            class: 'xs:text-lg md:text-2xl'
                                                         },
+                                                        'Skilled with the frameworks & CMS:'
+                                                    ),
+                                                    m('div', [
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://wordpress.org/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'WordPress '
+                                                        ),
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://laravel.com/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'Laravel '
+                                                        ),
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://react.dev/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'React '
+                                                        ),
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://svelte.dev/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'Svelte '
+                                                        ),
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://vuejs.org/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'Vue '
+                                                        ),
+                                                        m(
+                                                            'a',
+                                                            {
+                                                                href: 'https://mithril.js.org/',
+                                                                class: 'text-sm'
+                                                            },
+                                                            'Mithril '
+                                                        ),
                                                         [
-                                                            m(
-                                                                'h2',
-                                                                {
-                                                                    class: 'text-3xl leading-10 pb-4'
-                                                                },
-                                                                `Mohammad Saleem's Web Development`
-                                                            ),
-                                                            m(
-                                                                'p',
-
-                                                                ' • 15+ years of experience'
-                                                            ),
-                                                            m(
-                                                                'p',
-                                                                ' • full-stack'
-                                                            ),
-                                                            m(
-                                                                'p',
-
-                                                                ' • Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc.'
-                                                            ),
-                                                            m(
-                                                                'p',
-
-                                                                ' • Proficient in JS frameworks including React, Vue and many others'
-                                                            ),
-                                                            m(
-                                                                'p',
-
-                                                                ' • Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc.'
-                                                            ),
-                                                            m(
-                                                                'p',
-                                                                {
-                                                                    class: 'pb-4'
-                                                                },
-                                                                ' • CSS frameworks Tailwind & Bootstrap'
-                                                            ),
                                                             m(
                                                                 'span',
                                                                 {
-                                                                    class: `relative w-100 ${
-                                                                        click
-                                                                            ? 'm-0'
-                                                                            : ''
-                                                                    } border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
+                                                                    class: 'text-sm'
                                                                 },
-                                                                [
-                                                                    m(
-                                                                        'a',
-                                                                        {
-                                                                            href: `mailto:${email}`,
-                                                                            class: 'animate-pulse px-4',
-                                                                            onclick:
-                                                                                () => {
-                                                                                    return (
-                                                                                        (click =
-                                                                                            !click),
-                                                                                        setTimeout(
-                                                                                            () =>
-                                                                                                (click =
-                                                                                                    !click),
-                                                                                            5000
-                                                                                        )
-                                                                                    )
-                                                                                }
-                                                                        },
-                                                                        click
-                                                                            ? email
-                                                                            : 'Click to Reveal Email'
-                                                                    )
-                                                                ]
+                                                                'and more...'
                                                             )
                                                         ]
-                                                    )
+                                                    ])
                                                 ]
                                             )
                                         ]
+                                    ),
+                                    m(
+                                        'div',
+                                        {
+                                            class: 'md:grid md:place-content-center min-w-max mx-8 my-8'
+                                        },
+                                        [
+                                            m('img', {
+                                                class: `${
+                                                    colourModeOn
+                                                        ? 'grayscale-0'
+                                                        : 'grayscale'
+                                                } w-72 mx-16 rounded-full`,
+                                                src: photoLight,
+                                                alt: 'Mohammad Saleem',
+                                                title: 'Mohammad Saleem'
+                                            })
+                                        ]
                                     )
                                 ]
-                            )
+                            ),
+                            m('div', { class: 'w-full h-auto' }, [
+                                m(
+                                    'span',
+                                    {
+                                        class: `relative w-100 ${
+                                            click ? 'm-0' : ''
+                                        } ${
+                                            colourModeOn
+                                                ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                                : 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
+                                    },
+                                    [
+                                        m(
+                                            'a',
+                                            {
+                                                href: `mailto:${email}`,
+                                                class: 'animate-pulse px-4',
+                                                onclick: () => {
+                                                    return (
+                                                        (click = !click),
+                                                        setTimeout(
+                                                            () =>
+                                                                (click =
+                                                                    !click),
+                                                            5000
+                                                        )
+                                                    )
+                                                }
+                                            },
+                                            click
+                                                ? email
+                                                : 'Click to Reveal Email'
+                                        )
+                                    ]
+                                )
+                            ])
                         ]
                     )
                 ]),

@@ -584,14 +584,22 @@ var _path = require("path");
 var _pathDefault = parcelHelpers.interopDefault(_path);
 var _masLogoSvg = require("../assets/images/mas-logo.svg");
 var _masLogoSvgDefault = parcelHelpers.interopDefault(_masLogoSvg);
-var _atPcBwWebp = require("../assets/images/at-pc-bw.webp");
-var _atPcBwWebpDefault = parcelHelpers.interopDefault(_atPcBwWebp);
-var _atPcColourWebp = require("../assets/images/at-pc-colour.webp");
-var _atPcColourWebpDefault = parcelHelpers.interopDefault(_atPcColourWebp);
+var _mohammadSaleemLightWebp = require("../assets/images/mohammad-saleem-light.webp");
+var _mohammadSaleemLightWebpDefault = parcelHelpers.interopDefault(_mohammadSaleemLightWebp);
 var _darkModeWebp = require("../assets/images/dark-mode.webp");
 var _darkModeWebpDefault = parcelHelpers.interopDefault(_darkModeWebp);
 var _colorModeWebp = require("../assets/images/color-mode.webp");
 var _colorModeWebpDefault = parcelHelpers.interopDefault(_colorModeWebp);
+var _css3LogoPng = require("../assets/images/branding-icons/css3-logo.png");
+var _css3LogoPngDefault = parcelHelpers.interopDefault(_css3LogoPng);
+var _html5LogoPng = require("../assets/images/branding-icons/html5-logo.png");
+var _html5LogoPngDefault = parcelHelpers.interopDefault(_html5LogoPng);
+var _javascriptLogoSvg = require("../assets/images/branding-icons/javascript-logo.svg");
+var _javascriptLogoSvgDefault = parcelHelpers.interopDefault(_javascriptLogoSvg);
+var _phpLogoSvg = require("../assets/images/branding-icons/php-logo.svg");
+var _phpLogoSvgDefault = parcelHelpers.interopDefault(_phpLogoSvg);
+var _typescriptLogoSvg = require("../assets/images/branding-icons/typescript-logo.svg");
+var _typescriptLogoSvgDefault = parcelHelpers.interopDefault(_typescriptLogoSvg);
 var _baseScss = require("../assets/styles/base.scss");
 var _indexScss = require("./index.scss");
 const root = document.body;
@@ -627,7 +635,7 @@ if (data().email) email = data().email;
             class: "flex flex-col dark:bg-black min-h-screen"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8`
+                class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-max`
             }, [
                 (0, _mithrilDefault.default)("div", [
                     (0, _mithrilDefault.default)("a", {
@@ -700,7 +708,7 @@ if (data().email) email = data().email;
                         (0, _mithrilDefault.default)("img", {
                             src: (0, _colorModeWebpDefault.default),
                             alt: "Colour Mode",
-                            class: "w-12 h-12 m-3",
+                            class: "w-12 h-12 m-3 filter-none dark:filter-none",
                             title: "Colour Mode"
                         })
                     ])
@@ -710,54 +718,121 @@ if (data().email) email = data().email;
                 class: "flex justify-between flex-1"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: `${colourModeOn ? "" : "grayscale"}  main lg:grid place-content-center w-screen flex-1 bg-[#ffffff0a]`
+                    class: `main flex flex-col w-screen flex-1 py-8`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: "flex flex-col md-flex-col-reverse lg:flex-row-reverse align-top justify-evenly lg:w-screen mx-auto light:bg-[#2d2d2d0a]"
+                        class: `${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
                     }, [
                         (0, _mithrilDefault.default)("div", {
-                            class: "lg:grid lg:pt-0 lg:place-content-center md:w-100 lg:w-[420px]"
+                            class: "text-lg md:text-2xl text-center"
+                        }, "Full Stack Website Developer"),
+                        (0, _mithrilDefault.default)("div", {
+                            class: "text-sm md:text-lg text-center"
+                        }, "with over 15 years of experience"),
+                        (0, _mithrilDefault.default)("div", {
+                            class: "flex flex-row justify-space-evenly mx-auto my-4 min-w-max"
                         }, [
                             (0, _mithrilDefault.default)("img", {
-                                src: colourModeOn ? (0, _atPcColourWebpDefault.default) : (0, _atPcBwWebpDefault.default),
-                                alt: "At my PC",
-                                title: "At my PC",
-                                class: `${colourModeOn ? "bg-gradient-to-b from-[#f2f0ac] to-[#0f5c05] dark:filter-none" : "grayscale"} lg:rounded-xl bg-gradient-to-b from-[#000] to-[#fff] dark:invert md:w-100 lg:w-[418px]`
+                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                src: (0, _css3LogoPngDefault.default),
+                                alt: "CSS3 Logo",
+                                title: "CSS3 Logo"
+                            }),
+                            (0, _mithrilDefault.default)("img", {
+                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                src: (0, _html5LogoPngDefault.default),
+                                alt: "HTML5 Logo",
+                                title: "HTML5 Logo"
+                            }),
+                            (0, _mithrilDefault.default)("img", {
+                                class: `h-6 m-2 xs:h-10 xs:mx-4 dark:filter-none filter-none`,
+                                src: (0, _javascriptLogoSvgDefault.default),
+                                alt: "JavaScript Logo",
+                                title: "JavaScript Logo"
+                            }),
+                            (0, _mithrilDefault.default)("img", {
+                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                src: (0, _typescriptLogoSvgDefault.default),
+                                alt: "TypeScript Logo",
+                                title: "TypeScript Logo"
+                            }),
+                            (0, _mithrilDefault.default)("img", {
+                                class: `h-6 m-2 xs:h-10 xs:mx-4`,
+                                src: (0, _phpLogoSvgDefault.default),
+                                alt: "PHP Logo",
+                                title: "PHP Logo"
                             })
-                        ]),
+                        ])
+                    ]),
+                    (0, _mithrilDefault.default)("div", {
+                        class: "flex flex-col flex-wrap md:flex-row justify-evenly mx-auto"
+                    }, [
                         (0, _mithrilDefault.default)("div", {
-                            class: "info grid place-content-center pt-4 lg:w-[420px] md:mt-0 w-auto mx-8 leading-8 text-black lg:mr-12 dark:invert"
+                            class: "mx-auto"
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: "rounded-lg"
+                                class: `${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
                             }, [
                                 (0, _mithrilDefault.default)("div", {
-                                    class: `${colourModeOn ? "text-[#024b7b]" : "text-[#000]"} rounded-md p-4 leading-8 text-black`
-                                }, [
-                                    (0, _mithrilDefault.default)("h2", {
-                                        class: "text-3xl leading-10 pb-4"
-                                    }, `Mohammad Saleem's Web Development`),
-                                    (0, _mithrilDefault.default)("p", " \u2022 15+ years of experience"),
-                                    (0, _mithrilDefault.default)("p", " \u2022 full-stack"),
-                                    (0, _mithrilDefault.default)("p", " \u2022 Experience with PHP, JavaScript, TypeScript, Python, Node, html, CSS, SASS etc."),
-                                    (0, _mithrilDefault.default)("p", " \u2022 Proficient in JS frameworks including React, Vue and many others"),
-                                    (0, _mithrilDefault.default)("p", " \u2022 Wordpress & PHP frameworks including Laravel, CodeIgniter, CakePHP, etc."),
-                                    (0, _mithrilDefault.default)("p", {
-                                        class: "pb-4"
-                                    }, " \u2022 CSS frameworks Tailwind & Bootstrap"),
-                                    (0, _mithrilDefault.default)("span", {
-                                        class: `relative w-100 ${click ? "m-0" : ""} border-white bg-black text-white block p-4 rounded-full h-16 grid place-content-center text-sm md:text-xl text-center`
-                                    }, [
-                                        (0, _mithrilDefault.default)("a", {
-                                            href: `mailto:${email}`,
-                                            class: "animate-pulse px-4",
-                                            onclick: ()=>{
-                                                return click = !click, setTimeout(()=>click = !click, 5000);
-                                            }
-                                        }, click ? email : "Click to Reveal Email")
-                                    ])
+                                    class: "xs:text-lg md:text-2xl"
+                                }, "Skilled with the frameworks & CMS:"),
+                                (0, _mithrilDefault.default)("div", [
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://wordpress.org/",
+                                        class: "text-sm"
+                                    }, "WordPress "),
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://laravel.com/",
+                                        class: "text-sm"
+                                    }, "Laravel "),
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://react.dev/",
+                                        class: "text-sm"
+                                    }, "React "),
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://svelte.dev/",
+                                        class: "text-sm"
+                                    }, "Svelte "),
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://vuejs.org/",
+                                        class: "text-sm"
+                                    }, "Vue "),
+                                    (0, _mithrilDefault.default)("a", {
+                                        href: "https://mithril.js.org/",
+                                        class: "text-sm"
+                                    }, "Mithril "),
+                                    [
+                                        (0, _mithrilDefault.default)("span", {
+                                            class: "text-sm"
+                                        }, "and more...")
+                                    ]
                                 ])
                             ])
+                        ]),
+                        (0, _mithrilDefault.default)("div", {
+                            class: "md:grid md:place-content-center min-w-max mx-8 my-8"
+                        }, [
+                            (0, _mithrilDefault.default)("img", {
+                                class: `${colourModeOn ? "grayscale-0" : "grayscale"} w-72 mx-16 rounded-full`,
+                                src: (0, _mohammadSaleemLightWebpDefault.default),
+                                alt: "Mohammad Saleem",
+                                title: "Mohammad Saleem"
+                            })
+                        ])
+                    ]),
+                    (0, _mithrilDefault.default)("div", {
+                        class: "w-full h-auto"
+                    }, [
+                        (0, _mithrilDefault.default)("span", {
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
+                        }, [
+                            (0, _mithrilDefault.default)("a", {
+                                href: `mailto:${email}`,
+                                class: "animate-pulse px-4",
+                                onclick: ()=>{
+                                    return click = !click, setTimeout(()=>click = !click, 5000);
+                                }
+                            }, click ? email : "Click to Reveal Email")
                         ])
                     ])
                 ])
@@ -773,7 +848,7 @@ if (data().email) email = data().email;
     }
 });
 
-},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/at-pc-bw.webp":"lpdv7","../assets/images/at-pc-colour.webp":"8Mt3d","../assets/images/dark-mode.webp":"ikZRW","../assets/images/color-mode.webp":"7CCHn","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zcoP":[function(require,module,exports) {
+},{"mithril":"1zcoP","fs":"jhUEF","path":"loE3o","../assets/images/mas-logo.svg":"42czT","../assets/images/mohammad-saleem-light.webp":"hyrnY","../assets/images/dark-mode.webp":"ikZRW","../assets/images/color-mode.webp":"7CCHn","../assets/styles/base.scss":"bjuoM","./index.scss":"77SYx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/images/branding-icons/css3-logo.png":"Ms14M","../assets/images/branding-icons/html5-logo.png":"5qNCn","../assets/images/branding-icons/javascript-logo.svg":"dF9fD","../assets/images/branding-icons/php-logo.svg":"cum0x","../assets/images/branding-icons/typescript-logo.svg":"gLmZs"}],"1zcoP":[function(require,module,exports) {
 "use strict";
 var hyperscript = require("93549bebb559a185");
 var request = require("ffc931a12fb92780");
@@ -3317,13 +3392,10 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"lpdv7":[function(require,module,exports) {
-module.exports = require("328f9c4759d3e02e").getBundleURL("g05j8") + "at-pc-bw.c51a27a4.webp" + "?" + Date.now();
+},{}],"hyrnY":[function(require,module,exports) {
+module.exports = require("260b5a2ddfe161c2").getBundleURL("g05j8") + "mohammad-saleem-light.dbae4d0a.webp" + "?" + Date.now();
 
-},{"328f9c4759d3e02e":"lgJ39"}],"8Mt3d":[function(require,module,exports) {
-module.exports = require("59be17af479532b1").getBundleURL("g05j8") + "at-pc-colour.463338c5.webp" + "?" + Date.now();
-
-},{"59be17af479532b1":"lgJ39"}],"ikZRW":[function(require,module,exports) {
+},{"260b5a2ddfe161c2":"lgJ39"}],"ikZRW":[function(require,module,exports) {
 module.exports = require("f42b20a27734232b").getBundleURL("g05j8") + "dark-mode.475bf8dd.webp" + "?" + Date.now();
 
 },{"f42b20a27734232b":"lgJ39"}],"7CCHn":[function(require,module,exports) {
@@ -3359,6 +3431,21 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
+},{}],"Ms14M":[function(require,module,exports) {
+module.exports = require("72ce001758a7db84").getBundleURL("g05j8") + "css3-logo.ee0dbe46.png" + "?" + Date.now();
+
+},{"72ce001758a7db84":"lgJ39"}],"5qNCn":[function(require,module,exports) {
+module.exports = require("219bc7084ec0ad6").getBundleURL("g05j8") + "html5-logo.66631e11.png" + "?" + Date.now();
+
+},{"219bc7084ec0ad6":"lgJ39"}],"dF9fD":[function(require,module,exports) {
+module.exports = require("c4e88e02c37aec09").getBundleURL("g05j8") + "javascript-logo.03fd716c.svg" + "?" + Date.now();
+
+},{"c4e88e02c37aec09":"lgJ39"}],"cum0x":[function(require,module,exports) {
+module.exports = require("46f9105fbf2bf142").getBundleURL("g05j8") + "php-logo.39176710.svg" + "?" + Date.now();
+
+},{"46f9105fbf2bf142":"lgJ39"}],"gLmZs":[function(require,module,exports) {
+module.exports = require("490e5a75538ab9e").getBundleURL("g05j8") + "typescript-logo.cfe34911.svg" + "?" + Date.now();
+
+},{"490e5a75538ab9e":"lgJ39"}]},["b3anl","ebWYT"], "ebWYT", "parcelRequire51bf")
 
 //# sourceMappingURL=index.739bf03c.js.map
