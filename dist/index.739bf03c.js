@@ -785,23 +785,23 @@ if (data().email) email = data().email;
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://wordpress.org/",
                                         class: "text-sm"
-                                    }, "WordPress "),
+                                    }, "WordPress, "),
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://react.dev/",
                                         class: "text-sm"
-                                    }, "React "),
+                                    }, "React, "),
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://svelte.dev/",
                                         class: "text-sm"
-                                    }, "Svelte "),
+                                    }, "Svelte, "),
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://vuejs.org/",
                                         class: "text-sm"
-                                    }, "Vue "),
+                                    }, "Vue, "),
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://mithril.js.org/",
                                         class: "text-sm"
-                                    }, "Mithril "),
+                                    }, "Mithril,"),
                                     [
                                         (0, _mithrilDefault.default)("span", {
                                             class: "text-sm"

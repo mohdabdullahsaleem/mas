@@ -334,7 +334,7 @@ m.mount(root, {
                                                                 href: 'https://wordpress.org/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'WordPress '
+                                                            'WordPress, '
                                                         ),
                                                         m(
                                                             'a',
@@ -342,7 +342,7 @@ m.mount(root, {
                                                                 href: 'https://react.dev/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'React '
+                                                            'React, '
                                                         ),
                                                         m(
                                                             'a',
@@ -350,7 +350,7 @@ m.mount(root, {
                                                                 href: 'https://svelte.dev/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'Svelte '
+                                                            'Svelte, '
                                                         ),
                                                         m(
                                                             'a',
@@ -358,7 +358,7 @@ m.mount(root, {
                                                                 href: 'https://vuejs.org/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'Vue '
+                                                            'Vue, '
                                                         ),
                                                         m(
                                                             'a',
@@ -366,7 +366,7 @@ m.mount(root, {
                                                                 href: 'https://mithril.js.org/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'Mithril '
+                                                            'Mithril,'
                                                         ),
                                                         [
                                                             m(
