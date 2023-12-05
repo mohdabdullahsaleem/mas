@@ -241,7 +241,7 @@ m.mount(root, {
                                         colorModeOn
                                             ? 'text-black dark:text-white bg-[#d47c7ce6]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
+                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8  w-72 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                 },
                                 [
                                     m(
@@ -254,14 +254,14 @@ m.mount(root, {
                                     m(
                                         'div',
                                         {
-                                            class: 'text-sm md:text-lg text-center'
+                                            class: 'text-sm md:text-lg grid place-content-center text-center sm:w-full'
                                         },
                                         'with over 15 years of experience in design and development'
                                     ),
                                     m(
                                         'div',
                                         {
-                                            class: 'flex flex-row justify-space-evenly mx-auto my-4 min-w-max'
+                                            class: 'flex flex-row flex-wrap justify-space-center mx-auto my-4 min-w-min'
                                         },
                                         [
                                             m('img', {
@@ -289,7 +289,7 @@ m.mount(root, {
                                                 title: 'TypeScript Logo'
                                             }),
                                             m('img', {
-                                                class: `h-6 m-2 xs:h-10`,
+                                                class: `h-6 m-2 xs:h-10 grid place-content-center w-auto mx-auto`,
                                                 src: php,
                                                 alt: 'PHP Logo',
                                                 title: 'PHP Logo'
@@ -412,7 +412,7 @@ m.mount(root, {
                                             colorModeOn
                                                 ? 'text-white dark:text-white bg-[#95d266e6]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-16`
+                                        } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-8`
                                     },
                                     [
                                         m(

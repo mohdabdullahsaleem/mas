@@ -1,8 +1,12 @@
 .main {
-    background: linear-gradient(#000000e6, #ffffff4d),
-        url('../assets/images/main-bg-no-color.webp');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
     background-blend-mode: multiply;
+}
+
+html.color-mode .main,
+html.color-mode.dark .main {
+    background-image: linear-gradient(#000000e6, #ffffff4d),
+        url('../assets/images/main-bg-color.webp');
 }

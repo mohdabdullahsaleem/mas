@@ -262,6 +262,10 @@ img, video {
   margin: 1.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -410,12 +414,24 @@ img, video {
   width: auto;
 }
 
+.w-min {
+  width: min-content;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
 .min-w-\[460px\] {
   min-width: 460px;
 }
 
 .min-w-max {
   min-width: max-content;
+}
+
+.min-w-min {
+  min-width: min-content;
 }
 
 .flex-1 {
@@ -889,6 +905,10 @@ html, body {
     display: block;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:border-solid {
     border-style: solid;
   }
@@ -1029,14 +1049,13 @@ html, body {
 
 .main {
   background-blend-mode: multiply;
-  background-color: #0000;
-  background-image: linear-gradient(#000000e6, #ffffff4d), url("main-bg-no-color.1a169d00.webp");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: scroll, scroll;
-  background-origin: padding-box, padding-box;
-  background-clip: border-box, border-box;
+}
+
+html.color-mode .main, html.color-mode.dark .main {
+  background-image: linear-gradient(#000000e6, #ffffff4d), url("main-bg-color.235b8feb.webp");
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */
