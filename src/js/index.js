@@ -239,7 +239,7 @@ m.mount(root, {
                                 {
                                     class: `${
                                         colorModeOn
-                                            ? 'text-black dark:text-white bg-[#d47c7c]'
+                                            ? 'text-black dark:text-white bg-[#d47c7ce6]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
                                     }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                 },
@@ -315,7 +315,7 @@ m.mount(root, {
                                                 {
                                                     class: `${
                                                         colorModeOn
-                                                            ? 'text-black dark:text-black bg-[#f2f0ac]'
+                                                            ? 'text-black dark:text-black bg-[#f2f0ace6]'
                                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
                                                     } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                                 },
@@ -393,7 +393,7 @@ m.mount(root, {
                                                     colorModeOn
                                                         ? 'grayscale-0'
                                                         : 'grayscale'
-                                                } w-72 mx-16 rounded-full`,
+                                                } w-72 mx-16 rounded-lg`,
                                                 src: photoLight,
                                                 alt: 'Mohammad Saleem',
                                                 title: 'Mohammad Saleem'
@@ -410,7 +410,7 @@ m.mount(root, {
                                             click ? 'm-0' : ''
                                         } ${
                                             colorModeOn
-                                                ? 'text-white dark:text-white bg-[#95d266]'
+                                                ? 'text-white dark:text-white bg-[#95d266e6]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
                                         } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-16`
                                     },
