@@ -635,34 +635,38 @@ if (data().email) email = data().email;
             class: "flex flex-col dark:bg-black min-h-screen w-auto"
         }, [
             (0, _mithrilDefault.default)("div", {
-                class: `${colorModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
+                class: `${colorModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header h-auto sm:block flex flex-row justify-between items-center px-8 min-w-[460px]`
             }, [
                 (0, _mithrilDefault.default)("div", [
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colorModeOn ? "text-[#d47c7c]  border-[#024b7b]" : "text-black dark:text-white "}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid `,
+                        class: `${colorModeOn ? "text-[#d47c7c]  border-[#024b7b]" : "text-black dark:text-white "}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:4xl xl:text-6xl  font-bold border-b-4`,
                         href: "/"
                     }, "Code"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colorModeOn ? "text-[#f2f0ac] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
+                        class: `${colorModeOn ? "text-[#f2f0ac] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left pr-8 py-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:4xl xl:text-6xl font-bold border-b-4 `,
                         href: "/"
-                    }, " & "),
+                    }, "&"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colorModeOn ? "text-[#95d266] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-solid`,
+                        class: `${colorModeOn ? "text-[#95d266] border-[#024b7b] " : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:4xl xl:text-6xl font-bold border-b-4`,
                         href: "/"
                     }, "Creativity"),
                     (0, _mithrilDefault.default)("a", {
-                        class: `${colorModeOn ? "text-[#512da8] border-b-4 border-dotted border-[#512da8]" : "text-black dark:text-white"}  hidden sm:block sm:float-left p-4 my-4 text-xl pl-8 md:text-4xl md:my-3 lg:pl-5 lg:py-1 lg:text-6xl font-bold border-b-4 border-dotted`,
+                        class: `${colorModeOn ? "text-[#512da8] border-b-4 border-dotted border-[#512da8]" : "text-black dark:text-white"}  hidden lg:block sm:float-left p-4 my-4 text-xl pl-8 lg:text-4xl md:my-3 lg:pl-5 lg:py-1 xl:text-6xl font-bold border-b-4 border-dotted`,
                         href: "/"
                     }, "Unleashed"),
-                    (0, _mithrilDefault.default)("img", {
-                        class: "logo sm:float-left w-12 h-12 m-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
-                        src: (0, _masLogoSvgDefault.default),
-                        alt: "Mohammad Saleem Logo",
-                        title: "Mohammad Saleem Logo"
-                    })
+                    (0, _mithrilDefault.default)("a", {
+                        href: "/"
+                    }, [
+                        (0, _mithrilDefault.default)("img", {
+                            class: "logo sm:float-left w-12 h-12 sm:mt-6 lg:mt-4 xl:mt-6 mx-8 sm:mx-0 text-xl md:text-4xl lg:text-6xl font-bold text-black ",
+                            src: (0, _masLogoSvgDefault.default),
+                            alt: "Mohammad Saleem Logo",
+                            title: "Mohammad Saleem Logo"
+                        })
+                    ])
                 ]),
                 (0, _mithrilDefault.default)("div", {
-                    class: "flex flex-row justify-end"
+                    class: "flex flex-row justify-end min-w-max sm:mt-4 lg:mt-2 xl:mt-4"
                 }, [
                     (0, _mithrilDefault.default)("button", {
                         class: "pointer border-white block text-white block",
@@ -684,12 +688,12 @@ if (data().email) email = data().email;
                         (0, _mithrilDefault.default)("img", {
                             src: (0, _darkModeWebpDefault.default),
                             alt: "Dark Mode",
-                            class: "w-16 h-16 m-3",
+                            class: "w-16 h-16 m-0",
                             title: "Dark Mode"
                         })
                     ]),
                     (0, _mithrilDefault.default)("button", {
-                        class: "pointer border-white block text-white block",
+                        class: "pointer border-white block text-white block w-16 h-16",
                         id: "colorMode",
                         type: "button",
                         onclick: function() {
@@ -708,7 +712,7 @@ if (data().email) email = data().email;
                         (0, _mithrilDefault.default)("img", {
                             src: (0, _colorModeWebpDefault.default),
                             alt: "color Mode",
-                            class: "w-12 h-12 m-3 filter-none dark:filter-none",
+                            class: " w-16 h-16 p-2 m-0 filter-none dark:filter-none",
                             title: "color Mode"
                         })
                     ])
