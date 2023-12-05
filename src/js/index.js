@@ -64,7 +64,7 @@ m.mount(root, {
         return m(
             'div',
             {
-                class: 'flex flex-col dark:bg-black min-h-screen'
+                class: 'flex flex-col dark:bg-black min-h-screen min-w-min'
             },
             [
                 m(

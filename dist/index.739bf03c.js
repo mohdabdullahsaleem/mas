@@ -632,7 +632,7 @@ if (data().email) email = data().email;
     },
     view: function() {
         return (0, _mithrilDefault.default)("div", {
-            class: "flex flex-col dark:bg-black min-h-screen"
+            class: "flex flex-col dark:bg-black min-h-screen min-w-min"
         }, [
             (0, _mithrilDefault.default)("div", {
                 class: `${colourModeOn ? "bg-[#370b4c] dark:bg-[#2d2d2d] bg-[#9fe1ea]" : "bg-[#fafafa] dark:bg-[#2d2d2d]"} header w-screen h-24 sm:block flex flex-row justify-between items-center px-8 min-w-max`

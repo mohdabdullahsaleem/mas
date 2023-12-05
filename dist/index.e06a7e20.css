@@ -417,6 +417,10 @@ img, video {
   min-width: max-content;
 }
 
+.min-w-min {
+  min-width: min-content;
+}
+
 .flex-1 {
   flex: 1;
 }
