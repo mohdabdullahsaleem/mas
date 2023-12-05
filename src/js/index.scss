@@ -11,12 +11,3 @@
 .page {
     background-position: top right;
 }
-
-body.color-mode {
-    background: linear-gradient(
-        rgba(0, 0, 0, 1) 0%,
-        rgba(54, 37, 4, 1) 41%,
-        rgba(110, 86, 64, 1) 67%,
-        rgb(222, 174, 128) 100%
-    );
-}
