@@ -230,7 +230,7 @@ m.mount(root, {
                                 {
                                     class: `${
                                         colourModeOn
-                                            ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                            ? 'text-black dark:text-white bg-[#d47c7c]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                     }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
                                 },
@@ -306,7 +306,7 @@ m.mount(root, {
                                                 {
                                                     class: `${
                                                         colourModeOn
-                                                            ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                                            ? 'text-black dark:text-black bg-[#f2f0ac]'
                                                             : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                                     } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
                                                 },
@@ -401,7 +401,7 @@ m.mount(root, {
                                             click ? 'm-0' : ''
                                         } ${
                                             colourModeOn
-                                                ? 'text-black bg-white dark:text-white dark:bg-[#595959]'
+                                                ? 'text-black dark:text-white bg-[#95d266]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#595959]'
                                         } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
                                     },
@@ -438,7 +438,7 @@ m.mount(root, {
                     {
                         class: `${
                             colourModeOn
-                                ? 'bg-[#95d266] dark:bg-[#024b7b]'
+                                ? 'bg-[#95d266] text-white dark:bg-[#024b7b]'
                                 : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
                         } footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
                     },

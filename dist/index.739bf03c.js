@@ -721,7 +721,7 @@ if (data().email) email = data().email;
                     class: `main flex flex-col w-screen flex-1 py-8`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: `${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
+                        class: `${colourModeOn ? "text-black dark:text-white bg-[#d47c7c]" : "text-black bg-white dark:text-white dark:bg-[#595959]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8 grid place-content-center rounded-lg`
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "text-lg md:text-2xl text-center"
@@ -771,7 +771,7 @@ if (data().email) email = data().email;
                             class: "mx-auto"
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: `${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
+                                class: `${colourModeOn ? "text-black dark:text-black bg-[#f2f0ac]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8`
                             }, [
                                 (0, _mithrilDefault.default)("div", {
                                     class: "xs:text-lg md:text-2xl"
@@ -820,7 +820,7 @@ if (data().email) email = data().email;
                         class: "w-full h-auto"
                     }, [
                         (0, _mithrilDefault.default)("span", {
-                            class: `relative w-100 ${click ? "m-0" : ""} ${colourModeOn ? "text-black bg-white dark:text-white dark:bg-[#595959]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colourModeOn ? "text-black dark:text-white bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#595959]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-xl mx-auto my-8`
                         }, [
                             (0, _mithrilDefault.default)("a", {
                                 href: `mailto:${email}`,
@@ -834,7 +834,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: `${colourModeOn ? "bg-[#95d266] dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
+                class: `${colourModeOn ? "bg-[#95d266] text-white dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"
