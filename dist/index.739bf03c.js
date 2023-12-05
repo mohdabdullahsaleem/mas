@@ -775,7 +775,7 @@ if (data().email) email = data().email;
                             }, [
                                 (0, _mithrilDefault.default)("div", {
                                     class: "xs:text-lg md:text-2xl"
-                                }, "Skilled with the frameworks & CMS:"),
+                                }, "Skilled with frameworks & CMS"),
                                 (0, _mithrilDefault.default)("div", [
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://wordpress.org/",

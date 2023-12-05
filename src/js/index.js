@@ -316,7 +316,7 @@ m.mount(root, {
                                                         {
                                                             class: 'xs:text-lg md:text-2xl'
                                                         },
-                                                        'Skilled with the frameworks & CMS:'
+                                                        'Skilled with frameworks & CMS'
                                                     ),
                                                     m('div', [
                                                         m(
