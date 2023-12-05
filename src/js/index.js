@@ -366,7 +366,7 @@ m.mount(root, {
                                                                 href: 'https://mithril.js.org/',
                                                                 class: 'text-sm'
                                                             },
-                                                            'Mithril,'
+                                                            'Mithril '
                                                         ),
                                                         [
                                                             m(

@@ -801,7 +801,7 @@ if (data().email) email = data().email;
                                     (0, _mithrilDefault.default)("a", {
                                         href: "https://mithril.js.org/",
                                         class: "text-sm"
-                                    }, "Mithril,"),
+                                    }, "Mithril "),
                                     [
                                         (0, _mithrilDefault.default)("span", {
                                             class: "text-sm"
