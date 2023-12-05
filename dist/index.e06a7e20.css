@@ -995,18 +995,16 @@ html, body {
   }
 }
 
-.info > div {
-  background: linear-gradient(#000000e6, #0000004d);
-  padding: 4px;
-  box-shadow: 2px 2px 5px;
-}
-
-.info > div > div {
-  background-color: #fff;
-}
-
-.page {
+.main {
+  background-blend-mode: multiply;
+  background-color: #0000;
+  background-image: linear-gradient(#000000e6, #ffffff4d), url("main-bg-no-color.1a169d00.webp");
   background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */

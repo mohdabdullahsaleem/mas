@@ -1,13 +1,8 @@
-.info > div {
-    padding: 4px;
-    background: linear-gradient(#000000e6, #0000004d);
-    box-shadow: 2px 2px 5px;
-}
-
-.info > div > div {
-    background-color: #fff;
-}
-
-.page {
+.main {
+    background: linear-gradient(#000000e6, #ffffff4d),
+        url('../assets/images/main-bg-no-color.webp');
+    background-repeat: no-repeat;
     background-position: top right;
+    background-size: contain;
+    background-blend-mode: multiply;
 }
