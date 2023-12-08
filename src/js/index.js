@@ -217,7 +217,7 @@ m.mount(root, {
                                         m('img', {
                                             src: colorMode,
                                             alt: 'color Mode',
-                                            class: ' w-16 h-16 p-2 m-0 filter-none dark:filter-none',
+                                            class: 'md:h-100 w-16 h-16 p-2 m-0 filter-none dark:filter-none',
                                             title: 'color Mode'
                                         })
                                     ]
@@ -231,7 +231,7 @@ m.mount(root, {
                     m(
                         'div',
                         {
-                            class: `main flex flex-col w-screen flex-1 py-8`
+                            class: `main flex flex-col w-screen flex-1 py-8 md:my-0`
                         },
                         [
                             m(
@@ -241,7 +241,7 @@ m.mount(root, {
                                         colorModeOn
                                             ? 'text-black dark:text-white bg-[#d47c7ce6]'
                                             : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                    }  auto h-auto flex flex-col mx-auto my-8 px-8 py-8  w-72 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
+                                    }  auto h-auto flex flex-col mx-auto mt-8 px-8 py-8 md:my-0 md:mt-4 md:w-screen w-72 grid place-content-center rounded-lg md:rounded-none shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                 },
                                 [
                                     m(
@@ -307,85 +307,81 @@ m.mount(root, {
                                     m(
                                         'div',
                                         {
-                                            class: 'mx-auto'
+                                            class: `${
+                                                colorModeOn
+                                                    ? 'text-black dark:text-black bg-[#f2f0ace6]'
+                                                    : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
+                                            } md:w-screen md:rounded-none rounded-lg text-center grid place-content-center w-72 h-72 mx-8 mt-8 p-8 md:mx-0 md:my-0 md:mt-4 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                         },
                                         [
                                             m(
                                                 'div',
                                                 {
-                                                    class: `${
-                                                        colorModeOn
-                                                            ? 'text-black dark:text-black bg-[#f2f0ace6]'
-                                                            : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
-                                                    } rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
+                                                    class: 'xs:text-lg md:text-2xl'
                                                 },
+                                                'Skilled with frameworks & CMS'
+                                            ),
+                                            m('div', [
+                                                m(
+                                                    'a',
+                                                    {
+                                                        href: 'https://wordpress.org/',
+                                                        class: 'text-sm'
+                                                    },
+                                                    'WordPress, '
+                                                ),
+                                                m(
+                                                    'a',
+                                                    {
+                                                        href: 'https://react.dev/',
+                                                        class: 'text-sm'
+                                                    },
+                                                    'React, '
+                                                ),
+                                                m(
+                                                    'a',
+                                                    {
+                                                        href: 'https://svelte.dev/',
+                                                        class: 'text-sm'
+                                                    },
+                                                    'Svelte, '
+                                                ),
+                                                m(
+                                                    'a',
+                                                    {
+                                                        href: 'https://vuejs.org/',
+                                                        class: 'text-sm'
+                                                    },
+                                                    'Vue, '
+                                                ),
+                                                m(
+                                                    'a',
+                                                    {
+                                                        href: 'https://mithril.js.org/',
+                                                        class: 'text-sm'
+                                                    },
+                                                    'Mithril '
+                                                ),
                                                 [
                                                     m(
-                                                        'div',
+                                                        'span',
                                                         {
-                                                            class: 'xs:text-lg md:text-2xl'
+                                                            class: 'text-sm'
                                                         },
-                                                        'Skilled with frameworks & CMS'
-                                                    ),
-                                                    m('div', [
-                                                        m(
-                                                            'a',
-                                                            {
-                                                                href: 'https://wordpress.org/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'WordPress, '
-                                                        ),
-                                                        m(
-                                                            'a',
-                                                            {
-                                                                href: 'https://react.dev/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'React, '
-                                                        ),
-                                                        m(
-                                                            'a',
-                                                            {
-                                                                href: 'https://svelte.dev/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'Svelte, '
-                                                        ),
-                                                        m(
-                                                            'a',
-                                                            {
-                                                                href: 'https://vuejs.org/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'Vue, '
-                                                        ),
-                                                        m(
-                                                            'a',
-                                                            {
-                                                                href: 'https://mithril.js.org/',
-                                                                class: 'text-sm'
-                                                            },
-                                                            'Mithril '
-                                                        ),
-                                                        [
-                                                            m(
-                                                                'span',
-                                                                {
-                                                                    class: 'text-sm'
-                                                                },
-                                                                'and many more...'
-                                                            )
-                                                        ]
-                                                    ])
+                                                        'and many more...'
+                                                    )
                                                 ]
-                                            )
+                                            ])
                                         ]
                                     ),
                                     m(
                                         'div',
                                         {
-                                            class: 'md:grid md:place-content-center min-w-max mx-8 my-8'
+                                            class: `${
+                                                colorModeOn
+                                                    ? 'text-black dark:text-black bg-[#95d266]'
+                                                    : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
+                                            }  md:h-min md:w-screen md:rounded-none rounded-lg text-center grid place-content-center w-72 h-72 mx-8 mt-8 p-8 md:mx-0 md:my-0 md:mt-4 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                                         },
                                         [
                                             m('img', {
@@ -393,7 +389,7 @@ m.mount(root, {
                                                     colorModeOn
                                                         ? 'grayscale-0'
                                                         : 'grayscale'
-                                                } w-72 mx-16 rounded-lg`,
+                                                } w-72 rounded-lg md:p-4`,
                                                 src: photoLight,
                                                 alt: 'Mohammad Saleem',
                                                 title: 'Mohammad Saleem'
@@ -410,7 +406,7 @@ m.mount(root, {
                                             click ? 'm-0' : ''
                                         } ${
                                             colorModeOn
-                                                ? 'text-white dark:text-white bg-[#95d266e6]'
+                                                ? 'text-white dark:text-white bg-[#512da8]'
                                                 : 'text-black bg-white dark:text-white dark:bg-[#0a0a0a]'
                                         } w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-8`
                                     },
@@ -447,7 +443,7 @@ m.mount(root, {
                     {
                         class: `${
                             colorModeOn
-                                ? 'bg-[#95d266] text-white dark:bg-[#024b7b]'
+                                ? 'bg-[#024b7b] text-white dark:bg-[#024b7b]'
                                 : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
                         } footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
                     },

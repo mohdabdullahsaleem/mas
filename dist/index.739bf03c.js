@@ -713,7 +713,7 @@ if (data().email) email = data().email;
                         (0, _mithrilDefault.default)("img", {
                             src: (0, _colorModeWebpDefault.default),
                             alt: "color Mode",
-                            class: " w-16 h-16 p-2 m-0 filter-none dark:filter-none",
+                            class: "md:h-100 w-16 h-16 p-2 m-0 filter-none dark:filter-none",
                             title: "color Mode"
                         })
                     ])
@@ -723,10 +723,10 @@ if (data().email) email = data().email;
                 class: "flex justify-between flex-1"
             }, [
                 (0, _mithrilDefault.default)("div", {
-                    class: `main flex flex-col w-screen flex-1 py-8`
+                    class: `main flex flex-col w-screen flex-1 py-8 md:my-0`
                 }, [
                     (0, _mithrilDefault.default)("div", {
-                        class: `${colorModeOn ? "text-black dark:text-white bg-[#d47c7ce6]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  auto h-auto flex flex-col mx-auto my-8 px-8 py-8  w-72 grid place-content-center rounded-lg shadow-sm shadow-[#4f4f4f] dark:shadow-white`
+                        class: `${colorModeOn ? "text-black dark:text-white bg-[#d47c7ce6]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  auto h-auto flex flex-col mx-auto mt-8 px-8 py-8 md:my-0 md:mt-4 md:w-screen w-72 grid place-content-center rounded-lg md:rounded-none shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                     }, [
                         (0, _mithrilDefault.default)("div", {
                             class: "text-lg md:text-2xl text-center"
@@ -773,48 +773,44 @@ if (data().email) email = data().email;
                         class: "flex flex-col flex-wrap md:flex-row justify-evenly mx-auto"
                     }, [
                         (0, _mithrilDefault.default)("div", {
-                            class: "mx-auto"
+                            class: `${colorModeOn ? "text-black dark:text-black bg-[#f2f0ace6]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} md:w-screen md:rounded-none rounded-lg text-center grid place-content-center w-72 h-72 mx-8 mt-8 p-8 md:mx-0 md:my-0 md:mt-4 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                         }, [
                             (0, _mithrilDefault.default)("div", {
-                                class: `${colorModeOn ? "text-black dark:text-black bg-[#f2f0ace6]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} rounded-lg text-center grid place-content-center w-72 h-72 mx-8 my-16 p-8 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
-                            }, [
-                                (0, _mithrilDefault.default)("div", {
-                                    class: "xs:text-lg md:text-2xl"
-                                }, "Skilled with frameworks & CMS"),
-                                (0, _mithrilDefault.default)("div", [
-                                    (0, _mithrilDefault.default)("a", {
-                                        href: "https://wordpress.org/",
+                                class: "xs:text-lg md:text-2xl"
+                            }, "Skilled with frameworks & CMS"),
+                            (0, _mithrilDefault.default)("div", [
+                                (0, _mithrilDefault.default)("a", {
+                                    href: "https://wordpress.org/",
+                                    class: "text-sm"
+                                }, "WordPress, "),
+                                (0, _mithrilDefault.default)("a", {
+                                    href: "https://react.dev/",
+                                    class: "text-sm"
+                                }, "React, "),
+                                (0, _mithrilDefault.default)("a", {
+                                    href: "https://svelte.dev/",
+                                    class: "text-sm"
+                                }, "Svelte, "),
+                                (0, _mithrilDefault.default)("a", {
+                                    href: "https://vuejs.org/",
+                                    class: "text-sm"
+                                }, "Vue, "),
+                                (0, _mithrilDefault.default)("a", {
+                                    href: "https://mithril.js.org/",
+                                    class: "text-sm"
+                                }, "Mithril "),
+                                [
+                                    (0, _mithrilDefault.default)("span", {
                                         class: "text-sm"
-                                    }, "WordPress, "),
-                                    (0, _mithrilDefault.default)("a", {
-                                        href: "https://react.dev/",
-                                        class: "text-sm"
-                                    }, "React, "),
-                                    (0, _mithrilDefault.default)("a", {
-                                        href: "https://svelte.dev/",
-                                        class: "text-sm"
-                                    }, "Svelte, "),
-                                    (0, _mithrilDefault.default)("a", {
-                                        href: "https://vuejs.org/",
-                                        class: "text-sm"
-                                    }, "Vue, "),
-                                    (0, _mithrilDefault.default)("a", {
-                                        href: "https://mithril.js.org/",
-                                        class: "text-sm"
-                                    }, "Mithril "),
-                                    [
-                                        (0, _mithrilDefault.default)("span", {
-                                            class: "text-sm"
-                                        }, "and many more...")
-                                    ]
-                                ])
+                                    }, "and many more...")
+                                ]
                             ])
                         ]),
                         (0, _mithrilDefault.default)("div", {
-                            class: "md:grid md:place-content-center min-w-max mx-8 my-8"
+                            class: `${colorModeOn ? "text-black dark:text-black bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  md:h-min md:w-screen md:rounded-none rounded-lg text-center grid place-content-center w-72 h-72 mx-8 mt-8 p-8 md:mx-0 md:my-0 md:mt-4 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                         }, [
                             (0, _mithrilDefault.default)("img", {
-                                class: `${colorModeOn ? "grayscale-0" : "grayscale"} w-72 mx-16 rounded-lg`,
+                                class: `${colorModeOn ? "grayscale-0" : "grayscale"} w-72 rounded-lg md:p-4`,
                                 src: (0, _mohammadSaleemLightWebpDefault.default),
                                 alt: "Mohammad Saleem",
                                 title: "Mohammad Saleem"
@@ -825,7 +821,7 @@ if (data().email) email = data().email;
                         class: "w-full h-auto"
                     }, [
                         (0, _mithrilDefault.default)("span", {
-                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-white dark:text-white bg-[#95d266e6]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-8`
+                            class: `relative w-100 ${click ? "m-0" : ""} ${colorModeOn ? "text-white dark:text-white bg-[#512da8]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"} w-max block p-4 rounded-lg h-16 grid place-content-center xs:text-sm md:text-xl text-center shadow-sm shadow-[#4f4f4f] dark:shadow-white mx-auto mt-8`
                         }, [
                             (0, _mithrilDefault.default)("a", {
                                 href: `mailto:${email}`,
@@ -839,7 +835,7 @@ if (data().email) email = data().email;
                 ])
             ]),
             (0, _mithrilDefault.default)("div", {
-                class: `${colorModeOn ? "bg-[#95d266] text-white dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
+                class: `${colorModeOn ? "bg-[#024b7b] text-white dark:bg-[#024b7b]" : "bg-[#ffffff] dark:text-black dark:bg-[#fff]"} footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"
