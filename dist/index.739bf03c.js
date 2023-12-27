@@ -810,7 +810,7 @@ if (data().email) email = data().email;
                             class: `${colorModeOn ? "text-black dark:text-black bg-[#95d266]" : "text-black bg-white dark:text-white dark:bg-[#0a0a0a]"}  md:h-min md:w-screen md:rounded-none rounded-lg text-center grid place-content-center w-72 h-72 mx-8 mt-8 p-8 md:mx-0 md:my-0 md:mt-4 shadow-sm shadow-[#4f4f4f] dark:shadow-white`
                         }, [
                             (0, _mithrilDefault.default)("img", {
-                                class: `${colorModeOn ? "grayscale-0" : "grayscale"} w-72 rounded-lg md:p-4`,
+                                class: `${colorModeOn ? "grayscale-0" : "grayscale"} rounded w-72`,
                                 src: (0, _mohammadSaleemLightWebpDefault.default),
                                 alt: "Mohammad Saleem",
                                 title: "Mohammad Saleem"
@@ -839,7 +839,7 @@ if (data().email) email = data().email;
             }, [
                 (0, _mithrilDefault.default)("span", {
                     class: "p-4"
-                }, "mohdsaleem.uk \xa9 2021")
+                }, "mohdsaleem.uk \xa9 2023")
             ])
         ]);
     }

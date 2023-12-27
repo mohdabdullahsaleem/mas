@@ -389,7 +389,7 @@ m.mount(root, {
                                                     colorModeOn
                                                         ? 'grayscale-0'
                                                         : 'grayscale'
-                                                } w-72 rounded-lg md:p-4`,
+                                                } rounded w-72`,
                                                 src: photoLight,
                                                 alt: 'Mohammad Saleem',
                                                 title: 'Mohammad Saleem'
@@ -447,7 +447,7 @@ m.mount(root, {
                                 : 'bg-[#ffffff] dark:text-black dark:bg-[#fff]'
                         } footer grid place-content-center min-h-min dark:text w-auto  min-w-[460px] mt-8`
                     },
-                    [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2021')]
+                    [m('span', { class: 'p-4' }, 'mohdsaleem.uk © 2023')]
                 )
             ]
         )
